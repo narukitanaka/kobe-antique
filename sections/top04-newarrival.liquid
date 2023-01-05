@@ -1,0 +1,105 @@
+<section class="top04">
+  <div class="top04_bg">
+    <div class="top04_inner01">
+      <div class="section_title vertical fadein">
+        <span class="en">new arrival</span>
+        <h2>新着情報</h2>
+      </div>
+      <div class="box fadein">
+        <p class="box_title AntroVectra">Invariant Value</p>
+        <ul>
+          {% for collection in collections %}
+            {% if collection.handle == 'items' %}
+              {% for product in collection.products %}
+                <li>
+                  <a href="{{ product.url }}">
+                    <figure>
+                      <picture><source srcset="{{ product.featured_image | product_img_url: 'master' }}" media="(min-width: 768px)" /><source srcset="{{ product.featured_image | product_img_url: 'master' }}" media="(max-width: 767px)" /><img src="{{ product.featured_image | product_img_url: 'master' }}" alt=""></picture>
+                    </figure>
+                    <div class="txt">
+                      <h3>{{ product.title }}</h3>
+                      <p class="price en">
+                        {% comment %} <span class="yen">¥</span> {% endcomment %}
+                        {{ product.price | money }}</p>
+                      <span class="viewmore en">VIEW MORE</span>
+                    </div>
+                  </a>
+                </li>
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+        {% comment %} <ul>
+        <li><a href=""><figure><picture><source srcset="./images/top/top04_img01.jpg" media="(min-width: 768px)" /><source srcset="./images/top/top04_img01_sp.jpg" media="(max-width: 767px)" /><img src="./images/top/top04_img01.jpg" alt=""></picture></figure><div class="txt"><h3>クイーンアン　アームチェア</h3><p class="price en"><span class="yen">¥</span>55,000</p><span class="viewmore en">VIEW MORE</span></div></a></li>
+        <li><a href=""><figure><picture><source srcset="./images/top/top04_img02.jpg" media="(min-width: 768px)" /><source srcset="./images/top/top04_img02_sp.jpg" media="(max-width: 767px)" /><img src="./images/top/top04_img02.jpg" alt=""></picture></figure><div class="txt"><h3>クイーンアン　アームチェア</h3><p class="price en"><span class="yen">¥</span>55,000</p><span class="viewmore en">VIEW MORE</span></div></a></li>
+        <li><a href=""><figure><picture><source srcset="./images/top/top04_img03.jpg" media="(min-width: 768px)" /><source srcset="./images/top/top04_img03_sp.jpg" media="(max-width: 767px)" /><img src="./images/top/top04_img03.jpg" alt=""></picture></figure><div class="txt"><h3>クイーンアン　アームチェア</h3><p class="price en"><span class="yen">¥</span>55,000</p><span class="viewmore en">VIEW MORE</span></div></a></li>
+        <li><a href=""><figure><picture><source srcset="./images/top/top04_img04.jpg" media="(min-width: 768px)" /><source srcset="./images/top/top04_img04_sp.jpg" media="(max-width: 767px)" /><img src="./images/top/top04_img04.jpg" alt=""></picture></figure><div class="txt"><h3>クイーンアン　アームチェア</h3><p class="price en"><span class="yen">¥</span>55,000</p><span class="viewmore en">VIEW MORE</span></div></a></li>
+        <li><a href=""><figure><picture><source srcset="./images/top/top04_img05.jpg" media="(min-width: 768px)" /><source srcset="./images/top/top04_img05_sp.jpg" media="(max-width: 767px)" /><img src="./images/top/top04_img05.jpg" alt=""></picture></figure><div class="txt"><h3>クイーンアン　アームチェア</h3><p class="price en"><span class="yen">¥</span>55,000</p><span class="viewmore en">VIEW MORE</span></div></a></li>
+        <li><a href=""><figure><picture><source srcset="./images/top/top04_img06.jpg" media="(min-width: 768px)" /><source srcset="./images/top/top04_img06_sp.jpg" media="(max-width: 767px)" /><img src="./images/top/top04_img06.jpg" alt=""></picture></figure><div class="txt"><h3>クイーンアン　アームチェア</h3><p class="price en"><span class="yen">¥</span>55,000</p><span class="viewmore en">VIEW MORE</span></div></a></li>
+        <li><a href=""><figure><picture><source srcset="./images/top/top04_img07.jpg" media="(min-width: 768px)" /><source srcset="./images/top/top04_img07_sp.jpg" media="(max-width: 767px)" /><img src="./images/top/top04_img07.jpg" alt=""></picture></figure><div class="txt"><h3>クイーンアン　アームチェア</h3><p class="price en"><span class="yen">¥</span>55,000</p><span class="viewmore en">VIEW MORE</span></div></a></li>
+        <li><a href=""><figure><picture><source srcset="./images/top/top04_img08.jpg" media="(min-width: 768px)" /><source srcset="./images/top/top04_img08_sp.jpg" media="(max-width: 767px)" /><img src="./images/top/top04_img08.jpg" alt=""></picture></figure><div class="txt"><h3>クイーンアン　アームチェア</h3><p class="price en"><span class="yen">¥</span>55,000</p><span class="viewmore en">VIEW MORE</span></div></a></li>
+        <li><a href=""><figure><picture><source srcset="./images/top/top04_img09.jpg" media="(min-width: 768px)" /><source srcset="./images/top/top04_img09_sp.jpg" media="(max-width: 767px)" /><img src="./images/top/top04_img09.jpg" alt=""></picture></figure><div class="txt"><h3>クイーンアン　アームチェア</h3><p class="price en"><span class="yen">¥</span>55,000</p><span class="viewmore en">VIEW MORE</span></div></a></li>
+        </ul> {% endcomment %}
+      </div>
+      <div class="btn fadein">
+        <a href="/items" class="en">
+          <span>all items</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="top04_inner02_bg">
+      <div class="top04_inner02 fadein">
+        <div class="item">
+          <div class="heading">
+            <span class="en_h en">ERCOL</span>
+            <h3>アーコール</h3>
+          </div>
+          <figure>
+            <picture>
+              <source srcset="./images/top/top04_img10.png" media="(min-width: 768px)" />
+              <source srcset="./images/top/top04_img10_sp.png" media="(max-width: 767px)" />
+              <img src="./images/top/top04_img10.png" alt="">
+            </picture>
+          </figure>
+          <div class="txt">
+            <p>
+              英国人気家具ブランドのErcol（アーコール）。<br>独特な美しさで、置いているだけで雰囲気がある、そんな魅力を持っています。特集ページにてまとめてご覧いただけます。
+            </p>
+            <a href="#" class="en">view more</a>
+          </div>
+        </div>
+        <div class="item re">
+          <div class="heading">
+            <span class="en_h en">SECOND <br class="is_sp">RATE SALE</span>
+            <h3>B品セール</h3>
+          </div>
+          <figure>
+            <picture>
+              <source srcset="./images/top/top04_img11.png" media="(min-width: 768px)" />
+              <source srcset="./images/top/top04_img11_sp.png" media="(max-width: 767px)" />
+              <img src="./images/top/top04_img11.png" alt="">
+            </picture>
+          </figure>
+          <div class="txt">
+            <p>
+              B品の家具や雑貨を期間限定でお得なセール価格にてご提供致します。
+            </p>
+            <a href="#" class="en">view more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "top04-newarrival",
+    "presets": [
+      {
+        "name": "top04-newarrival"
+      }
+    ]
+  }
+{% endschema %}

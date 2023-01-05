@@ -1,0 +1,156 @@
+<section class="top03">
+  <div class="top03_inner">
+    <div class="section_title vertical white fadein">
+      <span class="en">category</span>
+      <h2>カテゴリー</h2>
+    </div>
+    <div class="box fadein">
+      <div class="item">
+        <a href="/collections/{{ section.settings.top-collection }}">
+          <div class="item_h_wrap">
+            <div class="item_h">
+              <span class="en">{{ section.settings.collection-head }}</span>
+              <h3>{{ section.settings.collection-sub-head }}</h3>
+            </div>
+          </div>
+          <div class="figure_wrap">
+            <figure>
+              <img src="{{ section.settings.collection-img | img_url: 'master' }}" alt="">
+            </figure>
+            <span class="category en">CATEGORY / 01</span>
+          </div>
+        </a>
+      </div>
+      <div class="item">
+        <a href="/collections/{{ section.settings.top-collection02 }}">
+          <div class="item_h_wrap">
+            <div class="item_h">
+              <span class="en">{{ section.settings.collection-head02 }}</span>
+              <h3 class="small">{{ section.settings.collection-sub-head02 }}</h3>
+            </div>
+          </div>
+          <div class="figure_wrap">
+            <figure>
+              <img src="{{ section.settings.collection-img02 | img_url: 'master' }}" alt="">
+            </figure>
+            <span class="category en">CATEGORY / 02</span>
+          </div>
+        </a>
+      </div>
+      <div class="item row_h">
+        <a href="/collections/{{ section.settings.top-collection03 }}">
+          <div class="item_h_wrap">
+            <div class="item_h">
+              <span class="en">{{ section.settings.collection-head03 }}</span>
+              <h3>{{ section.settings.collection-sub-head03 }}</h3>
+            </div>
+          </div>
+          <div class="figure_wrap">
+            <figure>
+              <img src="{{ section.settings.collection-img03 | img_url: 'master' }}" alt="">
+            </figure>
+            <span class="category en">CATEGORY / 03</span>
+          </div>
+        </a>
+      </div>
+      <div class="item row_h">
+        <a href="/collections/{{ section.settings.top-collection04 }}">
+          <div class="item_h_wrap">
+            <div class="item_h">
+              <span class="en">{{ section.settings.collection-head04 }}</span>
+              <h3>{{ section.settings.collection-sub-head04 }}</h3>
+            </div>
+          </div>
+          <div class="figure_wrap">
+            <figure>
+              <img src="{{ section.settings.collection-img04 | img_url: 'master' }}" alt="">
+            </figure>
+            <span class="category en">CATEGORY / 04</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "top03-category",
+    "settings": [
+      {
+        "type": "collection",
+        "id": "top-collection",
+        "label": "表示するカテゴリーを選択してください"
+      },
+      {
+        "type": "image_picker",
+        "id": "collection-img",
+        "label": "画像を選択してください"
+      },
+      {
+        "type": "text",
+        "id": "collection-head",
+        "label": "大文字英語でカテゴリー名を記入してください"
+      },
+      {
+        "type": "text",
+        "id": "collection-sub-head",
+        "label": "日本語でカテゴリー名を記入してください"
+      }, {
+        "type": "collection",
+        "id": "top-collection02",
+        "label": "表示するカテゴリーを選択してください"
+      }, {
+        "type": "image_picker",
+        "id": "collection-img02",
+        "label": "画像を選択してください"
+      }, {
+        "type": "text",
+        "id": "collection-head02",
+        "label": "大文字英語でカテゴリー名を記入してください"
+      }, {
+        "type": "text",
+        "id": "collection-sub-head02",
+        "label": "日本語でカテゴリー名を記入してください"
+      }, {
+        "type": "collection",
+        "id": "top-collection03",
+        "label": "表示するカテゴリーを選択してください"
+      }, {
+        "type": "image_picker",
+        "id": "collection-img03",
+        "label": "画像を選択してください"
+      }, {
+        "type": "text",
+        "id": "collection-head03",
+        "label": "大文字英語でカテゴリー名を記入してください"
+      }, {
+        "type": "text",
+        "id": "collection-sub-head03",
+        "label": "日本語でカテゴリー名を記入してください"
+      }, {
+        "type": "collection",
+        "id": "top-collection04",
+        "label": "表示するカテゴリーを選択してください"
+      }, {
+        "type": "image_picker",
+        "id": "collection-img04",
+        "label": "画像を選択してください"
+      }, {
+        "type": "text",
+        "id": "collection-head04",
+        "label": "大文字英語でカテゴリー名を記入してください"
+      }, {
+        "type": "text",
+        "id": "collection-sub-head04",
+        "label": "日本語でカテゴリー名を記入してください"
+      }
+    ],
+    "presets": [
+      {
+        "name": "top03-category"
+      }
+    ]
+  }
+{% endschema %}

@@ -816,7 +816,7 @@ footer .footer_inner .copyright {
   height: auto;
 }
 .top02::before {
-  background: url(../images/common/bg01.jpg) center center/auto repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg) center center/auto repeat;
 }
 .top02::after {
   height: 68.5%;
@@ -924,7 +924,7 @@ footer .footer_inner .copyright {
   padding: 86px 0 80px;
 }
 .top03::before {
-  background: url(../images/common/bg02.jpg) center center/auto repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg02.jpg) center center/auto repeat;
 }
 .top03::after {
   width: 75%;
@@ -1007,7 +1007,7 @@ footer .footer_inner .copyright {
   padding: 0;
 }
 .top04::before {
-  background: url(../images/common/bg01.jpg) center center/auto repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg) center center/auto repeat;
 }
 .top04 .top04_bg {
   padding: 84px 20px 75px;
@@ -1069,6 +1069,9 @@ footer .footer_inner .copyright {
 }
 .top04 .top04_bg .top04_inner01 .box ul li:nth-of-type(8) {
   border-radius: 0 0 25px 0;
+}
+.top04 .top04_bg .top04_inner01 .box ul li:nth-of-type(n+9) {
+  display: none;
 }
 .top04 .top04_bg .top04_inner01 .box ul li a .txt {
   display: none;
@@ -1148,7 +1151,7 @@ footer .footer_inner .copyright {
   padding: 80px 20px 80px;
 }
 .top05::before {
-  background: url(../images/common/bg02.jpg) center center/auto repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg02.jpg) center center/auto repeat;
 }
 .top05::after {
   content: "";

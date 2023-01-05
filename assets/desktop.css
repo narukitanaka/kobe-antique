@@ -1585,7 +1585,7 @@ footer .footer_inner .copyright p {
   width: 100%;
   height: 100%;
   content: "";
-  background: url(../images/common/bg01.jpg) center center/contain repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg) center center/contain repeat;
   z-index: -2;
 }
 .top02::after {
@@ -1783,7 +1783,7 @@ footer .footer_inner .copyright p {
   width: 100%;
   height: 100%;
   content: "";
-  background: url(../images/common/bg02.jpg) center center/contain repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg02.jpg) center center/contain repeat;
   z-index: -2;
 }
 .top03::after {
@@ -2060,7 +2060,7 @@ footer .footer_inner .copyright p {
   width: 100%;
   height: 100%;
   content: "";
-  background: url(../images/common/bg01.jpg) center center/contain repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg) center center/contain repeat;
   z-index: -2;
 }
 .top04 .top04_inner01 {
@@ -2151,6 +2151,9 @@ footer .footer_inner .copyright p {
 }
 .top04 .top04_inner01 .box ul li:last-of-type {
   border-radius: 0 0 50px 0;
+}
+.top04 .top04_inner01 .box ul li:nth-of-type(n+10) {
+  display: none;
 }
 .top04 .top04_inner01 .box ul li a {
   position: relative;
@@ -2483,7 +2486,7 @@ footer .footer_inner .copyright p {
   width: 100%;
   height: 100%;
   content: "";
-  background: url(../images/common/bg02.jpg) center center/contain repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg02.jpg) center center/contain repeat;
   z-index: -2;
 }
 .top05::after {

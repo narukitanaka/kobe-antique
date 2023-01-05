@@ -4,9 +4,43 @@
       "type": "top01-mv",
       "settings": {
       }
+    },
+    "b1800d80-434b-4f84-a8d0-b0d622262eb1": {
+      "type": "top02-about",
+      "settings": {
+      }
+    },
+    "7d829476-8cd8-4f04-9974-bfce7bc6d5dc": {
+      "type": "top03-category",
+      "settings": {
+        "top-collection": "チェア",
+        "collection-img": "shopify:\/\/shop_images\/top03_img01.jpg",
+        "collection-head": "CHAIR",
+        "collection-sub-head": "チェア",
+        "top-collection02": "テーブル",
+        "collection-img02": "shopify:\/\/shop_images\/top03_img02.jpg",
+        "collection-head02": "TABLE",
+        "collection-sub-head02": "テーブル",
+        "top-collection03": "チェスト",
+        "collection-img03": "shopify:\/\/shop_images\/top03_img03.jpg",
+        "collection-head03": "CHEST",
+        "collection-sub-head03": "チェスト",
+        "top-collection04": "キャビネット",
+        "collection-img04": "shopify:\/\/shop_images\/top03_img04.jpg",
+        "collection-head04": "CABINET",
+        "collection-sub-head04": "キャビン"
+      }
+    },
+    "c5ed02cd-f817-43c1-86c7-19cbad80fa13": {
+      "type": "top04-newarrival",
+      "settings": {
+      }
     }
   },
   "order": [
-    "6f573fb3-4b2c-48f2-b7c8-d9722f3d31ce"
+    "6f573fb3-4b2c-48f2-b7c8-d9722f3d31ce",
+    "b1800d80-434b-4f84-a8d0-b0d622262eb1",
+    "7d829476-8cd8-4f04-9974-bfce7bc6d5dc",
+    "c5ed02cd-f817-43c1-86c7-19cbad80fa13"
   ]
 }
