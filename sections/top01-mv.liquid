@@ -1,0 +1,77 @@
+<section class="top01 mv">
+  <div class="mv_txt en">
+    <span class="small">ANTIQUE & VINTAGE STORE</span>
+    <h2>KOBE <br class="is_sp">ANTIQUE WAREHOUSE</h2>
+    <p>
+      Antiques that have been handed down from generation to generation are used in daily life.<br class="is_pc">And
+      by treating them with care, we hope to pass them on to the next generation.
+    </p>
+  </div>
+  <div class="mv_slider">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <picture>
+            <source srcset="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/mv01.jpg" />
+            <source srcset="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/mv01.jpg" />
+            <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/mv01.jpg" class="objectCover">
+          </picture>
+        </div>
+        <div class="swiper-slide">
+          <picture>
+            <source srcset="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/mv02.jpg" media="(min-width: 768px)" />
+            <source srcset="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/mv02.jpg" media="(max-width: 767px)" />
+            <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/mv02.jpg" class="objectCover">
+          </picture>
+        </div>
+        <div class="swiper-slide">
+          <picture>
+            <source srcset="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/mv03.jpg" media="(min-width: 768px)" />
+            <source srcset="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/mv03.jpg" media="(max-width: 767px)" />
+            <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/mv03.jpg" class="objectCover">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="topic">
+    <p class="topic_title AntroVectra">Topic</p>
+    <div class="topic_slider">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          {% for article in blogs['news'].articles %}
+            <div class="swiper-slide">
+              <a href="{{ article.url }}">
+                <div class="inner">
+                  <time class="en">{{ article.created_at | date: '%Y.%m.%d' }}</time>
+                  <p class="topic_h">{{ article.title }}</p>
+                </div>
+                <span class="circle">
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/arrow.svg"
+                    alt=""
+                    class="arrow">
+                </span>
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mv_scroll">
+    <span class="mv_scroll_txt en">SCROLL</span>
+    <span class="mv_scroll_bar"></span>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "top01-mv",
+    "presets": [
+      {
+        "name": "top01-mv"
+      }
+    ]
+  }
+{% endschema %}
