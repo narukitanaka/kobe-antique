@@ -6,7 +6,7 @@
 ///////////////////////////////////////////////////*/
 @font-face {
   font-family: "AntroVectra";
-  src: url(../fonts/Antro_Vectra_Bolder.woff2) format("woff2"), url(../fonts/Antro_Vectra_Bolder.otf) format("opentype");
+  src: url(Antro_Vectra_Bolder.woff2) format("woff2"), url(Antro_Vectra_Bolder.otf) format("opentype");
   font-weight: bolder;
 }
 html {
@@ -273,6 +273,12 @@ a[href*="tel:"] {
   display: none;
   padding-right: 10px;
   overflow: hidden;
+  position: relative;
+}
+.side_act .act.search .inner form {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .side_act .act.search .inner input {
   border: none;
@@ -482,7 +488,7 @@ a[href*="tel:"] {
   content: "";
   width: 100%;
   height: 100%;
-  background: url(../images/common/contact_bg.jpg) center center/cover no-repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/contact_bg.jpg) center center/cover no-repeat;
   z-index: -2;
 }
 .contact_area::after {
@@ -2704,7 +2710,7 @@ footer .footer_inner .copyright p {
   width: 100%;
   height: 100%;
   content: "";
-  background: url(../images/common/bg01.jpg) center center/contain repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg) center center/contain repeat;
   z-index: -2;
 }
 .top06::after {
@@ -3032,7 +3038,7 @@ footer .footer_inner .copyright p {
   width: 100%;
   height: 100%;
   content: "";
-  background: url(../images/common/bg02.jpg) center center/contain repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg02.jpg) center center/contain repeat;
   z-index: -2;
 }
 .top07 .top07_inner {
@@ -3191,14 +3197,14 @@ footer .footer_inner .copyright p {
   }
 }
 .top07 .top07_inner .slider .swiper-container .swiper-button .swiper-button-prev {
-  background-image: url(../images/common/swiper_prev.png);
+  background-image: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/swiper_prev.png);
   left: 0;
 }
 .top07 .top07_inner .slider .swiper-container .swiper-button .swiper-button-prev::after {
   content: none;
 }
 .top07 .top07_inner .slider .swiper-container .swiper-button .swiper-button-next {
-  background-image: url(../images/common/swiper_next.png);
+  background-image: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/swiper_next.png);
   right: 0;
 }
 .top07 .top07_inner .slider .swiper-container .swiper-button .swiper-button-next::after {
@@ -4469,7 +4475,7 @@ footer .footer_inner .copyright p {
   width: 100%;
   height: 100%;
   content: "";
-  background: url(../images/common/bg01.jpg) center center/contain repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg) center center/contain repeat;
   z-index: -2;
 }
 .about02::after {
@@ -4828,7 +4834,7 @@ footer .footer_inner .copyright p {
   width: 100%;
   height: 100%;
   content: "";
-  background: url(../images/common/bg02.jpg) center center/contain repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg02.jpg) center center/contain repeat;
   z-index: -2;
 }
 .about03::after {
@@ -5122,7 +5128,7 @@ footer .footer_inner .copyright p {
   width: 100%;
   height: 100%;
   content: "";
-  background: url(../images/common/bg01.jpg) center center/contain repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg) center center/contain repeat;
   z-index: -2;
 }
 .about04::after {
@@ -5417,7 +5423,7 @@ footer .footer_inner .copyright p {
   width: 100%;
   height: 100%;
   content: "";
-  background: url(../images/common/bg02.jpg) center center/contain repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg02.jpg) center center/contain repeat;
   z-index: -2;
 }
 .about05::after {
@@ -5550,7 +5556,7 @@ footer .footer_inner .copyright p {
   width: 100%;
   height: 100%;
   content: "";
-  background: url(../images/common/bg02.jpg) center center/contain repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg02.jpg) center center/contain repeat;
   z-index: -2;
 }
 .about06::after {
@@ -5686,7 +5692,7 @@ footer .footer_inner .copyright p {
   width: 100%;
   height: 100%;
   content: "";
-  background: url(../images/common/bg01.jpg) center center/contain repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg) center center/contain repeat;
   z-index: -2;
 }
 .repair02::after {
@@ -5852,7 +5858,7 @@ footer .footer_inner .copyright p {
   width: 100%;
   height: 100%;
   content: "";
-  background: url(../images/common/bg02.jpg) center center/contain repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg02.jpg) center center/contain repeat;
   z-index: -2;
 }
 .repair03 .repair03_inner {
@@ -6085,7 +6091,7 @@ footer .footer_inner .copyright p {
   width: 100%;
   height: 100%;
   content: "";
-  background: url(../images/common/bg01.jpg) center center/contain repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg) center center/contain repeat;
   z-index: -2;
 }
 .repair04 .box01_bg {
@@ -6731,7 +6737,7 @@ footer .footer_inner .copyright p {
   width: 100%;
   height: 100%;
   content: "";
-  background: url(../images/common/bg01.jpg) center center/contain repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg) center center/contain repeat;
   z-index: -2;
 }
 .rental02 .rental02_inner {
@@ -6914,7 +6920,7 @@ footer .footer_inner .copyright p {
   width: 100%;
   height: 100%;
   content: "";
-  background: url(../images/common/bg02.jpg) center center/contain repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg02.jpg) center center/contain repeat;
   z-index: -2;
 }
 .rental03::after {
@@ -7146,7 +7152,7 @@ footer .footer_inner .copyright p {
   width: 100%;
   height: 100%;
   content: "";
-  background: url(../images/common/bg01.jpg) center center/contain repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg) center center/contain repeat;
   z-index: -2;
 }
 .shop_cordinate02::after {
@@ -7353,7 +7359,7 @@ footer .footer_inner .copyright p {
   width: 100%;
   height: 100%;
   content: "";
-  background: url(../images/common/bg02.jpg) center center/contain repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg02.jpg) center center/contain repeat;
   z-index: -2;
 }
 .shop_cordinate03::after {
@@ -7591,7 +7597,7 @@ footer .footer_inner .copyright p {
   width: 100%;
   height: 100%;
   content: "";
-  background: url(../images/common/bg01.jpg) center center/contain repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg) center center/contain repeat;
   z-index: -2;
 }
 .shop_cordinate04::after {
@@ -8120,7 +8126,7 @@ footer .footer_inner .copyright p {
   width: 100%;
   height: 100%;
   content: "";
-  background: url(../images/common/bg01.jpg) center center/contain repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg) center center/contain repeat;
   z-index: -2;
 }
 .shop_access02 .shop_access02_bg {
@@ -8543,7 +8549,7 @@ footer .footer_inner .copyright p {
   width: 100%;
   height: 100%;
   content: "";
-  background: url(../images/common/bg02.jpg) center center/contain repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg02.jpg) center center/contain repeat;
   z-index: -2;
 }
 .shop_access03 .shop_access03_wrap::after {
@@ -8694,7 +8700,7 @@ footer .footer_inner .copyright p {
   width: 100%;
   height: 100%;
   content: "";
-  background: url(../images/common/bg01.jpg) center center/contain repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg) center center/contain repeat;
   z-index: -2;
 }
 .shop_access04::after {
@@ -9427,7 +9433,7 @@ footer .footer_inner .copyright p {
   width: 100%;
   height: 100%;
   content: "";
-  background: url(../images/common/bg01.jpg) center center/contain repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg) center center/contain repeat;
   z-index: -2;
 }
 .privacypolicy02 .privacypolicy02_in {
@@ -9517,7 +9523,7 @@ footer .footer_inner .copyright p {
   width: 100%;
   height: 100%;
   content: "";
-  background: url(../images/common/bg01.jpg) center center/contain repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg) center center/contain repeat;
   z-index: -2;
 }
 .transaction02 .transaction02_in {

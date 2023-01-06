@@ -35,12 +35,42 @@
       "type": "top04-newarrival",
       "settings": {
       }
+    },
+    "d348f21a-f33f-4d44-b7ad-5caecbec7459": {
+      "type": "top05_service",
+      "settings": {
+      }
+    },
+    "8bd3db5f-41a7-403d-b658-a1c0adfb88d8": {
+      "type": "top06-shop-warehouse",
+      "settings": {
+      }
+    },
+    "002e69d5-9bcd-4bc2-87eb-3af7c0898731": {
+      "type": "top07-blog",
+      "settings": {
+      }
+    },
+    "ac647815-abec-4fcc-b380-300b7774b748": {
+      "type": "top08-contact",
+      "settings": {
+      }
+    },
+    "84081186-da4d-486f-b29c-5a8132aa58fc": {
+      "type": "top09-chat-side",
+      "settings": {
+      }
     }
   },
   "order": [
     "6f573fb3-4b2c-48f2-b7c8-d9722f3d31ce",
     "b1800d80-434b-4f84-a8d0-b0d622262eb1",
     "7d829476-8cd8-4f04-9974-bfce7bc6d5dc",
-    "c5ed02cd-f817-43c1-86c7-19cbad80fa13"
+    "c5ed02cd-f817-43c1-86c7-19cbad80fa13",
+    "d348f21a-f33f-4d44-b7ad-5caecbec7459",
+    "8bd3db5f-41a7-403d-b658-a1c0adfb88d8",
+    "002e69d5-9bcd-4bc2-87eb-3af7c0898731",
+    "ac647815-abec-4fcc-b380-300b7774b748",
+    "84081186-da4d-486f-b29c-5a8132aa58fc"
   ]
 }

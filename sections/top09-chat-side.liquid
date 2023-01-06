@@ -1,0 +1,52 @@
+<div class="chat">
+  <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_chat.svg" alt="">
+  <span class="en">chat</span>
+</div>
+<div class="side_act">
+  <div class="act tel">
+    <span class="act_txt en">tel</span>
+    <div class="act_inner">
+      <span class="icon" id="open01">
+        <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_tel.svg" alt="">
+      </span>
+      <a
+        href="tel:078-224-5444"
+        class="inner en"
+        id="inner01">
+        <p class="tel_number">078-224-5444</p>
+        <p class="time">10:00 - 17:00</p>
+      </a>
+    </div>
+  </div>
+  <div class="act search">
+    <span class="act_txt en">search</span>
+    <div class="act_inner">
+      <span class="icon" id="open02">
+        <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_search.svg" alt="">
+      </span>
+      <div class="inner" id="inner02">
+        <form
+          action="/serch"
+          method="get"
+          role="search">
+          <input type="text" placeholder="サイト内を検索">
+          <input
+            type="hidden"
+            name="type"
+            value="product">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "top09-chat-side",
+    "presets": [
+      {
+        "name": "top09-chat-side"
+      }
+    ]
+  }
+{% endschema %}

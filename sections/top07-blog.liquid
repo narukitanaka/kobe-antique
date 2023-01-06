@@ -1,0 +1,56 @@
+<section class="top07">
+  <div class="top07_inner">
+    <div class="section_title white horizontal fadein">
+      <span class="en">blog</span>
+      <h2>ブログ</h2>
+    </div>
+    <div class="slider">
+      <div class="swiper-container fadein">
+        <div class="swiper-wrapper">
+          {% for article in blogs['news'].articles %}
+            <div class="swiper-slide">
+              <a href="{{ article.url }}">
+                <figure>
+                  <img src="{{ article.image.src | img_url: 'master' }} " alt="">
+                </figure>
+                <div class="txt">
+                  <h3>{{ article.title }}</h3>
+                  <div class="inner">
+                    <div class="info">
+                      <span class="category en">{{ article.tags }}
+                      </span>
+                      <span class="date en">
+                        <time>{{ article.created_at | date: '%Y.%m.%d' }}</time>
+                        up</span>
+                    </div>
+                    <span href="{{ article.url }}" class="readmore en">read more</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="swiper-button">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="btn fadein">
+    <a href="/pages/topics" class="en">
+      <span>view more</span>
+    </a>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "top07-blog",
+    "presets": [
+      {
+        "name": "top07-blog"
+      }
+    ]
+  }
+{% endschema %}

@@ -40,20 +40,24 @@
       <div class="swiper-container">
         <div class="swiper-wrapper">
           {% for article in blogs['news'].articles %}
-            <div class="swiper-slide">
-              <a href="{{ article.url }}">
-                <div class="inner">
-                  <time class="en">{{ article.created_at | date: '%Y.%m.%d' }}</time>
-                  <p class="topic_h">{{ article.title }}</p>
+            {% for tag in article.tags %}
+              {% if tag == 'INFORMAITION' %}
+                <div class="swiper-slide">
+                  <a href="{{ article.url }}">
+                    <div class="inner">
+                      <time class="en">{{ article.created_at | date: '%Y.%m.%d' }}</time>
+                      <p class="topic_h">{{ article.title }}</p>
+                    </div>
+                    <span class="circle">
+                      <img
+                        src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/arrow.svg"
+                        alt=""
+                        class="arrow">
+                    </span>
+                  </a>
                 </div>
-                <span class="circle">
-                  <img
-                    src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/arrow.svg"
-                    alt=""
-                    class="arrow">
-                </span>
-              </a>
-            </div>
+              {% endif %}
+            {% endfor %}
           {% endfor %}
         </div>
       </div>
