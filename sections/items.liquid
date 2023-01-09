@@ -1,6 +1,11 @@
 <!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ すべての商品01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
 <section class="items01">
-  {% paginate collection.products by 16 %}
+  {% if cart.attributes.pagination != blank %}
+    {%- assign limit = cart.attributes.pagination %}
+  {% else %}
+    {% assign limit = 16 -%}
+  {% endif %}
+  {% paginate collection.products by limit %}
     <div class="breadcrumbs">
       <ol
         itemscope
@@ -102,11 +107,16 @@
           </div>
           <div class="category_box" id="js-category-box">
             <ul>
-              {% for collection in collections %}
+              {% for block in section.blocks %}
+                <li>
+                  <a href="{{ block.settings.category_url }}">{{ block.settings.category_title }}</a>
+                </li>
+              {% endfor %}
+              {% comment %} {% for collection in collections %}
                 <li>
                   <a href="{{ collection.url }}">{{ collection.title }}</a>
                 </li>
-              {% endfor %}
+              {% endfor %} {% endcomment %}
             </ul>
           </div>
           <div class="toolbar">
@@ -134,17 +144,56 @@
                 <div class="inner">
                   <p>表示件数</p>
                   <div class="number">
-                    <select name="" id="">
+                    {% comment %} <select name="" id="">
                       <option value="48件">48件</option>
+                    </select> {% endcomment %}
+                    <select name='paginateBy' id='paginateBy' class='collection-sort__input filters-toolbar__input'> 
+                      {% for i in (16..16) %} {% assign v = i | append: '' %} 
+                    <option value='{{ v }}'
+                      {% if cart.attributes.pagination != blank and cart.attributes.pagination %}
+                        {% if cart.attributes.pagination == v %} selected{% endif %}
+                      {% else %}
+                        {% if i == 40 %} selected{% endif %}
+                      {% endif %}>{{ i }} 件 </option> 
+                      {% endfor %}  
+                      {% for i in (32..32) %} {% assign v = i | append: '' %} 
+                    <option value='{{ v }}'
+                      {% if cart.attributes.pagination != blank and cart.attributes.pagination %}
+                        {% if cart.attributes.pagination == v %} selected{% endif %}
+                      {% else %}
+                        {% if i == 40 %} selected{% endif %}
+                      {% endif %}>{{ i }} 件 </option> 
+                      {% endfor %}  
+                      {% for i in (48..48) %} {% assign v = i | append: '' %} 
+                    <option value='{{ v }}'
+                      {% if cart.attributes.pagination != blank and cart.attributes.pagination %}
+                        {% if cart.attributes.pagination == v %} selected{% endif %}
+                      {% else %}
+                        {% if i == 40 %} selected{% endif %}
+                      {% endif %}>{{ i }} 件 </option> 
+                      {% endfor %}
+                      {% for i in (64..64) %} {% assign v = i | append: '' %} 
+                    <option value='{{ v }}'
+                      {% if cart.attributes.pagination != blank and cart.attributes.pagination %}
+                        {% if cart.attributes.pagination == v %} selected{% endif %}
+                      {% else %}
+                        {% if i == 40 %} selected{% endif %}
+                      {% endif %}>{{ i }} 件 </option> 
+                      {% endfor %}
                     </select>
                   </div>
                 </div>
                 <div class="inner">
                   <p>並び順</p>
                   <div class="select">
-                    <select name="" id="">
-                      <option value="新着順">新着順</option>
+                    <form  id="FacetSortForm">
+                    {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+                    <select name="sort_by" id="SortBy" aria-describedby="a11y-refresh-page-message">
+                      {%- for option in collection.sort_options -%}
+                      <option value="{{ option.value }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name }}</option>
+                      {%- endfor -%}
                     </select>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -195,43 +244,80 @@
             </ul>
           </div>
           {% if paginate.pages > 1 %}
-            {% comment %} <div class="pagination">
-            <ul>
-            <li class="prev">
-            <a href="#" clsass="en">prev</a>
-            </li>
-            <li>
-            <a href="#" class="en">1</a>
-            </li>
-            <li>
-            <span class="en">2</span>
-            </li>
-            <li>
-            <a href="#" class="en">3</a>
-            </li>
-            <li>
-            <span class="dott" class="en">…</span>
-            </li>
-            <li>
-            <a href="#" class="en">10</a>
-            </li>
-            <li class="next">
-            <a href="#" clsass="en">next</a>
-            </li>
-            </ul>
-            </div> {% endcomment %}
             {% render "pagination", paginate: paginate %}
           {% endif %}
         </div>
       </div>
     </div>
+    
   {% endpaginate %}
 </section>
 <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ すべての商品01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
 
+
+{% javascript %}
+  /* Bind a change event to the dropdown */
+  $('#paginateBy').on('change', function(){
+  /* Get the current value. Some value validation could be added here (but we don't) */
+  var val = $(this).val();
+  /* Send the value as a cart attribute via the AJAX API */
+  $.ajax({
+  type: "POST",
+  url: '/cart.js',
+  data: {"attributes[pagination]": val}, /* We are using an attribute named "pagination" */
+  success: function(d){
+  window.location.reload();
+  },
+  dataType: 'json'
+  });
+  });
+
+  
+  let parameters = {};
+  if (location.search.length) {
+    let keyValue = "";
+    let couples = location.search.substr(1).split('&');
+    for (let i = 0; i < couples.length; i++) {
+      keyValue = couples[i].split('=');
+      if (keyValue.length > 1) {
+        parameters[decodeURIComponent(keyValue[0])] = decodeURIComponent(keyValue[1]);
+      }
+    }
+  }
+
+  const selectElement = document.querySelector("#SortBy");
+  selectElement.addEventListener("change", function(event) {
+    parameters.sort_by = event.target.value;
+    const url = Object.keys(parameters).map(function(key) {
+      return encodeURIComponent(key) + '=' + encodeURIComponent(parameters[key])
+    }).join('&');
+    location.search = url;
+  });
+{% endjavascript %}
+
+
+
 {% schema %}
   {
     "name": "collection-itemlist",
+    "blocks": [
+      {
+        "name": "カテゴリー",
+        "type": "block_category",
+        "settings": [
+          {
+            "type": "collection",
+            "id": "category_url",
+            "label": "表示するカテゴリーを選択してください。"
+          },
+          {
+            "type": "text",
+            "id": "category_title",
+            "label": "カテゴリ名を記入してください。"
+          }
+        ]
+      }
+    ],
     "presets": [
       {
         "name": "collection-itemlist"

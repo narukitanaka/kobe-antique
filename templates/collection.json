@@ -30,6 +30,34 @@
     },
     "c3d06dc4-0ba5-4bca-b905-2b66bb714058": {
       "type": "items",
+      "blocks": {
+        "ecaecc5f-4250-4328-8fbe-08bc0cb50167": {
+          "type": "block_category",
+          "settings": {
+            "category_url": "allitems",
+            "category_title": "すべての商品"
+          }
+        },
+        "e10dc32f-81e1-4f13-ad8c-cc5da0618abc": {
+          "type": "block_category",
+          "settings": {
+            "category_url": "チェア",
+            "category_title": "チェア"
+          }
+        },
+        "808e94b0-c7d1-4010-a875-6fad21374631": {
+          "type": "block_category",
+          "settings": {
+            "category_url": "ビューロー-デスク",
+            "category_title": "ビューローデスク"
+          }
+        }
+      },
+      "block_order": [
+        "ecaecc5f-4250-4328-8fbe-08bc0cb50167",
+        "e10dc32f-81e1-4f13-ad8c-cc5da0618abc",
+        "808e94b0-c7d1-4010-a875-6fad21374631"
+      ],
       "settings": {
       }
     }

@@ -1699,6 +1699,7 @@ footer .footer_inner .copyright {
 }
 .items01 .items01_wrap .items01_inner .category .items_list_list ul li a figure {
   border-radius: 5px;
+  width: 100px;
 }
 .items01 .items01_wrap .items01_inner .category .items_list_list ul li a figure::before {
   content: none;

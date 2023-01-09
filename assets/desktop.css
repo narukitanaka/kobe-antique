@@ -3830,6 +3830,9 @@ footer .footer_inner .copyright p {
   overflow: hidden;
   position: relative;
 }
+.items01 .items01_wrap .items01_inner .category .items_list_grid ul li a figure img {
+  width: 100%;
+}
 .items01 .items01_wrap .items01_inner .category .items_list_grid ul li a figure::before {
   position: absolute;
   top: 0;
@@ -3926,6 +3929,7 @@ footer .footer_inner .copyright p {
   overflow: hidden;
   border-radius: 5px;
   position: relative;
+  width: 280px;
 }
 .items01 .items01_wrap .items01_inner .category .items_list_list ul li a figure::before {
   position: absolute;
@@ -3954,6 +3958,9 @@ footer .footer_inner .copyright p {
   .items01 .items01_wrap .items01_inner .category .items_list_list ul li a figure::before {
     font-size: 13px;
   }
+}
+.items01 .items01_wrap .items01_inner .category .items_list_list ul li a figure img {
+  width: 100%;
 }
 .items01 .items01_wrap .items01_inner .category .items_list_list ul li a .txt {
   color: #3e3e3e;
