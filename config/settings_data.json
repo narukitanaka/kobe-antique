@@ -159,8 +159,243 @@
         "settings": {
           "color_scheme": "background-1"
         }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+        }
+      },
+      "review": {
+        "type": "review",
+        "blocks": {
+          "19c3d1fc-758e-4a89-8513-bc4b125086ab": {
+            "type": "block_review",
+            "settings": {
+              "review_img": "shopify:\/\/shop_images\/review02_img18.jpg",
+              "review_img_sp": "shopify:\/\/shop_images\/review02_img18_sp.jpg",
+              "review_user-name": "兵庫県Y様（個人）",
+              "review_product-name": "コーナーキャビネット",
+              "review_textarea": "先程、コーナーキャビネットが届きました。 きれいにメンテナンスしていただき、ありがとうございます。 お部屋にもマッチして、とても満足しています。 また、新たな商品が搬入されたらご連絡いただければ幸いです。 この度はありがとうございました。",
+              "review_time": "2022.10.24"
+            }
+          },
+          "f13754fa-464b-48ff-b78e-4b767ec4c1ef": {
+            "type": "block_review",
+            "settings": {
+              "review_img": "shopify:\/\/shop_images\/review02_img02.jpg",
+              "review_img_sp": "shopify:\/\/shop_images\/review02_img02_sp.jpg",
+              "review_user-name": "兵庫県B様（個人）",
+              "review_product-name": "スモーカーズボウチェア&アームチェア",
+              "review_textarea": "父が50年前に購入した丸テーブルに相性ピッタリ！座り心地も抜群！３才と1才の子供達も自分達の椅子よりもよく座ります。これから何十年この椅子と毎日楽しく過ごしていきたいと思います。",
+              "review_time": "2022.9.27"
+            }
+          },
+          "2083fe18-155b-4d5d-b122-6f11aa850a0e": {
+            "type": "block_review",
+            "settings": {
+              "review_img": "shopify:\/\/shop_images\/review02_img03.jpg",
+              "review_img_sp": "shopify:\/\/shop_images\/review02_img03_sp.jpg",
+              "review_user-name": "兵庫県N様（個人）",
+              "review_product-name": "英国クラシックなブックケース",
+              "review_textarea": "奥行き、高さ、幅　探していたサイズが見つかり、ワクワクしました。全面、左右がガラス、このデザインとっても気に入りました。さあ、中には何を入れようかな？ワクワクです。ありがとうございました。",
+              "review_time": "2022.8.30"
+            }
+          },
+          "e9c9e251-e978-42f6-8234-3bfcd1a5692e": {
+            "type": "block_review",
+            "settings": {
+              "review_img": "shopify:\/\/shop_images\/review02_img04.jpg",
+              "review_img_sp": "shopify:\/\/shop_images\/review02_img04_sp.jpg",
+              "review_user-name": "東京都T様（個人）",
+              "review_product-name": "コーヒーテーブル",
+              "review_textarea": "素敵なテーブルが届きまし～た♥本当に大きさもとても良く、色も素敵でした！素敵！すてき！ステキです！ありがとうございました～蜂蜜ワックスで磨きました～うれしいです♥",
+              "review_time": "2021.12.2"
+            }
+          },
+          "50fdc5a4-fa66-4291-b749-81bbc0f7d582": {
+            "type": "block_review",
+            "settings": {
+              "review_img": "shopify:\/\/shop_images\/review02_img05.jpg",
+              "review_img_sp": "shopify:\/\/shop_images\/review02_img05_sp.jpg",
+              "review_user-name": "東京都T様（個人）",
+              "review_product-name": "コーヒーテーブル",
+              "review_textarea": "可愛いテーブルが届きました。蜂蜜ワックスで磨いてみました。とっても　気に入りました。いつも　ありがとうございます。大切に使います。",
+              "review_time": "2021.9.10"
+            }
+          },
+          "3580fd6c-9dd3-40af-8cca-c5af701e34d6": {
+            "type": "block_review",
+            "settings": {
+              "review_img": "shopify:\/\/shop_images\/review02_img06.jpg",
+              "review_img_sp": "shopify:\/\/shop_images\/review02_img06_sp.jpg",
+              "review_user-name": "神奈川県O様（個人）",
+              "review_product-name": "ホイールバックチェア",
+              "review_textarea": "先日、椅子2脚を注文しました。無事に姪の手元に届き、形状、色、座り心地、すべて完璧！！！と大変喜んでおりました。今後も時々HPを覗かせていただきます。どうも有難うございました♡",
+              "review_time": "2021.7.21"
+            }
+          },
+          "a8feb8ed-e3a0-4c4d-adb2-776533b129ab": {
+            "type": "block_review",
+            "settings": {
+              "review_img": "shopify:\/\/shop_images\/review02_img07.jpg",
+              "review_img_sp": "shopify:\/\/shop_images\/review02_img07_sp.jpg",
+              "review_user-name": "京都府N様（個人）",
+              "review_product-name": "ホイールバックチェア",
+              "review_textarea": "先日はお手配くださりありがとうございました。4月8日に確かに受けとりました。想像以上に綺麗な状態で、メンテナンスも行き届いており嬉しく思いました。ありがとうございました。大切に致します。",
+              "review_time": "2021.4.12"
+            }
+          },
+          "4c9dc9b3-0e98-4e25-8ade-11103841bfcc": {
+            "type": "block_review",
+            "settings": {
+              "review_img": "shopify:\/\/shop_images\/review02_img08.jpg",
+              "review_img_sp": "shopify:\/\/shop_images\/review02_img08_sp.jpg",
+              "review_user-name": "兵庫県K様（個人）",
+              "review_product-name": "コーヒーテーブル",
+              "review_textarea": "昨日はお引越し作業もある中、お邪魔して申し訳ありませんでした。やはり、ステキで既に家に馴染んでます(^^)また遊びに行かせていただきますね！芦屋のショップも楽しみです(^^)",
+              "review_time": "2020.12.27"
+            }
+          },
+          "6ce9359e-2ce5-45ad-939f-d34e370e8101": {
+            "type": "block_review",
+            "settings": {
+              "review_img": "shopify:\/\/shop_images\/review02_img09.jpg",
+              "review_img_sp": "shopify:\/\/shop_images\/review02_img09_sp.jpg",
+              "review_user-name": "兵庫県　Good Mood design様",
+              "review_product-name": "ディスプレイキャビネット",
+              "review_textarea": "雰囲気が素晴らしく、とても気に入って使わせて頂いております。今後ともどうぞ宜しくお願いいたします。お店様紹介：Good Mood design様神戸のジュエリーデザイナーと、職人の手から生まれるMOOD（ムード）。個性あふれるオリジナルデザインを1点1点大切に作成しているジュエリーショップです。",
+              "review_time": "2020.12.15"
+            }
+          },
+          "3aea9af3-34d1-4ea5-8e2b-834b122ca3a7": {
+            "type": "block_review",
+            "settings": {
+              "review_img": "shopify:\/\/shop_images\/review02_img10.jpg",
+              "review_img_sp": "shopify:\/\/shop_images\/review02_img10_sp.jpg",
+              "review_user-name": "三重県K様（個人）",
+              "review_product-name": "ビューロー",
+              "review_textarea": "無事にお品が届き、設置まで完了いたしました。優美な姿はまさしく貴婦人の佇まいのようです。蓋の上部部分も言われなければわからない程に綺麗に仕上げていただき嬉しく思います。ビューローというと、マホガニー特有の少し明るいお色味とカプリオールレッグが多い印象ですが、オーク材のオケージョナブルテーブルと色味を合わせたかったのと、収納力重視で探しておりましたのでまさにこちらが理想のお品になります。ご縁をいただけたことと、何よりも決め細やかなお心遣いに感謝致します。スペースの関係で家具は難しいですが、シルバー製品の雑貨などがございましたら ぜひまたご縁をいただきたく思います。本当にありがとうございました。",
+              "review_time": "2020.11.16"
+            }
+          },
+          "d01eb181-a9fa-43f8-ab28-1f5653f8695c": {
+            "type": "block_review",
+            "settings": {
+              "review_img": "shopify:\/\/shop_images\/review02_img11.jpg",
+              "review_img_sp": "shopify:\/\/shop_images\/review02_img11_sp.jpg",
+              "review_user-name": "熊本県N様（個人）",
+              "review_product-name": "コンパクトミラー",
+              "review_textarea": "先程、購入させていただきましたコンパクトミラー受け取りました。とても購入まで悩んでいた商品でして、あまり見かけないデザインでもあったので今回購入できて大変嬉しく思っております。とても素敵な商品で早速部屋に飾って楽しんでおります^_^ 細かい花や鳥の装飾がとても素敵な雰囲気です。また少し重みを感じる感じもとても気に入っております。大切にしていきたいと思います。お忙しい中、発送の件もこちらの都合にもかかわらずご対応頂き本当にありがとうございました。また気になる商品がありましたら是非購入させていただけますと嬉しく思います。この度は本当にありがとうございました！",
+              "review_time": "2020.08.27"
+            }
+          },
+          "379cc24e-55a4-4bf5-b375-6047ea457730": {
+            "type": "block_review",
+            "settings": {
+              "review_img": "shopify:\/\/shop_images\/review02_img12.jpg",
+              "review_img_sp": "shopify:\/\/shop_images\/review02_img12_sp.jpg",
+              "review_user-name": "兵庫県F様（個人）",
+              "review_product-name": "ビューローブックケース",
+              "review_textarea": "一年ほど前からビューローを探しており、しかしなかなかピンとくる品に出会えませんでしたが、偶然見かけたこちらのビューローに、一目惚れしました。とても綺麗に手入れされた状態で届き、仕事部屋に置いてみたところ、お気に入りの一角となりました。どんな本を並べようか、ウキウキしながら考えています。神戸アンティークの担当者さんも、また宅配便の担当者さん達も、丁寧に対応してくださり、安心して購入することができました。ありがとうございました。大切にさせていただきます。",
+              "review_time": "2020.08.17"
+            }
+          },
+          "f0bd228d-cfca-4b9e-a899-26b1dbd4cfbe": {
+            "type": "block_review",
+            "settings": {
+              "review_img": "shopify:\/\/shop_images\/review02_img13.jpg",
+              "review_img_sp": "shopify:\/\/shop_images\/review02_img13_sp.jpg",
+              "review_user-name": "大阪府N様（個人）",
+              "review_product-name": "調味料ケース・ポプリポット",
+              "review_textarea": "一度お店と倉庫にも行かして頂いた事ありますが、遠いのでネットショッピング出来るのは有り難いです。先日送って頂いた2つの小物、磨いたらピカピカになりました。",
+              "review_time": "2020.05.14"
+            }
+          },
+          "c031cd7a-50e2-4315-b82d-71d097edfcdb": {
+            "type": "block_review",
+            "settings": {
+              "review_img": "shopify:\/\/shop_images\/review02_img14.jpg",
+              "review_img_sp": "shopify:\/\/shop_images\/review02_img14_sp.jpg",
+              "review_user-name": "広島県T様（個人）",
+              "review_product-name": "リップスタンド",
+              "review_textarea": "先ほど、リップスタンド、到着しました。早く送ってくださってありがとうございました。インク瓶ですが、(元々大きさがぴったりで入りにくかった為)ゴールドでビンを巻いてから差し込めば、台座に嵌まることを発見！これで、日々の練習のときの相棒にいたします。美しいものと出会えて、ますます頑張れそうです。お迎えできてほんとによかったです。本当にありがとうございました。",
+              "review_time": "2020.05.15"
+            }
+          },
+          "2b017c83-7163-4881-bf2d-11d37781240c": {
+            "type": "block_review",
+            "settings": {
+              "review_img": "shopify:\/\/shop_images\/review02_img15.jpg",
+              "review_img_sp": "shopify:\/\/shop_images\/review02_img15_sp.jpg",
+              "review_user-name": "和歌山県M様（個人）",
+              "review_product-name": "ソーイングボックス",
+              "review_textarea": "長年探していたソーイングボックス。たまたま目にとまった神戸アンティークさんのInstagramで出会いました！商品紹介の画像がとても丁寧で、実物を見なくても、品物がとても良いコンディションであることが一目瞭然でした。購入後の対応もとても親切で、心から神戸アンティークさんで購入出来て良かったと思いました。一生の宝物として、大切に使います。 純和風のわが家ですが、こんな西洋の品物も何気にハマるんですよね。これからも素敵なアンティークを楽しみにしています。有難うございました。",
+              "review_time": "2020.04.27"
+            }
+          },
+          "45dca48c-62f3-4a62-9b03-ef59bdf74ed6": {
+            "type": "block_review",
+            "settings": {
+              "review_img": "shopify:\/\/shop_images\/review02_img16.jpg",
+              "review_img_sp": "shopify:\/\/shop_images\/review02_img16_sp.jpg",
+              "review_user-name": "兵庫県S様（個人）",
+              "review_product-name": "スモーカーボウチェア・スツール",
+              "review_textarea": "以前から気になっていたスモーカーズボウチェアを見に行った際、スツールも気に入って購入しました。スモーカーズボウチェアは、座り心地がよくてインテリア性もあって非常に気に入っています。スツールは何かと使い勝手もよくて、今は玄関に置いています。 トランクとスタンドで気になっているものがあるので、また見に行きます。",
+              "review_time": "2020.02.24"
+            }
+          },
+          "72871db3-8116-468b-8e22-55ced96c7d3b": {
+            "type": "block_review",
+            "settings": {
+              "review_img": "shopify:\/\/shop_images\/review02_img17.jpg",
+              "review_img_sp": "shopify:\/\/shop_images\/review02_img17_sp.jpg",
+              "review_user-name": "大阪府M様（個人）",
+              "review_product-name": "アンティークミシン",
+              "review_textarea": "アンティークミシンが無事に届きました。とても素敵なミシンをありがとうございます。家にあるシンガーのミシン台テーブルに乗せて眺めています。錆びもなく柄も綺麗に残っていて、とても美しいです。良い買い物ができて喜んでおります。有難うございました。",
+              "review_time": "2019.10.30"
+            }
+          },
+          "a00f56e0-ba31-4bcb-965e-29159f3a74f4": {
+            "type": "block_review",
+            "settings": {
+              "review_img": "shopify:\/\/shop_images\/review02_img01.jpg",
+              "review_img_sp": "shopify:\/\/shop_images\/review02_img01_sp.jpg",
+              "review_user-name": "兵庫県Y様（個人）",
+              "review_product-name": "コーナーキャビネット",
+              "review_textarea": "先程、コーナーキャビネットが届きました。 きれいにメンテナンスしていただき、ありがとうございます。 お部屋にもマッチして、とても満足しています。 また、新たな商品が搬入されたらご連絡いただければ幸いです。 この度はありがとうございました。",
+              "review_time": "2022.10.24"
+            }
+          }
+        },
+        "block_order": [
+          "19c3d1fc-758e-4a89-8513-bc4b125086ab",
+          "f13754fa-464b-48ff-b78e-4b767ec4c1ef",
+          "2083fe18-155b-4d5d-b122-6f11aa850a0e",
+          "e9c9e251-e978-42f6-8234-3bfcd1a5692e",
+          "50fdc5a4-fa66-4291-b749-81bbc0f7d582",
+          "3580fd6c-9dd3-40af-8cca-c5af701e34d6",
+          "a8feb8ed-e3a0-4c4d-adb2-776533b129ab",
+          "4c9dc9b3-0e98-4e25-8ade-11103841bfcc",
+          "6ce9359e-2ce5-45ad-939f-d34e370e8101",
+          "3aea9af3-34d1-4ea5-8e2b-834b122ca3a7",
+          "d01eb181-a9fa-43f8-ab28-1f5653f8695c",
+          "379cc24e-55a4-4bf5-b375-6047ea457730",
+          "f0bd228d-cfca-4b9e-a899-26b1dbd4cfbe",
+          "c031cd7a-50e2-4315-b82d-71d097edfcdb",
+          "2b017c83-7163-4881-bf2d-11d37781240c",
+          "45dca48c-62f3-4a62-9b03-ef59bdf74ed6",
+          "72871db3-8116-468b-8e22-55ced96c7d3b",
+          "a00f56e0-ba31-4bcb-965e-29159f3a74f4"
+        ],
+        "settings": {
+          "top-collection": "",
+          "collection-sub-head04": ""
+        }
       }
-    }
+    },
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Default": {

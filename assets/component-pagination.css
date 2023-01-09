@@ -15,8 +15,8 @@
 }
 
 .pagination__list > li {
-  flex: 1 0 4.4rem;
-  max-width: 4.4rem;
+  /* flex: 1 0 4.4rem;
+  max-width: 4.4rem; */
 }
 
 .pagination__list > li:not(:last-child) {
@@ -51,7 +51,7 @@ a.pagination__item:hover::after {
 .pagination__item:hover::after {
   content: '';
   display: block;
-  width: 2rem;
+  width: 1.5rem;
   position: absolute;
   bottom: 8px;
   left: 50%;

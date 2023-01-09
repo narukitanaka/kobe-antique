@@ -1,0 +1,133 @@
+<div class="review02_inner">
+  <div class="heading fadein">
+    <h2>ご購入いただいたお客様の声を<br class="is_sp">お届けします。</h2>
+    <p>
+      また、KOBE ANTIQUE WAREHOUSEではご購入いただいたお客様の声をお待ちしております。<br>
+      <a href="/pages/contact">問い合わせフォーム</a>よりお気軽にご相談ください。
+    </p>
+  </div>
+  <div class="box fadein">
+    <ul class="item_list">
+      {% for block in section.blocks %}
+        <li>
+          <figure>
+            <picture>
+              <source srcset="{{ block.settings.review_img | img_url: 'master' }}" media="(min-width: 768px)" />
+              <source srcset="{{ block.settings.review_img_sp | img_url: 'master' }}" media="(max-width: 767px)" />
+              <img src="{{ block.settings.review_img | img_url: 'master' }}" alt="">
+            </picture>
+          </figure>
+          <div class="txt">
+            <div class="txt_h">
+              <p class="name">{{ block.settings.review_user-name }}</p>
+              <h3>[{{ block.settings.review_product-name }}]</h3>
+            </div>
+            <p class="txt_p">
+              {{ block.settings.review_textarea }}
+            </p>
+            <time class="en">{{ block.settings.review_time }}</time>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+<div class="popup" id="popup">
+  <div class="popup_inner">
+    <div class="content_wrap">
+      <ul class="content_list">
+        {% for block in section.blocks %}
+          <li class="show">
+            <figure>
+              <picture>
+                <source srcset="{{ block.settings.review_img | img_url: 'master' }}" media="(min-width: 768px)" />
+                <source srcset="{{ block.settings.review_img_sp | img_url: 'master' }}" media="(max-width: 767px)" />
+                <img src="{{ block.settings.review_img | img_url: 'master' }}" alt="">
+              </picture>
+            </figure>
+            <div class="txt">
+              <div class="txt_h">
+                <p class="name">{{ block.settings.review_user-name }}</p>
+                <h3>[{{ block.settings.review_product-name }}]</h3>
+              </div>
+              <p class="txt_p">
+                {{ block.settings.review_textarea }}
+              </p>
+              <time class="en">{{ block.settings.review_time }}</time>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+      <div class="prev" id="prev">
+        <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/popup_prev.svg" alt="">
+      </div>
+      <div class="next" id="next">
+        <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/popup_next.svg" alt="">
+      </div>
+      <div class="cancel" id="cancel">
+        <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/cancel.svg" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "お客さまの声",
+    "settings": [
+      {
+        "type": "collection",
+        "id": "top-collection",
+        "label": "表示するカテゴリーを選択してください"
+      }, {
+        "type": "text",
+        "id": "collection-sub-head04",
+        "label": "日本語でカテゴリー名を記入してください"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "投稿内容",
+        "type": "block_review",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "review_img",
+            "label": "画像を選択してください"
+          },
+          {
+            "type": "image_picker",
+            "id": "review_img_sp",
+            "label": "スマホ用画像を選択してください"
+          },
+          {
+            "type": "text",
+            "id": "review_user-name",
+            "label": "お客様の名前",
+            "default": "○○県X様（個人）"
+          },
+          {
+            "type": "text",
+            "id": "review_product-name",
+            "label": "商品名"
+          }, {
+            "type": "textarea",
+            "id": "review_textarea",
+            "label": "説明文"
+          }, {
+            "type": "text",
+            "id": "review_time",
+            "label": "投稿日",
+            "default": "2023.01.15"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "お客さまの声"
+      }
+    ]
+  }
+{% endschema %}

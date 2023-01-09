@@ -1,0 +1,241 @@
+<!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ すべての商品01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
+<section class="items01">
+  {% paginate collection.products by 16 %}
+    <div class="breadcrumbs">
+      <ol
+        itemscope
+        itemtype="https://schema.org/BreadcrumbList"
+        class="en">
+        <li
+          itemprop="itemListElement"
+          itemscope
+          itemtype="http://schema.org/ListItem">
+          <a itemprop="item" href="/">
+            <span itemprop="name">top</span>
+          </a>
+          <meta itemprop="position" content="1" />
+        </li>
+
+        <li
+          itemprop="itemListElement"
+          itemscope
+          itemtype="http://schema.org/ListItem">
+          <span itemprop="name">all items</span>
+          <meta itemprop="position" content="3" />
+        </li>
+      </ol>
+    </div>
+    <div class="items01_wrap">
+      <div class="section_title vertical">
+        {% if collection.title == 'すべての商品' %}
+          <span class="en">{{ collection.handle }}</span>
+          <h2>{{ collection.title }}</h2>
+        {% elsif collection.title == 'チェア' %}
+          <span class="en">{{ collection.handle }}</span>
+          <h2>{{ collection.title }}</h2>
+        {% elsif collection.title == 'ビューロー・デスク' %}
+          <span class="en">{{ collection.handle }}</span>
+          <h2>{{ collection.title }}</h2>
+        {% elsif collection.title == 'ブックケース' %}
+          <span class="en">{{ collection.handle }}</span>
+          <h2>{{ collection.title }}</h2>
+        {% elsif collection.title == 'トランク' %}
+          <span class="en">{{ collection.handle }}</span>
+          <h2>{{ collection.title }}</h2>
+        {% elsif collection.title == 'シルバー雑貨' %}
+          <span class="en">{{ collection.handle }}</span>
+          <h2>{{ collection.title }}</h2>
+        {% elsif collection.title == '洋書' %}
+          <span class="en">{{ collection.handle }}</span>
+          <h2>{{ collection.title }}</h2>
+        {% elsif collection.title == '小物入れ・置物' %}
+          <span class="en">{{ collection.handle }}</span>
+          <h2>{{ collection.title }}</h2>
+        {% elsif collection.title == 'テーブル' %}
+          <span class="en">{{ collection.handle }}</span>
+          <h2>{{ collection.title }}</h2>
+        {% elsif collection.title == 'キャビネット' %}
+          <span class="en">{{ collection.handle }}</span>
+          <h2>{{ collection.title }}</h2>
+        {% elsif collection.title == 'スタンド' %}
+          <span class="en">{{ collection.handle }}</span>
+          <h2>{{ collection.title }}</h2>
+        {% elsif collection.title == 'ソーイングボックス' %}
+          <span class="en">{{ collection.handle }}</span>
+          <h2>{{ collection.title }}</h2>
+        {% elsif collection.title == '絵・看板' %}
+          <span class="en">{{ collection.handle }}</span>
+          <h2>{{ collection.title }}</h2>
+        {% elsif collection.title == 'テーブルウェア' %}
+          <span class="en">{{ collection.handle }}</span>
+          <h2>{{ collection.title }}</h2>
+        {% elsif collection.title == '雑貨その他' %}
+          <span class="en">{{ collection.handle }}</span>
+          <h2>{{ collection.title }}</h2>
+        {% elsif collection.title == 'チェスト' %}
+          <span class="en">{{ collection.handle }}</span>
+          <h2>{{ collection.title }}</h2>
+        {% elsif collection.title == 'サイドボード' %}
+          <span class="en">{{ collection.handle }}</span>
+          <h2>{{ collection.title }}</h2>
+        {% elsif collection.title == 'ミシン' %}
+          <span class="en">{{ collection.handle }}</span>
+          <h2>{{ collection.title }}</h2>
+        {% elsif collection.title == '家具その他' %}
+          <span class="en">{{ collection.handle }}</span>
+          <h2>{{ collection.title }}</h2>
+        {% elsif collection.title == 'ガレージアイテム' %}
+          <span class="en">{{ collection.handle }}</span>
+          <h2>{{ collection.title }}</h2>
+        {% elsif collection.title == 'おもちゃ' %}
+          <span class="en">{{ collection.handle }}</span>
+          <h2>{{ collection.title }}</h2>
+        {% endif %}
+      </div>
+      <div class="items01_inner">
+        <div class="category">
+          <div class="category_h" id="js-category">
+            <span class="en_h en">category</span>
+            <h3>
+              <span>カテゴリから探す</span>
+            </h3>
+          </div>
+          <div class="category_box" id="js-category-box">
+            <ul>
+              {% for collection in collections %}
+                <li>
+                  <a href="{{ collection.url }}">{{ collection.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="toolbar">
+            <p class="toolbar_txt">
+              全{{ paginate.items }}件中<br class="is_tab">
+              {% assign page_count = paginate.page_size %}
+              {% assign page_offset = paginate.current_offset | plus: 1 %}
+              {% if paginate.previous and paginate.next %}
+                {{ page_offset }}-{{ page_offset | plus: page_count }}
+              {% elsif paginate.next %}
+                1〜{{ page_count }}
+              {% elsif paginate.previous %}
+                {% if page_offset == paginate.items %}
+                  〜{{ page_offset }}
+                {% else %}
+                  {{ page_offset }}〜{{ paginate.items }}
+                {% endif %}
+              {% else %}
+                {{ paginate.items }}
+              {% endif %}
+              件を表示しています。
+            </p>
+            <div class="toolbar_item_wrap">
+              <div class="toolbar_item01">
+                <div class="inner">
+                  <p>表示件数</p>
+                  <div class="number">
+                    <select name="" id="">
+                      <option value="48件">48件</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="inner">
+                  <p>並び順</p>
+                  <div class="select">
+                    <select name="" id="">
+                      <option value="新着順">新着順</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="toolbar_item02">
+                <p>表示</p>
+                <div class="inner">
+                  <span class="icon" id="grid_btn">
+                    <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_grid.svg" alt="">
+                  </span>
+                  <span class="icon" id="list_btn">
+                    <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_list.svg" alt="">
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="items_list_grid show" id="items_list_grid">
+            <ul>
+              {% for product in collection.products %}
+                <li>
+                  <a href="{{ product.url | within: collection }}">
+                    <figure><img src="{{ product.featured_image.src | img_url: 'large' }}" alt=""></figure>
+                    <div class="txt">
+                      <p class="items_title">{{ product.title }}</p>
+                      <span class="price en">
+                        {{ product.price | money }}</span>
+                    </div>
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="items_list_list" id="items_list_list">
+            <ul>
+              {% for product in collection.products %}
+                <li>
+                  <a href="{{ product.url | within: collection }}">
+                    <figure><img src="{{ product.featured_image.src | img_url: 'large' }}" alt=""></figure>
+                    <div class="txt">
+                      <p class="items_title">{{ product.title }}</p>
+                      <span class="price en">
+                        {{ product.price | money }}</span>
+                      <p class="info">{{ product.content }}</p>
+                    </div>
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% if paginate.pages > 1 %}
+            {% comment %} <div class="pagination">
+            <ul>
+            <li class="prev">
+            <a href="#" clsass="en">prev</a>
+            </li>
+            <li>
+            <a href="#" class="en">1</a>
+            </li>
+            <li>
+            <span class="en">2</span>
+            </li>
+            <li>
+            <a href="#" class="en">3</a>
+            </li>
+            <li>
+            <span class="dott" class="en">…</span>
+            </li>
+            <li>
+            <a href="#" class="en">10</a>
+            </li>
+            <li class="next">
+            <a href="#" clsass="en">next</a>
+            </li>
+            </ul>
+            </div> {% endcomment %}
+            {% render "pagination", paginate: paginate %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endpaginate %}
+</section>
+<!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ すべての商品01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+
+{% schema %}
+  {
+    "name": "collection-itemlist",
+    "presets": [
+      {
+        "name": "collection-itemlist"
+      }
+    ]
+  }
+{% endschema %}

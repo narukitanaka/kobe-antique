@@ -1501,7 +1501,7 @@ footer .footer_inner .copyright {
   padding: 75px 20px 0;
 }
 .items01::before {
-  background: url(../images/common/bg01.jpg) center center/auto repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg) center center/auto repeat;
 }
 .items01 .breadcrumbs {
   padding: 0;
@@ -3679,7 +3679,7 @@ footer .footer_inner .copyright {
   padding: 18px 0 60px;
 }
 .review02::before {
-  background: url(../images/common/bg01.jpg) center center/auto repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg) center center/auto repeat;
 }
 .review02::after {
   bottom: 60px;

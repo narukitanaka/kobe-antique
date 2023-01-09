@@ -3512,7 +3512,7 @@ footer .footer_inner .copyright p {
   width: 100%;
   height: 100%;
   content: "";
-  background: url(../images/common/bg01.jpg) center center/contain repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg) center center/contain repeat;
   z-index: -2;
 }
 .items01 .items01_wrap {
@@ -4079,8 +4079,9 @@ footer .footer_inner .copyright p {
   letter-spacing: 0.1em;
   color: #3e3e3e;
   font-weight: bold;
-  display: block;
+  /* display: block; */
   padding: 0 12px;
+  display: flex;
 }
 .items01 .items01_wrap .items01_inner .category .pagination ul li span.dott {
   padding-top: 8px;
@@ -7785,7 +7786,7 @@ footer .footer_inner .copyright p {
   width: 100%;
   height: 100%;
   content: "";
-  background: url(../images/common/bg01.jpg) center center/contain repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg) center center/contain repeat;
   z-index: -2;
 }
 .review02::after {
@@ -7975,6 +7976,9 @@ footer .footer_inner .copyright p {
   .review02 .popup .popup_inner .content_wrap .content_list li {
     padding: 35px;
   }
+}
+.review02 .popup .popup_inner .content_wrap .content_list li figure img {
+  width: 100%;
 }
 .review02 .popup .popup_inner .content_wrap .content_list li.show {
   display: block !important;
