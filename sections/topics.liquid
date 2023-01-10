@@ -1,0 +1,116 @@
+<!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 新着情報01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+<section class="topics01 lower_mv">
+  <figure>
+    <picture>
+      <source srcset="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/mv_76698339-62b0-4da8-967a-5abe47740ab0.jpg" media="(min-width: 768px)" />
+      <source srcset="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/mv_sp_8997c21c-bd9c-45e2-a397-1655ab910e3a.jpg" media="(max-width: 767px)" />
+      <img
+        src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/mv_76698339-62b0-4da8-967a-5abe47740ab0.jpg"
+        alt=""
+        class="objectCover">
+    </picture>
+  </figure>
+  <div class="lower_mv_txt">
+    <span class="en_h en">TOPICS</span>
+    <h1>
+      <span>新着情報</span>
+    </h1>
+  </div>
+</section>
+<!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 新着情報01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+<!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 新着情報02 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+{%- paginate blog.articles by 10 -%}
+<section class="topics02">
+  <div class="breadcrumbs">
+    <ol
+      itemscope
+      itemtype="https://schema.org/BreadcrumbList"
+      class="en">
+      <li
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/ListItem">
+        <a itemprop="item" href="/">
+          <span itemprop="name">top</span>
+        </a>
+        <meta itemprop="position" content="1" />
+      </li>
+
+      <li
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/ListItem">
+        <span itemprop="name">TOPICS</span>
+        <meta itemprop="position" content="2" />
+      </li>
+    </ol>
+  </div>
+
+  <div class="topics02_outer">
+    <div class="topics02_in">
+      <ul class="category_list fadein">
+        <li class="en active">
+          <a href="/blogs/news">ALL</a>
+        </li>
+        {% for tag in blog.all_tags %}
+        <li class="en">
+          <a href="{{ blog.url }}/tagged/{{ tag }}">{{ tag }}</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+      <div class="box fadein">
+        {%- for article in blog.articles -%}
+        <a href="{{ article.url }}" class="item">
+          <figure>
+            <img src="{{ article.image.src | img_url: 'master' }}" alt="">
+          </figure>
+          <div class="inner">
+            <div class="label">
+              <p class="date en">{{ article.created_at | date: '%Y.%m.%d' }}</p>
+              <p class="cat en">
+                <span>{{ article.tags }}</span>
+              </p>
+            </div>
+            <p class="title">{{ article.title }}</p>
+          </div>
+        </a>
+        {%- endfor -%}
+      </div>
+      
+
+      {% if paginate.pages > 1 %}
+        {% render "pagination", paginate: paginate %}
+      {% endif %}
+
+    </div>
+  </div>
+</section>
+{%- endpaginate -%}
+
+
+
+<!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 新着情報02 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+<!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ cta  ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
+<section class="items03 contact_area">
+  <div class="contact_area_inner">
+    <div class="section_title white horizontal">
+      <span class="en">contact</span>
+      <h2>コンタクト</h2>
+    </div>
+    <p>商品や修理、レンタルに関する<br class="is_sp">お問い合わせなど <br class="is_sp">お気軽にお問い合わせください。</p>
+    <a href="/pages/contact"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_mail.svg" alt="">お問合せフォーム</a>
+  </div>
+</section>
+<!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ cta ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+
+{% schema %}
+  {
+    "name": "topics",
+    "presets": [
+      {
+        "name": "topics"
+      }
+    ]
+  }
+{% endschema %}

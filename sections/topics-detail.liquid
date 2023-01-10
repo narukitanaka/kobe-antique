@@ -1,0 +1,99 @@
+<!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 新着情報詳細01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+<section class="topics_detail01 lower_mv">
+  <figure>
+    <picture>
+      <source srcset="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/mv_f70df37f-ad2d-454c-8741-00a82389d65e.jpg" media="(min-width: 768px)" />
+      <source srcset="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/mv_sp_93a46ef1-b4c3-42e5-aa6e-8b0523135f06.jpg" media="(max-width: 767px)" />
+      <img
+        src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/mv_f70df37f-ad2d-454c-8741-00a82389d65e.jpg"
+        alt=""
+        class="objectCover">
+    </picture>
+  </figure>
+  <div class="lower_mv_txt">
+    <span class="en_h en">TOPICS</span>
+    <div class="sec_title">
+      <span>新着情報</span>
+    </div>
+  </div>
+</section>
+<!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 新着情報詳細01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+<!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 新着情報詳細02 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+
+<section class="topics_detail02">
+  <div class="breadcrumbs">
+    <ol
+      itemscope
+      itemtype="https://schema.org/BreadcrumbList"
+      class="en">
+      <li
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/ListItem">
+        <a itemprop="item" href="/">
+          <span itemprop="name">top</span>
+        </a>
+        <meta itemprop="position" content="1" />
+      </li>
+
+      <li
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/ListItem">
+        <a itemprop="item" href="/blogs/news">
+          <span itemprop="name">TOPICS</span>
+        </a>
+        <meta itemprop="position" content="2" />
+      </li>
+
+      <li
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/ListItem">
+        <span itemprop="name">{{ article.title }}</span>
+        <meta itemprop="position" content="3" />
+      </li>
+    </ol>
+  </div>
+
+  <div class="box fadein">
+    <div class="label">
+      <p class="date en">{{ article.created_at | date: '%Y.%m.%d' }}</p>
+      <p class="cat en">
+        <span>{{ article.tags }}</span>
+      </p>
+    </div>
+    <h1>{{ article.title }}</h1>
+    <p>
+      {{ article.content }}
+    </p>
+  </div>
+
+
+</section>
+
+
+<!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 新着情報詳細02 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+<!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ cta  ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
+<section class="items03 contact_area">
+  <div class="contact_area_inner">
+    <div class="section_title white horizontal">
+      <span class="en">contact</span>
+      <h2>コンタクト</h2>
+    </div>
+    <p>商品や修理、レンタルに関する<br class="is_sp">お問い合わせなど <br class="is_sp">お気軽にお問い合わせください。</p>
+    <a href="/pages/contact"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_mail.svg" alt="">お問合せフォーム</a>
+  </div>
+</section>
+<!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ cta ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+
+{% schema %}
+  {
+    "name": "topics-detail",
+    "presets": [
+      {
+        "name": "topics-detail"
+      }
+    ]
+  }
+{% endschema %}
