@@ -9,7 +9,7 @@
         <p class="box_title AntroVectra">Invariant Value</p>
         <ul>
           {% for collection in collections %}
-            {% if collection.handle == 'items' %}
+            {% if collection.handle == 'allitems' %}
               {% for product in collection.products %}
                 <li>
                   <a href="{{ product.url }}">

@@ -32,7 +32,9 @@
     </div>
     <div class="items01_wrap">
       <div class="section_title vertical">
-        {% if collection.title == 'すべての商品' %}
+        <span class="en">all items</span>
+          <h2>すべての商品</h2>
+        {% comment %} {% if collection.title == 'すべての商品' %}
           <span class="en">{{ collection.handle }}</span>
           <h2>{{ collection.title }}</h2>
         {% elsif collection.title == 'チェア' %}
@@ -95,7 +97,7 @@
         {% elsif collection.title == 'おもちゃ' %}
           <span class="en">{{ collection.handle }}</span>
           <h2>{{ collection.title }}</h2>
-        {% endif %}
+        {% endif %} {% endcomment %}
       </div>
       <div class="items01_inner">
         <div class="category">
@@ -214,7 +216,7 @@
             <ul>
               {% for product in collection.products %}
                 <li>
-                  <a href="{{ product.url | within: collection }}">
+                  <a href="{{ product.url }}">
                     <figure><img src="{{ product.featured_image.src | img_url: 'large' }}" alt=""></figure>
                     <div class="txt">
                       <p class="items_title">{{ product.title }}</p>
@@ -253,6 +255,19 @@
   {% endpaginate %}
 </section>
 <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ すべての商品01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+<!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ すべての商品02 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+      <!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ すべての商品03 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
+      <section class="items03 contact_area">
+        <div class="contact_area_inner">
+          <div class="section_title white horizontal">
+            <span class="en">contact</span>
+            <h2>コンタクト</h2>
+          </div>
+          <p>商品や修理、レンタルに関する<br class="is_sp">お問い合わせなど <br class="is_sp">お気軽にお問い合わせください。</p>
+          <a href="/pages/contact"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_mail.svg" alt="">お問合せフォーム</a>
+        </div>
+      </section>
+      <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ すべての商品03 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
 
 
 {% javascript %}

@@ -1410,7 +1410,7 @@ footer .footer_inner .copyright {
   padding: 80px 0 82px;
 }
 .items_common::before {
-  background: url(../images/common/bg02.jpg) center center/auto repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg02.jpg) center center/auto repeat;
 }
 .items_common::after {
   width: 84%;
@@ -1765,7 +1765,7 @@ footer .footer_inner .copyright {
   padding: 75px 20px 40px;
 }
 .items_detail01::before {
-  background: url(../images/common/bg01.jpg) center center/auto repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg) center center/auto repeat;
 }
 .items_detail01 .breadcrumbs {
   padding: 0;

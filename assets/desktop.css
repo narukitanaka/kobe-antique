@@ -2287,6 +2287,9 @@ footer .footer_inner .copyright p {
     width: 62px;
   }
 }
+.top04 .top04_inner01 ul figure img {
+  width: 100%;
+}
 .top04 .top04_inner02_bg {
   position: relative;
 }
@@ -3262,7 +3265,7 @@ footer .footer_inner .copyright p {
   content: "";
   width: 9px;
   height: 12px;
-  background: url(../images/common/pankudu.png) center center/contain no-repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/pankudu.png) center center/contain no-repeat;
 }
 .breadcrumbs ol li a {
   color: #3e3e3e;
@@ -3287,7 +3290,7 @@ footer .footer_inner .copyright p {
   width: 100%;
   height: 100%;
   content: "";
-  background: url(../images/common/bg02.jpg) center center/contain repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg02.jpg) center center/contain repeat;
   z-index: -2;
 }
 .items_common::after {
@@ -4114,7 +4117,7 @@ footer .footer_inner .copyright p {
   width: 100%;
   height: 100%;
   content: "";
-  background: url(../images/common/bg01.jpg) center center/contain repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg) center center/contain repeat;
   z-index: -2;
 }
 .items_detail01 .items_detail01_bg {
@@ -4170,6 +4173,7 @@ footer .footer_inner .copyright p {
 }
 .items_detail01 .items_detail01_bg .items_detail01_inner .box .items_img .slider .swiper-container .swiper-wrapper .swiper-slide img {
   margin-left: 1px;
+  width: 100%;
 }
 .items_detail01 .items_detail01_bg .items_detail01_inner .box .items_img .slider .swiper-container .swiper-button-prev,
 .items_detail01 .items_detail01_bg .items_detail01_inner .box .items_img .slider .swiper-container .swiper-button-next {
@@ -4183,11 +4187,11 @@ footer .footer_inner .copyright p {
   content: none;
 }
 .items_detail01 .items_detail01_bg .items_detail01_inner .box .items_img .slider .swiper-container .swiper-button-prev {
-  background: url(../images/items_detail/prev.svg) center center/contain no-repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/prev.svg) center center/contain no-repeat;
   left: 25px;
 }
 .items_detail01 .items_detail01_bg .items_detail01_inner .box .items_img .slider .swiper-container .swiper-button-next {
-  background: url(../images/items_detail/next.svg) center center/contain no-repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/next.svg) center center/contain no-repeat;
   right: 25px;
 }
 .items_detail01 .items_detail01_bg .items_detail01_inner .box .items_img .slider_thumb .swiper-container .swiper-wrapper {
