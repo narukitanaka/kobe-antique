@@ -1570,7 +1570,7 @@ footer .footer_inner .copyright {
   content: "";
   width: 13px;
   height: 8px;
-  background: url(../images/items/category_arrow.svg) center center/contain no-repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/category_arrow.svg) center center/contain no-repeat;
   transition: transform 0.3s;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -1762,7 +1762,7 @@ footer .footer_inner .copyright {
 //
 ///////////////////////////////////////////////////*/
 .items_detail01 {
-  padding: 75px 20px 40px;
+  padding: 75px 20px 35px;
 }
 .items_detail01::before {
   background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg) center center/auto repeat;
@@ -1784,10 +1784,11 @@ footer .footer_inner .copyright {
 }
 .items_detail01 .items_detail01_bg .items_detail01_inner .box {
   display: block;
-  margin-bottom: 72px;
+  margin-bottom: 0;
 }
 .items_detail01 .items_detail01_bg .items_detail01_inner .box .items_img {
   width: 100%;
+  margin-bottom: 0;
 }
 .items_detail01 .items_detail01_bg .items_detail01_inner .box .items_img .slider {
   margin-bottom: 10px;
@@ -1818,6 +1819,7 @@ footer .footer_inner .copyright {
   width: calc((100% - 40px) / 5) !important;
 }
 .items_detail01 .items_detail01_bg .items_detail01_inner .box .txt {
+  position: static;
   width: 100%;
   margin-top: 40px;
 }
@@ -1867,7 +1869,7 @@ footer .footer_inner .copyright {
   background: #fff;
   width: 100%;
   text-align: center;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.1em;
 }
@@ -1919,52 +1921,55 @@ footer .footer_inner .copyright {
   padding-right: 10px;
   letter-spacing: 0.075em;
 }
-.items_detail01 .items_detail01_bg .items_detail01_inner .info {
+.items_detail01 .items_detail01_bg .items_detail01_inner .box .info_wrap {
+  margin-top: 72px;
+}
+.items_detail01 .items_detail01_bg .items_detail01_inner .box .info_wrap .info {
   padding: 30px 0 45px 6px;
 }
-.items_detail01 .items_detail01_bg .items_detail01_inner .info.pt {
+.items_detail01 .items_detail01_bg .items_detail01_inner .box .info_wrap .info.pt {
   padding-top: 46px;
 }
-.items_detail01 .items_detail01_bg .items_detail01_inner .info .heading.column {
+.items_detail01 .items_detail01_bg .items_detail01_inner .box .info_wrap .info .heading.column {
   flex-direction: column;
   align-items: flex-start;
 }
-.items_detail01 .items_detail01_bg .items_detail01_inner .info .heading.column h2 {
+.items_detail01 .items_detail01_bg .items_detail01_inner .box .info_wrap .info .heading.column h2 {
   margin-left: 0;
   margin-top: 15px;
 }
-.items_detail01 .items_detail01_bg .items_detail01_inner .info .heading span {
+.items_detail01 .items_detail01_bg .items_detail01_inner .box .info_wrap .info .heading span {
   font-size: 20px;
   font-weight: 500;
 }
-.items_detail01 .items_detail01_bg .items_detail01_inner .info .heading h2 {
+.items_detail01 .items_detail01_bg .items_detail01_inner .box .info_wrap .info .heading h2 {
   font-size: 15px;
   padding-bottom: 3px;
   margin-left: 16px;
   font-weight: 500;
 }
-.items_detail01 .items_detail01_bg .items_detail01_inner .info h3 {
+.items_detail01 .items_detail01_bg .items_detail01_inner .box .info_wrap .info h3 {
   font-size: 14px;
   margin-bottom: 10px;
   margin-top: 28px;
 }
-.items_detail01 .items_detail01_bg .items_detail01_inner .info .detail_txt01 {
+.items_detail01 .items_detail01_bg .items_detail01_inner .box .info_wrap .info .detail_txt01 {
   margin-bottom: 28px;
 }
-.items_detail01 .items_detail01_bg .items_detail01_inner .info .detail_txt02 {
+.items_detail01 .items_detail01_bg .items_detail01_inner .box .info_wrap .info .detail_txt02 {
   font-size: 13px;
   line-height: 1.8;
 }
-.items_detail01 .items_detail01_bg .items_detail01_inner .info .detail_txt02 + .detail_txt02 {
+.items_detail01 .items_detail01_bg .items_detail01_inner .box .info_wrap .info .detail_txt02 + .detail_txt02 {
   margin-top: 16px;
 }
-.items_detail01 .items_detail01_bg .items_detail01_inner .info a {
+.items_detail01 .items_detail01_bg .items_detail01_inner .box .info_wrap .info a {
   margin-left: 15px;
 }
-.items_detail01 .items_detail01_bg .items_detail01_inner .info ul {
+.items_detail01 .items_detail01_bg .items_detail01_inner .box .info_wrap .info ul {
   margin-top: 25px;
 }
-.items_detail01 .items_detail01_bg .items_detail01_inner .info ul li {
+.items_detail01 .items_detail01_bg .items_detail01_inner .box .info_wrap .info ul li {
   line-height: 1.8;
   padding-left: 13px;
 }
@@ -3763,6 +3768,7 @@ footer .footer_inner .copyright {
 ///////////////////////////////////////////////////*/
 .shop_access02 {
   padding: 18px 0 0;
+  overflow: hidden;
 }
 .shop_access02::before {
   background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg) center center/auto repeat;
@@ -4294,7 +4300,7 @@ footer .footer_inner .copyright {
   width: 25px;
   height: 25px;
   transform: translateY(-50%);
-  background: url(../images/topics/arrow.png) center center/cover no-repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/arrow.png) center center/cover no-repeat;
 }
 .topics02 .topics02_outer .topics02_in .box .item:first-of-type {
   padding-top: 0;
@@ -4588,7 +4594,7 @@ footer .footer_inner .copyright {
   padding: 20px 0 0;
 }
 .contact02::before {
-  background: url(../images/common/bg01.jpg) center center/auto repeat;
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg) center center/auto repeat;
 }
 .contact02 .contact02_in {
   position: relative;

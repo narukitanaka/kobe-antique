@@ -166,6 +166,88 @@ $(function () {
 	});
 
 
+
+
+  //パララックス トップページ
+
+		var rellax = document.getElementsByClassName('rellax01');
+		new simpleParallax(rellax, {
+			orientation: 'down',
+			scale: 1.1,
+			overflow: true,
+			delay: 1.1,
+		});
+
+		var rellax = document.getElementsByClassName('rellax02');
+		new simpleParallax(rellax, {
+			orientation: 'down',
+			scale: 1.2,
+			overflow: true,
+			delay: 1.5,
+		});
+
+		var rellax = document.getElementsByClassName('rellax03');
+		new simpleParallax(rellax, {
+			orientation: 'down',
+			scale: 1.4,
+			overflow: true,
+			delay: 0.9,
+		});
+
+		var rellax = document.getElementsByClassName('rellax04');
+		new simpleParallax(rellax, {
+			orientation: 'down',
+			scale: 1.55,
+			overflow: true,
+			delay: 0.3,
+		});
+
+
+
+	//パララックス ショップ / アクセスページ
+
+		var rellax = document.getElementsByClassName('rellax05');
+		new simpleParallax(rellax, {
+			orientation: 'down',
+			scale: 1.1,
+			overflow: true,
+			delay: 1.1,
+		});
+
+		var rellax = document.getElementsByClassName('rellax06');
+		new simpleParallax(rellax, {
+			orientation: 'down',
+			scale: 1.2,
+			overflow: true,
+			delay: 1.5,
+		});
+
+		var rellax = document.getElementsByClassName('rellax07');
+		new simpleParallax(rellax, {
+			orientation: 'down',
+			scale: 1.4,
+			overflow: true,
+			delay: 0.9,
+		});
+
+		var rellax = document.getElementsByClassName('rellax08');
+		new simpleParallax(rellax, {
+			orientation: 'down',
+			scale: 1.55,
+			overflow: true,
+			delay: 0.3,
+		});
+
+		var rellax = document.getElementsByClassName('rellax09');
+		new simpleParallax(rellax, {
+			orientation: 'down',
+			scale: 1.6,
+			overflow: true,
+			delay: 0.3,
+		});
+
+
+
 	// 一番最後に記述
 	$("body").removeClass("preload");
 
