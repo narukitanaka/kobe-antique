@@ -3366,6 +3366,9 @@ footer .footer_inner .copyright p {
   border-radius: 5px;
   position: relative;
 }
+.items_common .items_common_inner .slider .swiper-container .swiper-wrapper .swiper-slide a figure img {
+  width: 100%;
+}
 .items_common .items_common_inner .slider .swiper-container .swiper-wrapper .swiper-slide a figure::before {
   position: absolute;
   top: 0;
@@ -3933,7 +3936,7 @@ footer .footer_inner .copyright p {
   overflow: hidden;
   border-radius: 5px;
   position: relative;
-  width: 280px;
+  width: 30%;
 }
 .items01 .items01_wrap .items01_inner .category .items_list_list ul li a figure::before {
   position: absolute;
@@ -3969,6 +3972,7 @@ footer .footer_inner .copyright p {
 .items01 .items01_wrap .items01_inner .category .items_list_list ul li a .txt {
   color: #3e3e3e;
   padding-right: 20px;
+  width: 70%;
 }
 .items01 .items01_wrap .items01_inner .category .items_list_list ul li a .txt .items_title {
   font-size: 20px;
@@ -4025,6 +4029,10 @@ footer .footer_inner .copyright p {
 .items01 .items01_wrap .items01_inner .category .items_list_list ul li a .txt .info {
   font-size: 14px;
   letter-spacing: 0.1em;
+  display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
 }
 @media screen and (max-width: 1025px) {
   .items01 .items01_wrap .items01_inner .category .items_list_list ul li a .txt .info {

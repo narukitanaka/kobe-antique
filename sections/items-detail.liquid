@@ -125,27 +125,27 @@
           <table>
             <tr>
               <th>サイズ</th>
-              <td>幅約62㎝×奥行約63㎝×高さ約101.5㎝<br>座面の高さ約50㎝</td>
+              <td>{{ product.metafields.custom._size }}</td>
             </tr>
             <tr>
               <th>重さ</th>
-              <td>男性1人で運べます</td>
+              <td>{{ product.metafields.custom._weight }}</td>
             </tr>
             <tr>
               <th>生産国</th>
-              <td>推定1920年頃　イギリス入荷</td>
+              <td>{{ product.metafields.custom._country }}</td>
             </tr>
             <tr>
               <th>材質</th>
-              <td>マホガニー材</td>
+              <td>{{ product.metafields.custom._material }}</td>
             </tr>
             <tr>
               <th>配送</th>
-              <td>ヤマトホームコンビニエンスＣ</td>
+              <td>{{ product.metafields.custom._delivery }}</td>
             </tr>
             <tr>
               <th>メンテナンス</th>
-              <td>メンテナンス済み</td>
+              <td>{{ product.metafields.custom._maintenance }}</td>
             </tr>
           </table>
         </div>
@@ -156,17 +156,10 @@
               <span class="en">detail</span>
               <h2>商品詳細</h2>
             </div>
-            <h3>クイーンアンスタイルのアームチェア</h3>
-            <p class="detail_txt01">推定1920年頃　マホガニー材　イギリス入荷</p>
-            <p class="detail_txt02">曲線を描く背もたれ、猫足のカブリオールレッグ、奥深いマホガニー材で作られた、クイーンアンスタイルののアーム付きチェア。</p>
+            <h3>{{ product.metafields.custom._info_tytle }}</h3>
+            <p class="detail_txt01">{{ product.metafields.custom._info_sub }}</p>
             <p class="detail_txt02">
-              座面は落とし込み仕様で、簡単に取り外しができるので、お手入れしやすいのも嬉しいポイント。<br>現在の座面は入荷時のままで、状態の良い合皮レザーが張られています
-            </p>
-            <p class="detail_txt02">
-              座面は広く、どっしりとした重さがあり、リラックスできる1脚。<br>在庫はアーム付きが2脚、アーム無しが4脚ございます。（傷のつき方など違う為、別々に掲載予定です。）
-            </p>
-            <p class="detail_txt02">
-              座面の生地張替え可能です。<a href="#">詳細はこちら</a>
+              {{ product.content }}
             </p>
           </div>
           <div class="info pt">
@@ -204,66 +197,21 @@
     <div class="slider">
       <div class="swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <a href="#">
-              <figure>
-                <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/items_common_img01.jpg" alt="">
-              </figure>
-              <div class="txt">
-                <p class="items_title">クイーンアン　アームチェア</p>
-                <span class="price en">
-                  <span class="yen">¥</span>55,000</span>
-              </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#">
-              <figure>
-                <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/items_common_img02.jpg" alt="">
-              </figure>
-              <div class="txt">
-                <p class="items_title">クイーンアン　アームチェア</p>
-                <span class="price en">
-                  <span class="yen">¥</span>55,000</span>
-              </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#">
-              <figure>
-                <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/items_common_img03.jpg" alt="">
-              </figure>
-              <div class="txt">
-                <p class="items_title">クイーンアン　アームチェア</p>
-                <span class="price en">
-                  <span class="yen">¥</span>55,000</span>
-              </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#">
-              <figure>
-                <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/items_common_img04.jpg" alt="">
-              </figure>
-              <div class="txt">
-                <p class="items_title">クイーンアン　アームチェア</p>
-                <span class="price en">
-                  <span class="yen">¥</span>55,000</span>
-              </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#">
-              <figure>
-                <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/items_common_img05.jpg" alt="">
-              </figure>
-              <div class="txt">
-                <p class="items_title">クイーンアン　アームチェア</p>
-                <span class="price en">
-                  <span class="yen">¥</span>55,000</span>
-              </div>
-            </a>
-          </div>
+          {% for product in product.tags %}
+            <div class="swiper-slide">
+              <a href="{{ product.url }}">
+                <figure>
+                  <img src="{{ product.featured_image.src | img_url: 'master' }}" alt="">
+                </figure>
+                <div class="txt">
+                  <p class="items_title">{{ product.title }}</p>
+                  <span class="price en">
+                    {{ product.price | money }}
+                  </span>
+                </div>
+              </a>
+            </div>
+          {% endfor %}
         </div>
       </div>
     </div>
