@@ -4746,4 +4746,15 @@ footer .footer_inner .copyright {
   /* 横向き */
 }/*# sourceMappingURL=smart.css.map */
 
+/*///////////////////////////////////////////////////
+//
+//            ▼ 追加 ▼
+//
+///////////////////////////////////////////////////*/
+.product-form__buttons button {
+  width: 100%;
+  justify-content: center;
+  padding: 21px 19px;
+  font-size: 14px;
+}
 }

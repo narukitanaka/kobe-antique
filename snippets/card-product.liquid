@@ -32,7 +32,7 @@
     endif
   -%}
   <div class="card-wrapper product-card-wrapper underline-links-hover">
-    <div
+    {% comment %} <div
       class="
         card
         card--{{ settings.card_style }}
@@ -43,8 +43,8 @@
         {% if horizontal_class %} card--horizontal{% endif %}
       "
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
-    >
-      <div
+    > {% endcomment %}
+      {% comment %} <div
         class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
       >
@@ -133,9 +133,20 @@
             {%- endif -%}
           </div>
         </div>
-      </div>
-      <div class="card__content">
-        <div class="card__information">
+      </div> {% endcomment %}
+      
+
+        <a href="{{ card_product.url }}">
+          <figure><img src="{{ card_product.featured_media | image_url }}" alt=""></figure>
+          <div class="txt">
+            <p class="items_title">{{ card_product.title }}</p>
+            <span class="price en">
+              {{ card_product.price | money }}</span>
+          </div>
+        </a>
+
+      {% comment %} <div class="card__content"></div> {% endcomment %}
+        {% comment %} <div class="card__information">
           <h3
             class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
             {% if card_product.featured_media or settings.card_style == 'card' %}
@@ -197,8 +208,8 @@
 
             {% render 'price', product: card_product, price_class: '' %}
           </div>
-        </div>
-        {%- if show_quick_add -%}
+        </div> {% endcomment %}
+        {% comment %} {%- if show_quick_add -%}
           <div class="quick-add no-js-hidden">
             {%- assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id -%}
             {%- if card_product.variants.size == 1 -%}
@@ -314,7 +325,7 @@
           {%- endif -%}
         </div>
       </div>
-    </div>
+    </div> {% endcomment %}
   </div>
 {%- else -%}
   <div class="product-card-wrapper card-wrapper underline-links-hover">
