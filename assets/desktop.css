@@ -3544,8 +3544,8 @@ footer .footer_inner .copyright p {
   background: #cbd0d1;
   width: 100%;
   max-width: 1600px;
-  height: 800px;
-  border-radius: 800px 800px 0 0;
+  height: 700px;
+  border-radius: 700px 700px 0 0;
   z-index: -1;
   opacity: 0.4;
 }
@@ -3558,7 +3558,7 @@ footer .footer_inner .copyright p {
   background: #cbd0d1;
   width: 100%;
   max-width: 1600px;
-  height: calc(100% - 800px);
+  height: calc(100% - 700px);
   z-index: -1;
   opacity: 0.4;
 }
@@ -9656,7 +9656,7 @@ footer .footer_inner .copyright p {
   max-width: 1520px;
   width: 90%;
   height: 100%;
-  top: 7%;
+  top: 1%;
   left: 50%;
   transform: translateX(-50%);
   background: #cbd0d1;
@@ -9681,7 +9681,88 @@ footer .footer_inner .copyright p {
   margin: 10px 0 0;
   font-weight: 400;
 }
-
+.globo-formbuilder .globo-form-app {
+  margin-top: 70px;
+}
+.globo-formbuilder .globo-form-app .globo-form-control{
+  display: flex;
+  margin-bottom: 70px;
+}
+.globo-formbuilder .globo-form-app .globo-form-control .checkbox-wrapper {
+  width: 65%;
+  margin: 0 0 0 auto;
+}
+.globo-formbuilder .globo-form-app .globo-form-control .checkbox-wrapper .checkbox-label {
+  width: 100%;
+}
+.globo-formbuilder .globo-form-app .globo-form-control:last-of-type {
+  display: block;
+}
+.globo-formbuilder .globo-form-app .globo-form-control .flat-input {
+  height: 65px;
+}
+.globo-formbuilder .globo-form-app .globo-form-control .globo-label {
+  width: 35%;
+  font-size: 18px;
+}
+.globo-formbuilder .globo-form-app .globo-form-control .globo-label .label-content {
+  position: relative;
+}
+.globo-formbuilder .globo-form-app .globo-form-control .globo-label .label-content:before {
+  position: absolute;
+  top: 5px;
+  right: -45px;
+  content: "";
+  width: 37px;
+  height: 20px;
+  background-color: #938E7C;
+}
+.globo-formbuilder .globo-form-app .globo-form-control .globo-label .label-content:after {
+  position: absolute;
+  top: 4px;
+  right: -38px;
+  content: "必須";
+  font-size: 12px;
+  color: #fff;
+}
+.globo-formbuilder .globo-form-app .globo-form-control .globo-label .text-danger {
+  display: none;
+}
+.globo-formbuilder .globo-form-app .globo-form-control .globo-form-input {
+  width: 65%;
+  background-color: #fff !important;
+}
+.globo-formbuilder .globo-form-app .globo-form-control textarea {
+  width: 65%;
+  height: 270px !important;
+  background-color: #fff !important;
+}
+.globo-formbuilder .globo-form-app .globo-form-control .policy_right {
+  background-color: #fff;
+  height: 200px;
+  padding: 30px;
+}
+.globo-formbuilder .globo-form-app .globo-form-control .policy_right p {
+  overflow-y: scroll;
+  font-size: 13px;
+  font-weight: normal;
+  color: #3e3e3e !important;
+}
+.globo-formbuilder .globo-form-app .footer .submit {
+  font-size: 18px;
+  height: 80px;
+}
+.globo-form-app .globo-form-control .checkbox-wrapper .checkbox-label:before {
+  background-color: none !important;
+  box-shadow: none !important;
+  border-color: #3e3e3e !important;
+}
+.globo-form-app .globo-form-control .checkbox-wrapper .checkbox-label span::before {
+  top: 1px !important;
+}
+.globo-form-app .globo-form-control .checkbox-wrapper .checkbox-label span::after {
+  top: -1px !important;
+}
 /*///////////////////////////////////////////////////
 //
 //            ▼ 404 ▼

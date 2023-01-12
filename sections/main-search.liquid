@@ -18,13 +18,6 @@
 {%- endif -%}
 
 <style>
-  .template-search {
-    background: url('https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg?v=1672891851');
-    padding-top: 150px !important;
-  }
-  .template-search .h2 {
-    font-size: 2rem !important;
-  }
   .template-search__header {
     margin-bottom: 3rem;
   }
@@ -229,31 +222,117 @@
       {%- endif -%} {% endcomment %}
 
       {% style %}
+        /* .search_items {
+          padding-top: 116px !important;
+        }
+        .search_items:before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          content: "";
+          background: url('https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg?v=1672891851');
+          z-index: -2;
+        }
         .search_items_wrap {
           position: relative;
           width: 90%;
           max-width: 1600px;
-          margin: 0 auto;
-          padding: 0 0 150px;
+          margin: 110px auto 0;
+          padding: 52px 0 150px;
+        }
+        .search_items_wrap:before {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, 0);
+          content: "";
+          background: #cbd0d1;
+          width: 100%;
+          max-width: 1600px;
+          height: 700px;
+          border-radius: 700px 700px 0 0;
+          z-index: -1;
+          opacity: 0.4;
         }
         .search_items_wrap .search_items_inner {
           width: 85%;
           max-width: 1300px;
           margin: 0 auto;
         }
-        .search_items_wrap .search_items_inner .search_items_title {
-          text-align: center;
-          font-family: "Montserrat", sans-serif !important;
-          margin-bottom: 100px;
+        .search_items_wrap .search_items_inner:after {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translate(-50%, 0);
+          content: "";
+          background: #cbd0d1;
+          width: 100%;
+          max-width: 1600px;
+          height: calc(100% - 700px);
+          z-index: -1;
+          opacity: 0.4;
         }
-        .search_items_wrap .search_items_inner .search_items_title h2 {
-          font-size: 80px;
-          letter-spacing: 0.1em;
-          font-weight: 500;
+        .search_items_wrap .search_items_inner .toolbar {
+          display: flex;
+          justify-content: space-between;
+          color: #3e3e3e;
+          padding-right: 16px;
+          margin-bottom: 46px;
         }
-        .search_items_wrap .search_items_inner .search_items_title p {
+        .search_items_wrap .search_items_inner .toolbar .toolbar_txt {
+          font-size: 14px;
           letter-spacing: 0.1em;
-          font-weight: 500;
+          padding-top: 10px;
+        }
+        .search_items_wrap .search_items_inner .toolbar .toolbar_item_wrap {
+          display: flex;
+        }
+        .search_items_wrap .search_items_inner .toolbar .toolbar_item_wrap .toolbar_item01 {
+          display: flex;
+          margin-right: min(2.656vw, 51px);
+        }
+        .search_items_wrap .search_items_inner .toolbar .toolbar_item_wrap .toolbar_item01 .inner {
+          display: flex;
+          align-items: center;
+        }
+        .search_items_wrap .search_items_inner .toolbar .toolbar_item_wrap .toolbar_item01 .inner p {
+          font-size: 14px;
+          letter-spacing: 0.07em;
+          padding-top: 3px;
+          margin-right: 10px;
+        }
+        .search_items_wrap .search_items_inner .toolbar .toolbar_item_wrap .toolbar_item01 .inner .number {
+          margin-right: min(2.604vw, 50px);
+        }
+        .search_items_wrap .search_items_inner .toolbar .toolbar_item_wrap .toolbar_item01 .inner .select select {
+          border: none;
+          appearance: none;
+          background: #fff;
+          width: 100px;
+          padding: 6px 10px;
+          border-radius: 4px;
+          font-size: 14px;
+          letter-spacing: 0.07em;
+          cursor: pointer;
+          color: #3e3e3e;
+        }
+        .search_items_wrap .search_items_inner .toolbar .toolbar_item_wrap .toolbar_item02 {
+          display: flex;
+          align-items: center;
+        }
+        .search_items_wrap .search_items_inner .toolbar .toolbar_item_wrap .toolbar_item02 p {
+          font-size: 14px;
+          letter-spacing: 0.1em;
+          margin-right: 16px;
+          padding-top: 3px
+        }
+        .search_items_wrap .search_items_inner .toolbar .toolbar_item_wrap .toolbar_item02 .inner .icon {
+          cursor: pointer;
+        }
+        .search_items_wrap .search_items_inner .toolbar .toolbar_item_wrap .toolbar_item02 .inner .icon:first-of-type {
+          margin-right: 10px;
         }
         .search_items_wrap .search_items_inner .items_list_grid {
           display: block;
@@ -265,41 +344,421 @@
         }
         .search_items_wrap .search_items_inner .items_list_grid ul li {
           width: calc((100% - min(9.375vw, 180px)) / 4);
+        } */
+        .search_items_title {
+          text-align: center;
+          margin-bottom: 60px;
+        }
+        .search_items_title h2 {
+          font-family: "Montserrat", sans-serif !important;
+          font-size: 80px;
+          letter-spacing: 0.1em;
+          font-weight: 500;
+          color: #3e3e3e !important;
+        }
+        .search_items_title p {
+          font-family: "Montserrat", sans-serif !important;
+          letter-spacing: 0.1em;
+          font-weight: 500;
+          color: #3e3e3e !important;
+        }
+        figure img {
+          width: 100%;
+          aspect-ratio: 1 / 1 !important;
+          object-fit: cover;
+          object-position: center;
+        }
+        .items01 .items01_wrap {
+          margin: 60px auto 0 !important;
+          padding: 102px 0 150px !important;
+        }
+        .items01 .items01_wrap .items01_inner .category .toolbar {
+          justify-content: center !important;
+          margin-bottom: 100px !important;
+        }
+        @media screen and (max-width: 767px) {
+          .search_items_title {
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 40px;
+          }
+          .search_items_title h2 {
+            font-size: 30px;
+            letter-spacing: 0.05em;
+          }
+          .search_items_title p {
+            font-size: 14px;
+            padding: 0 0 5px;
+            margin-left: 10px;
+          }
+          .items01 .items01_wrap {
+            width: 100%;
+            margin: 80px 0 0 !important;
+            padding: 0 0 100px !important;
+          }
         }
       {% endstyle %}
 
-      <div class="search_items_wrap">
-        <div class="search_items_inner">
-          <div class="search_items_title">
-            <h2>SEARCH ITEM</h2>
-            <p>検索結果</p>
-          </div>
-          <div class="items_list_grid">
-            <ul>
-              {%- for item in search.results -%}
-                {% assign lazy_load = false %}
-                {%- if forloop.index > 2 -%}
-                  {%- assign lazy_load = true -%}
-                {%- endif -%}
-                <li>
-                  {%- case item.object_type -%}
-                    {%- when 'product' -%}
-                    {%- capture product_settings -%}
-                      {%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
-                    {% render 'card-product'
-                     , card_product: item,
-                     media_aspect_ratio: section.settings.image_ratio,
-                     show_secondary_image: section.settings.show_secondary_image,
-                     show_vendor: section.settings.show_vendor,
-                     show_rating: section.settings.show_rating,
-                     lazy_load: lazy_load %}
-                  {%- endcase -%}
-                </li>
-              {%- endfor -%}
-            </ul>
-          </div>
-        </div>
+
+      {% comment %} <div class="search_items">
+      <div class="breadcrumbs">
+      <ol
+      itemscope
+      itemtype="https://schema.org/BreadcrumbList"
+      class="en">
+      <li
+      itemprop="itemListElement"
+      itemscope
+      itemtype="http://schema.org/ListItem">
+      <a itemprop="item" href="/">
+      <span itemprop="name">top</span>
+      </a>
+      <meta itemprop="position" content="1" />
+      </li>
+
+      <li
+      itemprop="itemListElement"
+      itemscope
+      itemtype="http://schema.org/ListItem">
+      <span itemprop="name">search items</span>
+      <meta itemprop="position" content="3" />
+      </li>
+      </ol>
       </div>
+      <div class="search_items_wrap">
+      <div class="search_items_inner">
+      <div class="search_items_title">
+      <h2>SEARCH ITEM</h2>
+      <p>検索結果</p>
+      </div>
+      <div class="toolbar">
+      <p class="toolbar_txt">
+      全{{ paginate.items }}件中<br class="is_tab">
+      {% assign page_count = paginate.page_size %}
+      {% assign page_offset = paginate.current_offset | plus: 1 %}
+      {% if paginate.previous and paginate.next %}
+      {{ page_offset }}-{{ page_offset | plus: page_count }}
+      {% elsif paginate.next %}
+      1〜{{ page_count }}
+      {% elsif paginate.previous %}
+      {% if page_offset == paginate.items %}
+      〜{{ page_offset }}
+      {% else %}
+      {{ page_offset }}〜{{ paginate.items }}
+      {% endif %}
+      {% else %}
+      {{ paginate.items }}
+      {% endif %}
+      件を表示しています。
+      </p>
+      <div class="toolbar_item_wrap">
+      <div class="toolbar_item01">
+      <div class="inner">
+      <p>表示件数</p>
+      <div class="number">
+      <select name="" id="">
+      <option value="48件">48件</option>
+      </select>
+      <select name='paginateBy' id='paginateBy' class='collection-sort__input filters-toolbar__input'> 
+      {% for i in (16..16) %} {% assign v = i | append: '' %} 
+      <option value='{{ v }}'
+      {% if cart.attributes.pagination != blank and cart.attributes.pagination %}
+      {% if cart.attributes.pagination == v %} selected{% endif %}
+      {% else %}
+      {% if i == 40 %} selected{% endif %}
+      {% endif %}>{{ i }} 件 </option> 
+      {% endfor %}  
+      {% for i in (32..32) %} {% assign v = i | append: '' %} 
+      <option value='{{ v }}'
+      {% if cart.attributes.pagination != blank and cart.attributes.pagination %}
+      {% if cart.attributes.pagination == v %} selected{% endif %}
+      {% else %}
+      {% if i == 40 %} selected{% endif %}
+      {% endif %}>{{ i }} 件 </option> 
+      {% endfor %}  
+      {% for i in (48..48) %} {% assign v = i | append: '' %} 
+      <option value='{{ v }}'
+      {% if cart.attributes.pagination != blank and cart.attributes.pagination %}
+      {% if cart.attributes.pagination == v %} selected{% endif %}
+      {% else %}
+      {% if i == 40 %} selected{% endif %}
+      {% endif %}>{{ i }} 件 </option> 
+      {% endfor %}
+      {% for i in (64..64) %} {% assign v = i | append: '' %} 
+      <option value='{{ v }}'
+      {% if cart.attributes.pagination != blank and cart.attributes.pagination %}
+      {% if cart.attributes.pagination == v %} selected{% endif %}
+      {% else %}
+      {% if i == 40 %} selected{% endif %}
+      {% endif %}>{{ i }} 件 </option> 
+      {% endfor %}
+      </select>
+      </div>
+      </div>
+      <div class="inner">
+      <p>並び順</p>
+      <div class="select">
+      <form  id="FacetSortForm">
+      {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+      <select name="sort_by" id="SortBy" aria-describedby="a11y-refresh-page-message">
+      {%- for option in collection.sort_options -%}
+      <option value="{{ option.value }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name }}</option>
+      {%- endfor -%}
+      </select>
+      </form>
+      </div>
+      </div>
+      </div>
+      <div class="toolbar_item02">
+      <p>表示</p>
+      <div class="inner">
+      <span class="icon" id="grid_btn">
+      <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_grid.svg" alt="">
+      </span>
+      <span class="icon" id="list_btn">
+      <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_list.svg" alt="">
+      </span>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="items_list_grid">
+      <ul>
+      {%- for item in search.results -%}
+      {% assign lazy_load = false %}
+      {%- if forloop.index > 2 -%}
+      {%- assign lazy_load = true -%}
+      {%- endif -%}
+      <li>
+      {%- case item.object_type -%}
+      {%- when 'product' -%}
+      {%- capture product_settings -%}
+      {%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
+      {% render 'card-product'
+      , card_product: item,
+      media_aspect_ratio: section.settings.image_ratio,
+      show_secondary_image: section.settings.show_secondary_image,
+      show_vendor: section.settings.show_vendor,
+      show_rating: section.settings.show_rating,
+      lazy_load: lazy_load %}
+      {%- endcase -%}
+      </li>
+      {%- endfor -%}
+      </ul>
+      </div>
+      </div>
+      </div>
+      </div> {% endcomment %}
+
+
+      <div class="items01">
+        {% if cart.attributes.pagination != blank %}
+          {%- assign limit = cart.attributes.pagination %}
+        {% else %}
+          {% assign limit = 16 -%}
+        {% endif %}
+        {% paginate search.results by limit %}
+          <div class="breadcrumbs">
+            <ol
+              itemscope
+              itemtype="https://schema.org/BreadcrumbList"
+              class="en">
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="http://schema.org/ListItem">
+                <a itemprop="item" href="/">
+                  <span itemprop="name">top</span>
+                </a>
+                <meta itemprop="position" content="1" />
+              </li>
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="http://schema.org/ListItem">
+                <span itemprop="name">search items</span>
+                <meta itemprop="position" content="3" />
+              </li>
+            </ol>
+          </div>
+          <div class="items01_wrap">
+            <div class="items01_inner">
+              <div class="search_items_title">
+                <h2>SEARCH</h2>
+                <p>検索結果</p>
+              </div>
+              <div class="category">
+                <div class="toolbar" style>
+                  <p class="toolbar_txt">
+                    全{{ paginate.items }}件中<br class="is_tab">
+                    {% assign page_count = paginate.page_size %}
+                    {% assign page_offset = paginate.current_offset | plus: 1 %}
+                    {% if paginate.previous and paginate.next %}
+                      {{ page_offset }}-{{ page_offset | plus: page_count }}
+                    {% elsif paginate.next %}
+                      1〜{{ page_count }}
+                    {% elsif paginate.previous %}
+                      {% if page_offset == paginate.items %}
+                        〜{{ page_offset }}
+                      {% else %}
+                        {{ page_offset }}〜{{ paginate.items }}
+                      {% endif %}
+                    {% else %}
+                      {{ paginate.items }}
+                    {% endif %}
+                    件を表示しています。
+                  </p>
+                  {% comment %} <div class="toolbar_item_wrap">
+                  <div class="toolbar_item01">
+                  <div class="inner">
+                  <p>表示件数</p>
+                  <div class="number">
+                  <select
+                  name='paginateBy'
+                  id='paginateBy'
+                  class='collection-sort__input filters-toolbar__input'>
+                  {% for i in (16..16) %}
+                  {% assign v = i | append: '' %}
+                  <option
+                  value='{{ v }}'
+                  {% if cart.attributes.pagination != blank and cart.attributes.pagination %}
+                  {% if cart.attributes.pagination == v %}
+                  selected
+                  {% endif %}
+                  {% else %}
+                  {% if i == 40 %}
+                  selected
+                  {% endif %}
+                  {% endif %}>{{ i }} 件
+                  </option>
+                  {% endfor %}
+                  {% for i in (32..32) %}
+                  {% assign v = i | append: '' %}
+                  <option
+                  value='{{ v }}'
+                  {% if cart.attributes.pagination != blank and cart.attributes.pagination %}
+                  {% if cart.attributes.pagination == v %}
+                  selected
+                  {% endif %}
+                  {% else %}
+                  {% if i == 40 %}
+                  selected
+                  {% endif %}
+                  {% endif %}>{{ i }} 件
+                  </option>
+                  {% endfor %}
+                  {% for i in (48..48) %}
+                  {% assign v = i | append: '' %}
+                  <option
+                  value='{{ v }}'
+                  {% if cart.attributes.pagination != blank and cart.attributes.pagination %}
+                  {% if cart.attributes.pagination == v %}
+                  selected
+                  {% endif %}
+                  {% else %}
+                  {% if i == 40 %}
+                  selected
+                  {% endif %}
+                  {% endif %}>{{ i }} 件
+                  </option>
+                  {% endfor %}
+                  {% for i in (64..64) %}
+                  {% assign v = i | append: '' %}
+                  <option
+                  value='{{ v }}'
+                  {% if cart.attributes.pagination != blank and cart.attributes.pagination %}
+                  {% if cart.attributes.pagination == v %}
+                  selected
+                  {% endif %}
+                  {% else %}
+                  {% if i == 40 %}
+                  selected
+                  {% endif %}
+                  {% endif %}>{{ i }} 件
+                  </option>
+                  {% endfor %}
+                  </select>
+                  </div>
+                  </div>
+                  <div class="inner">
+                  <p>並び順</p>
+                  <div class="select">
+                  <form  id="FacetSortForm">
+                  {%- assign sort_by = product.sort_by | default: product.default_sort_by -%}
+                  <select name="sort_by" id="SortBy" aria-describedby="a11y-refresh-page-message">
+                  {%- for option in product.sort_options -%}
+                  <option value="{{ option.value }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name }}</option>
+                  {%- endfor -%}
+                  </select>
+                  </form>
+                  </div>
+                  </div>
+                  </div>
+                  <div class="toolbar_item02">
+                  <p>表示</p>
+                  <div class="inner">
+                  <span class="icon" id="grid_btn">
+                  <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_grid.svg" alt="">
+                  </span>
+                  <span class="icon" id="list_btn">
+                  <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_list.svg" alt="">
+                  </span>
+                  </div>
+                  </div>
+                  </div> {% endcomment %}
+                </div>
+                <div class="items_list_grid show" id="items_list_grid">
+                  <ul>
+                    {%- for item in search.results -%}
+                      {% assign lazy_load = false %}
+                      {%- if forloop.index > 2 -%}
+                        {%- assign lazy_load = true -%}
+                      {%- endif -%}
+                      <li>
+                        {%- case item.object_type -%}
+                          {%- when 'product' -%}
+                          {%- capture product_settings -%}
+                            {%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
+                          {% render 'card-product'
+                           , card_product: item,
+                           media_aspect_ratio: section.settings.image_ratio,
+                           show_secondary_image: section.settings.show_secondary_image,
+                           show_vendor: section.settings.show_vendor,
+                           show_rating: section.settings.show_rating,
+                           lazy_load: lazy_load %}
+                          {%- when 'article' -%}
+                          {% render 'article-card'
+                           , article: item,
+                           show_image: true,
+                           show_date: section.settings.article_show_date,
+                           show_author: section.settings.article_show_author,
+                           show_badge: true,
+                           media_aspect_ratio: 1,
+                           lazy_load: lazy_load %}
+                        {%- endcase -%}
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                </div>
+                {% comment %} {% if paginate.pages > 1 %}
+                {% render "pagination", paginate: paginate %}
+                {% endif %} {% endcomment %}
+              </div>
+            </div>
+          </div>
+        {% endpaginate %}
+      </div>
+
+      <section class="items03 contact_area">
+        <div class="contact_area_inner">
+          <div class="section_title white horizontal">
+            <span class="en">contact</span>
+            <h2>コンタクト</h2>
+          </div>
+          <p>商品や修理、レンタルに関する<br class="is_sp">お問い合わせなど <br class="is_sp">お気軽にお問い合わせください。</p>
+          <a href="/pages/contact"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_mail.svg" alt="">お問合せフォーム</a>
+        </div>
+      </section>
 
 
 

@@ -4589,52 +4589,6 @@ footer .footer_inner .copyright {
 .transaction02 .transaction02_in table tr:nth-of-type(11) td {
   white-space: nowrap;
 }
-
-.contact02 {
-  padding: 20px 0 0;
-}
-.contact02::before {
-  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg) center center/auto repeat;
-}
-.contact02 .contact02_in {
-  position: relative;
-  margin: 38px 0 0;
-}
-.contact02 .contact02_in::before {
-  content: "";
-  position: absolute;
-  width: 89.3333%;
-  height: 100%;
-  top: 9%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #cbd0d1;
-  opacity: 0.4;
-  border-radius: 60px 60px 0 0;
-  z-index: -1;
-}
-.contact02 .box {
-  max-width: 629.47px;
-  width: 100%;
-  color: #3e3e3e;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-.contact02 .box p {
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  line-height: 1.8;
-}
-.contact02 .box p + p {
-  font-size: 12px;
-  color: #333333;
-  margin: 15px 0 0;
-  font-weight: 400;
-  letter-spacing: 0.09em;
-  line-height: 2;
-}
-
 /*///////////////////////////////////////////////////
 //
 //            ▼ 投稿エリア ▼
@@ -4719,7 +4673,107 @@ footer .footer_inner .copyright {
   border: solid 1px #e2e2e2;
   padding: 0.15rem 0.5rem;
 }
+/*///////////////////////////////////////////////////
+//
+//            ▼ お問い合わせ ▼
+//
+///////////////////////////////////////////////////*/
+.contact02 {
+  padding: 20px 0 0;
+}
+.contact02::before {
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg) center center/auto repeat;
+}
+.contact02 .contact02_in {
+  position: relative;
+  margin: 38px 0 0;
+}
+.contact02 .contact02_in::before {
+  content: "";
+  position: absolute;
+  width: 89.3333%;
+  height: 100%;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #cbd0d1;
+  opacity: 0.4;
+  border-radius: 60px 60px 0 0;
+  z-index: -1;
+}
+.contact02 .box {
+  max-width: 629.47px;
+  width: 100%;
+  color: #3e3e3e;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.contact02 .box p {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 1.8;
+}
+.contact02 .box p + p {
+  font-size: 12px;
+  color: #333333;
+  margin: 15px 0 0;
+  font-weight: 400;
+  letter-spacing: 0.09em;
+  line-height: 2;
+}
 
+.contact02 .box {
+  max-width: 335px;
+  width: 100%;
+  color: #3e3e3e;
+}
+.globo-formbuilder .globo-form-app {
+  margin-top: 60px;
+}
+.globo-formbuilder .globo-form-app .globo-form-control{
+  display: block;
+  margin-bottom: 30px;
+}
+.globo-formbuilder .globo-form-app .globo-form-control .checkbox-wrapper {
+  width: 100%;
+  margin: 0;
+}
+.globo-formbuilder .globo-form-app .globo-form-control .flat-input {
+  height: 35px;
+}
+.globo-formbuilder .globo-form-app .globo-form-control .globo-label {
+  width: 100%;
+  font-size: 15px;
+  margin-bottom: 12px !important;
+}
+.globo-formbuilder .globo-form-app .globo-form-control .globo-label .label-content:before 
+{
+  top: 4px;
+  width: 32px;
+  height: 18px;
+}
+.globo-formbuilder .globo-form-app .globo-form-control .globo-label .label-content:after 
+{
+  top: 3px;
+  right: -39px;
+  font-size: 10px;
+}
+.globo-formbuilder .globo-form-app .globo-form-control .globo-form-input {
+  width: 100%;
+}
+.globo-formbuilder .globo-form-app .globo-form-control textarea {
+  width: 100%;
+  height: 100px !important;
+}
+.globo-formbuilder .globo-form-app .globo-form-control .policy_right {
+  height: 150px;
+  padding: 30px 20px;
+}
+.globo-formbuilder .globo-form-app .footer .submit {
+  font-size: 15px;
+  height: 50px;
+}
 /*///////////////////////////////////////////////////
 //
 //            ▼ 404 ▼
