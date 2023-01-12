@@ -42,10 +42,16 @@
       "type": "topics-detail",
       "settings": {
       }
+    },
+    "e2177156-38ce-4ab8-9f9a-89a4600bc2b6": {
+      "type": "top09-chat-side",
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
-    "6a2122d4-7e13-4062-943e-f9d34d32f561"
+    "6a2122d4-7e13-4062-943e-f9d34d32f561",
+    "e2177156-38ce-4ab8-9f9a-89a4600bc2b6"
   ]
 }

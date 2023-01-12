@@ -23,11 +23,17 @@
       "type": "contactform",
       "settings": {
       }
+    },
+    "24aef274-0101-41e2-bd16-235def2a9f46": {
+      "type": "top09-chat-side",
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
     "form",
-    "a0c5ec96-9994-4775-86f0-9d66ac562336"
+    "a0c5ec96-9994-4775-86f0-9d66ac562336",
+    "24aef274-0101-41e2-bd16-235def2a9f46"
   ]
 }

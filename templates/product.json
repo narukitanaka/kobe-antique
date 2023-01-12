@@ -214,6 +214,11 @@
       "type": "items-detail",
       "settings": {
       }
+    },
+    "02af916d-4bbe-4d51-8ee0-f63ebef76e0d": {
+      "type": "top09-chat-side",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -221,6 +226,7 @@
     "image-with-text",
     "multicolumn",
     "product-recommendations",
-    "8ddd58f1-7b6e-4baa-a5d3-5229a0c8e1bd"
+    "8ddd58f1-7b6e-4baa-a5d3-5229a0c8e1bd",
+    "02af916d-4bbe-4d51-8ee0-f63ebef76e0d"
   ]
 }

@@ -8,6 +8,20 @@
 {%- style -%}
   #shopify-section-template--17369381470524__cart-footer {
     background: url('https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg');
+    padding-bottom: 150px;
+  }
+  .cart__footer .cart__checkout-button {
+    height: 50px;
+    font-size: 1rem;
+    background-color: #938E7C;
+  }
+  .cart__footer small {
+    font-size: 1rem;
+  }
+  @media screen and (max-width: 767px) {
+    #shopify-section-template--17369381470524__cart-footer {
+      padding-bottom: 50px;
+    }
   }
 {%- endstyle -%}
 
@@ -36,8 +50,7 @@
             {% render block %}
             {%- when 'subtotal' -%}
             <div class="js-contents" {{ block.shopify_attributes }}>
-              <div
-                class="totals">
+              <div class="totals">
                 <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h2>
                 <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
               </div>

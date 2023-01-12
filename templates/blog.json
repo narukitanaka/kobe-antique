@@ -17,10 +17,16 @@
       "type": "topics",
       "settings": {
       }
+    },
+    "91ed0a1a-f5f4-4730-8042-7932d3edcb8c": {
+      "type": "top09-chat-side",
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
-    "27e5d0de-84cf-4023-af5b-a04c44c23422"
+    "27e5d0de-84cf-4023-af5b-a04c44c23422",
+    "91ed0a1a-f5f4-4730-8042-7932d3edcb8c"
   ]
 }

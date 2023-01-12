@@ -204,11 +204,17 @@
       ],
       "settings": {
       }
+    },
+    "ef5c11d6-bf3a-4aee-b035-32025550284c": {
+      "type": "top09-chat-side",
+      "settings": {
+      }
     }
   },
   "order": [
     "banner",
     "product-grid",
-    "c3d06dc4-0ba5-4bca-b905-2b66bb714058"
+    "c3d06dc4-0ba5-4bca-b905-2b66bb714058",
+    "ef5c11d6-bf3a-4aee-b035-32025550284c"
   ]
 }
