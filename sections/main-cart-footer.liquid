@@ -6,19 +6,8 @@
 {{ 'base.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-
-  body {
-    display: grid;
-    grid-template-rows: auto auto 1fr auto;
-    grid-template-columns: 100%;
-    min-height: 100%;
-    margin: 0;
-    font-size: 1.5rem;
-    letter-spacing: 0.06rem;
-    line-height: calc(1 + 0.8 / var(--font-body-scale));
-    font-family: var(--font-body-family);
-    font-style: var(--font-body-style);
-    font-weight: var(--font-body-weight);
+  #shopify-section-template--17369381470524__cart-footer {
+    background: url('https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg01.jpg');
   }
 {%- endstyle -%}
 
@@ -47,7 +36,8 @@
             {% render block %}
             {%- when 'subtotal' -%}
             <div class="js-contents" {{ block.shopify_attributes }}>
-              <div class="totals">
+              <div
+                class="totals">
                 <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h2>
                 <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
               </div>
@@ -132,6 +122,8 @@
     if (! isIE()) 
       return;
     
+
+
 
     const cartSubmitInput = document.createElement('input');
     cartSubmitInput.setAttribute('name', 'checkout');
