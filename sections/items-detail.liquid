@@ -218,14 +218,12 @@
                             cx="33"
                             cy="33"
                             r="30"></circle>
-                      </svg>
-                    </div>
-                  </button>
-                  {%- if block.settings.show_dynamic_checkout -%}
+                        </svg>
+                      </div>
+                    </button>
                     {{ form | payment_button }}
-                  {%- endif -%}
-                </div>
-              {%- endform -%}
+                  </div>
+                {%- endform -%}
             </product-form>
           </div>
 
@@ -301,6 +299,7 @@
 </section>
 <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ すべての商品01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
 <!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ すべての商品02 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
+{%- assign metafields-products = product.metafields.custom._related_products -%}
 <section class="items_detail02 items_common">
   <div class="items_common_inner">
     <div class="section_title">
@@ -312,7 +311,7 @@
     <div class="slider">
       <div class="swiper-container">
         <div class="swiper-wrapper">
-          {% for product in product.tags %}
+          {%- for product in metafields-products.value  -%}
             <div class="swiper-slide">
               <a href="{{ product.url }}">
                 <figure>
@@ -332,6 +331,7 @@
     </div>
   </div>
 </section>
+
 <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ すべての商品02 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
 <!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ すべての商品03 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
 <section class="items_detail03 contact_area">

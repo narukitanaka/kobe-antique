@@ -1085,6 +1085,44 @@ footer .footer_inner .footer_logo {
 footer .footer_inner .calender {
   grid-area: calender;
 }
+footer .footer_inner .calender .calendarMaster__storeCustom .calendarMaster__generalCalendar {
+  background-color: #3e3e3e;
+  box-shadow: none;
+  width: 100%;
+}
+footer .footer_inner .calender .calendarMaster__storeCustom .calendarMaster__generalCalendar .react-calendar {
+  background-color: #3e3e3e;
+  width: 100%;
+}
+footer .footer_inner .calender .calendarMaster__storeCustom .css-6igxke {
+  border-top: none;
+  margin-top: 25px;
+}
+footer .footer_inner .calender .calendarMaster__storeCustom .css-6igxke ul li:first-of-type {
+  display: none;
+}
+footer .footer_inner .calender .calendarMaster__storeCustom .css-6igxke ul li {
+  color: #fff;
+}
+footer .footer_inner .calender .calendarMaster__storeCustom .react-calendar__navigation {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 20px;
+}
+footer .footer_inner .calender .calendarMaster__storeCustom .react-calendar__navigation__arrow {
+  display: none;
+}
+footer .footer_inner .calender .calendarMaster__storeCustom .react-calendar__navigation__label {
+  text-align: start;
+  letter-spacing: 2px;
+  color: #fff;
+}
+footer .footer_inner .calender .calendarMaster__storeCustom .react-calendar__month-view__weekdays__weekday {
+  opacity: 1;
+  color: #fff;
+}
+footer .footer_inner .calender .calendarMaster__storeCustom .react-calendar__month-view__days button abbr {
+  color: #fff;
+}
 footer .footer_inner .footer_contents {
   grid-area: footer_contents;
   padding-left: 16.5%;
@@ -3356,6 +3394,9 @@ footer .footer_inner .copyright p {
 }
 .items_common .items_common_inner .slider .swiper-container .swiper-wrapper .swiper-slide {
   width: calc((100% - 10.625vw) / 5);
+}
+.items_common .items_common_inner .slider .swiper-container .swiper-wrapper .swiper-slide:nth-of-type(n + 6) {
+  display: none;
 }
 .items_common .items_common_inner .slider .swiper-container .swiper-wrapper .swiper-slide a:hover figure::before {
   opacity: 1;
@@ -9781,7 +9822,15 @@ footer .footer_inner .copyright p {
   font-size: 3rem;
   margin-bottom: 0.5rem;
 }
-
+/*///////////////////////////////////////////////////
+//
+//            ▼ カートボタン ▼
+//
+///////////////////////////////////////////////////*/
+.product-form__buttons {
+  display: flex;
+  gap: 20px;
+}
 .product-form__buttons button {
   display: flex;
   align-items: center;
@@ -9795,11 +9844,23 @@ footer .footer_inner .copyright p {
   text-transform: uppercase;
   padding: 21px 24px;
   transition: opacity .3s;
+  height: 70px;
 }
 .product-form__buttons button img {
   margin-right: 9px;
 }
 .product-form__buttons button span {
   font-family: Montserrat,sans-serif;
+}
+.product-form__buttons .shopify-payment-button__button {
+  width: 180px !important;
+  height: 70px!important;
+}
+.product-form__buttons .shopify-cleanslate .jjzYeefyWpPZLH9pIgyw{
+  max-height: 70px !important;
+  border-radius: 3px;
+}
+.product-form__buttons .shopify-payment-button__more-options {
+  display: none;
 }
 

@@ -311,3 +311,95 @@
   </div>
 </section>
 <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ ショップコーディネート05 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+<!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ チャット・検索・TEL ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
+<div class="chat">
+  <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_chat.svg" alt="">
+  <span class="en">chat</span>
+</div>
+<div class="side_act">
+  <div class="act tel">
+    <span class="act_txt en">tel</span>
+    <div class="act_inner">
+      <span class="icon" id="open01">
+        <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_tel.svg" alt="">
+      </span>
+      <a
+        href="tel:078-224-5444"
+        class="inner en"
+        id="inner01">
+        <p class="tel_number">078-224-5444</p>
+        <p class="time">10:00 - 17:00</p>
+      </a>
+    </div>
+  </div>
+  <div class="act search">
+    <span class="act_txt en">search</span>
+    <div class="act_inner">
+      <span class="icon" id="open02">
+        <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_search.svg" alt="">
+      </span>
+      <div class="inner" id="inner02">
+        <form
+          action="{{ routes.search_url }}"
+          method="get"
+          role="search"
+          class="search">
+          <div class="field">
+            <input
+              class="search__input field__input"
+              id="Search-In-Template"
+              type="search"
+              name="q"
+              value="{{ search.terms | escape }}"
+              placeholder="サイト内を検索"
+              {%- if settings.predictive_search_enabled -%}
+              role="combobox"
+              aria-expanded="false"
+              aria-owns="predictive-search-results-list"
+              aria-controls="predictive-search-results-list"
+              aria-haspopup="listbox"
+              aria-autocomplete="list"
+              autocorrect="off"
+              autocomplete="off"
+              autocapitalize="off"
+              spellcheck="false"
+              {%- endif -%}>
+            <input
+              name="options[prefix]"
+              type="hidden"
+              value="product">
+            {%- if settings.predictive_search_enabled -%}
+              <div
+                class="predictive-search predictive-search--search-template"
+                tabindex="-1"
+                data-predictive-search>
+                <div class="predictive-search__loading-state">
+                  <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    role="presentation"
+                    class="spinner"
+                    viewBox="0 0 66 66"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle
+                      class="path"
+                      fill="none"
+                      stroke-width="6"
+                      cx="33"
+                      cy="33"
+                      r="30"></circle>
+                </svg>
+              </div>
+            </div>
+            <span
+              class="predictive-search-status visually-hidden"
+              role="status"
+              aria-hidden="true"></span>
+          {%- endif -%}
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ チャット・検索・TEL ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->

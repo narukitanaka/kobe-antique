@@ -41,140 +41,140 @@
         "e10dc32f-81e1-4f13-ad8c-cc5da0618abc": {
           "type": "block_category",
           "settings": {
-            "category_url": "chair",
+            "category_url": "チェア",
             "category_title": "チェア"
           }
         },
         "808e94b0-c7d1-4010-a875-6fad21374631": {
           "type": "block_category",
           "settings": {
-            "category_url": "desk",
+            "category_url": "ビューロー-デスク",
             "category_title": "ビューローデスク"
           }
         },
         "4b527cdf-52ae-47aa-93d4-24d7ce16999c": {
           "type": "block_category",
           "settings": {
-            "category_url": "boockcase",
+            "category_url": "ブックケース",
             "category_title": "ブックケース"
           }
         },
         "47f6e07b-6d06-4f8d-b4db-63acf69f7cc7": {
           "type": "block_category",
           "settings": {
-            "category_url": "tnruk",
+            "category_url": "トランク",
             "category_title": "トランク"
           }
         },
         "1d09655e-aadb-4fc6-ba11-acb56667d82b": {
           "type": "block_category",
           "settings": {
-            "category_url": "silver",
+            "category_url": "シルバー雑貨",
             "category_title": "シルバー雑貨"
           }
         },
         "31f0f7ae-7caf-476d-a3a7-bb6343b06bd8": {
           "type": "block_category",
           "settings": {
-            "category_url": "foreignbook",
+            "category_url": "洋書",
             "category_title": "洋書"
           }
         },
         "70ca3f9f-cde7-432b-a787-8fe45721aa1f": {
           "type": "block_category",
           "settings": {
-            "category_url": "ornament",
+            "category_url": "小物入れ-置物",
             "category_title": "小物入れ・置物"
           }
         },
         "e5d4713f-bedb-475a-8f24-d0ab1cfc7411": {
           "type": "block_category",
           "settings": {
-            "category_url": "table",
+            "category_url": "テーブル",
             "category_title": "テーブル"
           }
         },
         "9fe87257-1b73-496b-99f5-6dc79ce91541": {
           "type": "block_category",
           "settings": {
-            "category_url": "cabinet",
+            "category_url": "キャビネット",
             "category_title": "キャビネット"
           }
         },
         "b8b65c40-6327-46ea-9cc3-aa5697089f86": {
           "type": "block_category",
           "settings": {
-            "category_url": "stand",
+            "category_url": "スタンド",
             "category_title": "スタンド"
           }
         },
         "819c8523-f0b7-4578-a393-eb888dc18e76": {
           "type": "block_category",
           "settings": {
-            "category_url": "sewingbox",
+            "category_url": "ソーイングボックス",
             "category_title": "ソーイングボックス"
           }
         },
         "2404e5f9-54e0-4122-905e-b8dd9753933d": {
           "type": "block_category",
           "settings": {
-            "category_url": "signboard",
+            "category_url": "絵-看板",
             "category_title": "絵・看板"
           }
         },
         "36f1b2ac-0ad0-422f-86e8-6c00736e3894": {
           "type": "block_category",
           "settings": {
-            "category_url": "tableware",
+            "category_url": "テーブルウェア",
             "category_title": "テーブルウェア"
           }
         },
         "257e51be-62a7-4fab-b855-6be279299e32": {
           "type": "block_category",
           "settings": {
-            "category_url": "goods",
+            "category_url": "雑貨-その他",
             "category_title": "雑貨その他"
           }
         },
         "2275153f-548a-432f-ba3a-2c5c3082af8e": {
           "type": "block_category",
           "settings": {
-            "category_url": "chest",
+            "category_url": "チェスト",
             "category_title": "チェスト"
           }
         },
         "01f3f35a-d0df-4c96-ae59-2403b2b5337c": {
           "type": "block_category",
           "settings": {
-            "category_url": "sideboard",
+            "category_url": "サイドボード",
             "category_title": "サイドボード"
           }
         },
         "23da759e-83c6-410e-90c3-35c9394356bc": {
           "type": "block_category",
           "settings": {
-            "category_url": "mishin",
+            "category_url": "ミシン",
             "category_title": "ミシン"
           }
         },
         "b3dc890c-fd99-4f5f-ad3b-743bc848fe27": {
           "type": "block_category",
           "settings": {
-            "category_url": "furniture",
+            "category_url": "家具その他",
             "category_title": "家具その他"
           }
         },
         "7c77bf69-c2da-4cac-9f3f-5790032d5bec": {
           "type": "block_category",
           "settings": {
-            "category_url": "garageitem",
+            "category_url": "ガレージハウス",
             "category_title": "ガレージアイテム"
           }
         },
         "124f7a5b-9880-4fd7-8908-8becf24c3849": {
           "type": "block_category",
           "settings": {
-            "category_url": "toys",
+            "category_url": "おもちゃ",
             "category_title": "おもちゃ"
           }
         }

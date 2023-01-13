@@ -620,6 +620,9 @@ footer .footer_inner {
 footer .footer_inner .footer_logo {
   margin-bottom: 50px;
 }
+footer .footer_inner .calender {
+  margin-bottom: 30px;
+}
 footer .footer_inner .footer_contents {
   padding-left: 0;
 }
@@ -4802,13 +4805,19 @@ footer .footer_inner .copyright {
 
 /*///////////////////////////////////////////////////
 //
-//            ▼ 追加 ▼
+//            ▼ カートボタン ▼
 //
 ///////////////////////////////////////////////////*/
+.product-form__buttons {
+  flex-direction: column;
+}
 .product-form__buttons button {
   width: 100%;
   justify-content: center;
   padding: 21px 19px;
   font-size: 14px;
+}
+.product-form__buttons .shopify-payment-button__button {
+  width: 100% !important;
 }
 }

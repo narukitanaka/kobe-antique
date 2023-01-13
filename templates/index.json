@@ -13,19 +13,19 @@
     "7d829476-8cd8-4f04-9974-bfce7bc6d5dc": {
       "type": "top03-category",
       "settings": {
-        "top-collection": "chair",
+        "top-collection": "チェア",
         "collection-img": "shopify:\/\/shop_images\/top03_img01.jpg",
         "collection-head": "CHAIR",
         "collection-sub-head": "チェア",
-        "top-collection02": "table",
+        "top-collection02": "テーブル",
         "collection-img02": "shopify:\/\/shop_images\/top03_img02.jpg",
         "collection-head02": "TABLE",
         "collection-sub-head02": "テーブル",
-        "top-collection03": "chest",
+        "top-collection03": "チェスト",
         "collection-img03": "shopify:\/\/shop_images\/top03_img03.jpg",
         "collection-head03": "CHEST",
         "collection-sub-head03": "チェスト",
-        "top-collection04": "cabinet",
+        "top-collection04": "キャビネット",
         "collection-img04": "shopify:\/\/shop_images\/top03_img04.jpg",
         "collection-head04": "CABINET",
         "collection-sub-head04": "キャビン"
