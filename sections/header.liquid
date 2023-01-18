@@ -1,143 +1,780 @@
-<header id="header">
-  <div class="header_inner">
+{% comment %} <header {% if template == 'collection' %}class="header_items"{% endif %} id="header">
+<div class="header_inner">
 
-    <h1 class="logo">
-      <a href="/">
-        <picture>
-          <source srcset="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/logo.svg" media="(min-width: 768px)" />
-          <source srcset="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/logo_sp.svg" media="(max-width: 767px)" />
-          <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/logo.svg" alt="KOBE ANTIQUE WAREHOUSE">
-        </picture>
-      </a>
-    </h1>
+<h1 class="logo">
+<a href="/">
+{% if template == 'collection' %}
+<picture class="logo_items_w">
+<source srcset="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/logo.svg" media="(min-width: 768px)" />
+<source srcset="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/logo_sp.svg" media="(max-width: 767px)" />
+<img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/logo.svg" alt="KOBE ANTIQUE WAREHOUSE">
+</picture>
+<picture class="logo_items">
+<source srcset="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/logo_items.svg" media="(min-width: 768px)" />
+<source srcset="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/logo_items_sp.svg" media="(max-width: 767px)" />
+<img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/logo_items.svg" alt="KOBE ANTIQUE WAREHOUSE">
+</picture>
+{% else %}
+<picture>
+<source srcset="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/logo.svg" media="(min-width: 768px)" />
+<source srcset="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/logo_sp.svg" media="(max-width: 767px)" />
+<img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/logo.svg" alt="KOBE ANTIQUE WAREHOUSE">
+</picture>
+{% endif %}
+</a>
+</h1>
 
-    <nav>
-      <ul class="nav_menu">
-        <li class="nav_menu_item has_submenu">
-          <a class="en nav_menu_link js-nav_link" href="/collections/allitems">items<span class="is_sp up"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_up.svg" alt=""></span>
-          </a>
-          <div class="submenu_wrap">
-            <div class="submenu big_menu">
-              <div class="big_menu_inner">
-                <div class="heading">
-                  <span class="en_h en">all items</span>
-                  <p class="jp_h">全てのアイテム</p>
+<nav>
+<ul class="nav_menu">
+<li class="nav_menu_item has_submenu">
+<a class="en nav_menu_link js-nav_link" href="/collections/allitems">items<span class="is_sp up"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_up.svg" alt=""></span>
+</a>
+<div class="submenu_wrap">
+<div class="submenu big_menu">
+<div class="big_menu_inner">
+<div class="heading">
+<span class="en_h en">all items</span>
+<p class="jp_h">全てのアイテム</p>
+</div>
+<ul>
+{% for link in linklists.collection-menu.links %}
+<li>
+<a href="{{ link.url }}">
+<figure>{{ link.object.image | image_url: width: 150 | image_tag }}</figure>
+<p>{{ link.title }}<img
+class="submenu_angle is_pc"
+src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/angle.svg"
+alt=""><img
+class="submenu_angle is_sp"
+src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg"
+alt=""></p>
+</a>
+</li>
+{% endfor %}
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="nav_menu_item">
+<a class="en nav_menu_link" href="/pages/about">about us<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg?v=1672891851" alt=""></span>
+</a>
+</li>
+<li class="nav_menu_item has_submenu">
+<a class="en nav_menu_link js-nav_link">service<span class="is_sp up"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_up.svg" alt=""></span>
+</a>
+<div class="submenu_wrap is_sp">
+<div class="submenu service_menu">
+<div class="service_menu_inner">
+<div class="heading">
+<span class="en_h en">service</span>
+<p class="jp_h">サービス</p>
+</div>
+<ul>
+<li><a href="/pages/repair"><figure><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/service_menu_img01.jpg" alt=""></figure><span class="en_h en">repair</span><p class="jp_h">リペア<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg?" alt=""></span></p></a></li>
+<li><a href="/pages/rental"><figure><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/service_menu_img02.jpg" alt=""></figure><span class="en_h en">rental</span><p class="jp_h">レンタル<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span></p></a></li>
+<li><a href="/pages/shop-cordinate"><figure><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/service_menu_img03.jpg" alt=""></figure><span class="en_h en">shop cordinate</span><p class="jp_h">ショップコーディネート<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span></p></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="nav_menu_item">
+<a class="en nav_menu_link" href="/pages/review">review<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span>
+</a>
+</li>
+<li class="nav_menu_item">
+<a class="en nav_menu_link" href="/pages/shop-access">store/access<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span>
+</a>
+</li>
+<li class="nav_menu_item">
+<a class="en nav_menu_link" href="/blogs/news">topics<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span>
+</a>
+</li>
+<li class="nav_menu_item">
+<a class="en nav_menu_link" href="/pages/contact">contact<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span>
+</a>
+</li>
+</ul>
+<div class="icon_btn">
+<div class="icon">
+<a href="https://www.instagram.com/kobeantique_warehouse/" target="_blank">
+<img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_instagram.svg" alt="">
+</a>
+</div>
+<div class="icon">
+<a href="{{ routes.cart_url }}">
+<img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_cart.svg" alt="">
+</a>
+</div>
+</div>
+<div class="sp_side_act is_sp">
+<div class="act tel">
+<span class="act_txt en">tel</span>
+<div class="act_inner">
+<span class="icon">
+<img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_tel.svg" alt="">
+</span>
+<a href="tel:078-224-5444" class="inner en">
+<p class="tel_number">078-224-5444</p>
+<p class="time">10:00 - 17:00</p>
+</a>
+</div>
+</div>
+<div class="act search">
+<span class="act_txt en">search</span>
+<div class="act_inner">
+<span class="icon">
+<img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_search.svg" alt="">
+</span>
+<div class="inner">
+<input type="text" placeholder="サイト内を検索">
+</div>
+</div>
+</div>
+</div>
+<div class="sp_chat is_sp">
+<img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_chat.svg" alt="">
+<span class="en">chat</span>
+</div>
+
+</nav>
+
+<div class="only_sp_cart is_sp">
+<a href="{{ routes.cart_url }}">
+<img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_cart.svg?" alt="">
+</a>
+</div>
+
+<div class="menu_open is_sp" id="menu_open">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+</div>
+</header> {% endcomment %}
+
+
+{% if template == 'collection' %}
+  <header class="header_items" id="header">
+    <div class="header_inner">
+
+      <p class="logo">
+        <a href="/">
+          <picture class="logo_items_w">
+            <source srcset="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/logo.svg" media="(min-width: 768px)" />
+            <source srcset="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/logo_sp.svg" media="(max-width: 767px)" />
+            <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/logo.svg" alt="KOBE ANTIQUE WAREHOUSE">
+          </picture>
+          <picture class="logo_items">
+            <source srcset="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/logo_items.svg" media="(min-width: 768px)" />
+            <source srcset="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/logo_items_sp.svg" media="(max-width: 767px)" />
+            <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/logo_items.svg" alt="KOBE ANTIQUE WAREHOUSE">
+          </picture>
+        </a>
+      </p>
+
+      <nav>
+        <ul class="nav_menu">
+          <li class="nav_menu_item has_submenu">
+            <a class="en nav_menu_link js-nav_link" href="/collections/allitems">items<span class="is_sp up"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_up.svg" alt=""></span>
+            </a>
+            <div class="submenu_wrap">
+              <div class="submenu big_menu">
+                <div class="big_menu_inner">
+                  <div class="heading">
+                    <span class="en_h en">all items</span>
+                    <p class="jp_h">全てのアイテム</p>
+                  </div>
+                  <ul>
+                    {% for link in linklists.collection-menu.links %}
+                      <li>
+                        <a href="{{ link.url }}">
+                          <figure>{{ link.object.image | image_url: width: 150 | image_tag }}</figure>
+                          <p>{{ link.title }}<img
+                              class="submenu_angle is_pc"
+                              src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/angle.svg"
+                              alt=""><img
+                              class="submenu_angle is_sp"
+                              src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg"
+                              alt=""></p>
+                        </a>
+                      </li>
+                    {% endfor %}
+                  </ul>
                 </div>
-                <ul>
-                  {% for link in linklists.collection-menu.links %}
-                    <li>
-                      <a href="{{ link.url }}">
-                        <figure>{{ link.object.image | image_url: width: 150 | image_tag }}</figure>
-                        <p>{{ link.title }}<img
-                            class="submenu_angle is_pc"
-                            src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/angle.svg"
-                            alt=""><img
-                            class="submenu_angle is_sp"
-                            src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg"
-                            alt=""></p>
-                      </a>
-                    </li>
-                  {% endfor %}
-                </ul>
               </div>
             </div>
-          </div>
-        </li>
-        <li class="nav_menu_item">
-          <a class="en nav_menu_link" href="/pages/about">about us<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg?v=1672891851" alt=""></span>
-          </a>
-        </li>
-        <li class="nav_menu_item has_submenu">
-          <a class="en nav_menu_link js-nav_link">service<span class="is_sp up"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_up.svg" alt=""></span>
-          </a>
-          <div class="submenu_wrap is_sp">
-            <div class="submenu service_menu">
-              <div class="service_menu_inner">
-                <div class="heading">
-                  <span class="en_h en">service</span>
-                  <p class="jp_h">サービス</p>
+          </li>
+          <li class="nav_menu_item">
+            <a class="en nav_menu_link" href="/pages/about">about us<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span>
+            </a>
+          </li>
+          <li class="nav_menu_item has_submenu">
+            <a class="en nav_menu_link js-nav_link">service<span class="is_sp up"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_up.svg" alt=""></span>
+            </a>
+            <div class="submenu_wrap is_sp">
+              <div class="submenu service_menu">
+                <div class="service_menu_inner">
+                  <div class="heading">
+                    <span class="en_h en">service</span>
+                    <p class="jp_h">サービス</p>
+                  </div>
+                  <ul>
+                    <li><a href="/pages/repair"><figure><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/service_menu_img01.jpg" alt=""></figure><span class="en_h en">repair</span><p class="jp_h">リペア<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span></p></a></li>
+                    <li><a href="/pages/rental"><figure><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/service_menu_img02.jpg" alt=""></figure><span class="en_h en">rental</span><p class="jp_h">レンタル<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span></p></a></li>
+                    <li><a href="/pages/shop-cordinate"><figure><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/service_menu_img03.jpg" alt=""></figure><span class="en_h en">shop cordinate</span><p class="jp_h">ショップコーディネート<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span></p></a></li>
+                  </ul>
                 </div>
-                <ul>
-                  <li><a href="/pages/repair"><figure><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/service_menu_img01.jpg" alt=""></figure><span class="en_h en">repair</span><p class="jp_h">リペア<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg?" alt=""></span></p></a></li>
-                  <li><a href="/pages/rental"><figure><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/service_menu_img02.jpg" alt=""></figure><span class="en_h en">rental</span><p class="jp_h">レンタル<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span></p></a></li>
-                  <li><a href="/pages/shop-cordinate"><figure><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/service_menu_img03.jpg" alt=""></figure><span class="en_h en">shop cordinate</span><p class="jp_h">ショップコーディネート<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span></p></a></li>
-                </ul>
               </div>
             </div>
+          </li>
+          <li class="nav_menu_item">
+            <a class="en nav_menu_link" href="/pages/review">review<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span>
+            </a>
+          </li>
+          <li class="nav_menu_item">
+            <a class="en nav_menu_link" href="/pages/shop-access">store/access<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span>
+            </a>
+          </li>
+          <li class="nav_menu_item">
+            <a class="en nav_menu_link" href="/pages/topics">topics<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span>
+            </a>
+          </li>
+          <li class="nav_menu_item">
+            <a class="en nav_menu_link" href="/pages/contact">contact<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span>
+            </a>
+          </li>
+        </ul>
+        <div class="icon_btn">
+          <div class="icon">
+            <a href="https://www.instagram.com/kobeantique_warehouse/" target="_blank">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_instagram.svg"
+                alt=""
+                class="items_icon_w">
+              <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_instagram_b.svg" alt="">
+            </a>
           </div>
-        </li>
-        <li class="nav_menu_item">
-          <a class="en nav_menu_link" href="/pages/review">review<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span>
-          </a>
-        </li>
-        <li class="nav_menu_item">
-          <a class="en nav_menu_link" href="/pages/shop-access">store/access<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span>
-          </a>
-        </li>
-        <li class="nav_menu_item">
-          <a class="en nav_menu_link" href="/blogs/news">topics<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span>
-          </a>
-        </li>
-        <li class="nav_menu_item">
-          <a class="en nav_menu_link" href="/pages/contact">contact<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span>
-          </a>
-        </li>
-      </ul>
-      <div class="icon_btn">
-        <div class="icon">
-          <a href="https://www.instagram.com/kobeantique_warehouse/" target="_blank">
-            <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_instagram.svg" alt="">
-          </a>
-        </div>
-        <div class="icon">
-          <a href="{{ routes.cart_url }}">
-            <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_cart.svg" alt="">
-          </a>
-        </div>
-      </div>
-      <div class="sp_side_act is_sp">
-        <div class="act tel">
-          <span class="act_txt en">tel</span>
-          <div class="act_inner">
-            <span class="icon">
-              <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_tel.svg" alt="">
-            </span>
-            <a href="tel:078-224-5444" class="inner en">
-              <p class="tel_number">078-224-5444</p>
-              <p class="time">10:00 - 17:00</p>
+          <div class="icon">
+            <a href="{{ routes.cart_url }}">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_cart.svg"
+                alt=""
+                class="items_icon_w">
+              <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_cart_b.svg" alt="">
             </a>
           </div>
         </div>
-        <div class="act search">
-          <span class="act_txt en">search</span>
-          <div class="act_inner">
-            <span class="icon">
-              <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_search.svg" alt="">
-            </span>
-            <div class="inner">
-              <input type="text" placeholder="サイト内を検索">
+        <div class="sp_side_act is_sp">
+          <div class="act tel">
+            <span class="act_txt en">tel</span>
+            <div class="act_inner">
+              <span class="icon">
+                <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_tel.svg" alt="">
+              </span>
+              <a href="tel:078-224-5444" class="inner en">
+                <p class="tel_number">078-224-5444</p>
+                <p class="time">10:00 - 17:00</p>
+              </a>
+            </div>
+          </div>
+          <div class="act search">
+            <span class="act_txt en">search</span>
+            <div class="act_inner">
+              <span class="icon">
+                <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_search.svg" alt="">
+              </span>
+              <div class="inner">
+                <input type="text" placeholder="サイト内を検索">
+              </div>
             </div>
           </div>
         </div>
+        <div class="sp_chat is_sp">
+          <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_chat.svg" alt="">
+          <span class="en">chat</span>
+        </div>
+
+      </nav>
+
+      <div class="only_sp_cart is_sp">
+        <a href="{{ routes.cart_url }}">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_chat.svg"
+            alt=""
+            class="only_items_cart">
+          <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_cart_br.svg" alt="">
+        </a>
       </div>
-      <div class="sp_chat is_sp">
-        <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_chat.svg" alt="">
-        <span class="en">chat</span>
+
+      <div class="menu_open is_sp" id="menu_open">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
 
-    </nav>
-
-    <div class="only_sp_cart is_sp">
-      <a href="{{ routes.cart_url }}">
-        <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_cart.svg?" alt="">
-      </a>
     </div>
+  </header>
 
-    <div class="menu_open is_sp" id="menu_open">
-      <span></span>
-      <span></span>
-      <span></span>
+
+{% elsif template == 'product' %}
+
+
+  <header class="header_items" id="header">
+    <div class="header_inner">
+
+      <p class="logo">
+        <a href="/">
+          <picture class="logo_items_w">
+            <source srcset="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/logo.svg" media="(min-width: 768px)" />
+            <source srcset="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/logo_sp.svg" media="(max-width: 767px)" />
+            <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/logo.svg" alt="KOBE ANTIQUE WAREHOUSE">
+          </picture>
+          <picture class="logo_items">
+            <source srcset="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/logo_items.svg" media="(min-width: 768px)" />
+            <source srcset="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/logo_items_sp.svg" media="(max-width: 767px)" />
+            <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/logo_items.svg" alt="KOBE ANTIQUE WAREHOUSE">
+          </picture>
+        </a>
+      </p>
+
+      <nav>
+        <ul class="nav_menu">
+          <li class="nav_menu_item has_submenu">
+            <a class="en nav_menu_link js-nav_link" href="/collections/allitems">items<span class="is_sp up"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_up.svg" alt=""></span>
+            </a>
+            <div class="submenu_wrap">
+              <div class="submenu big_menu">
+                <div class="big_menu_inner">
+                  <div class="heading">
+                    <span class="en_h en">all items</span>
+                    <p class="jp_h">全てのアイテム</p>
+                  </div>
+                  <ul>
+                    {% for link in linklists.collection-menu.links %}
+                      <li>
+                        <a href="{{ link.url }}">
+                          <figure>{{ link.object.image | image_url: width: 150 | image_tag }}</figure>
+                          <p>{{ link.title }}<img
+                              class="submenu_angle is_pc"
+                              src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/angle.svg"
+                              alt=""><img
+                              class="submenu_angle is_sp"
+                              src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg"
+                              alt=""></p>
+                        </a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav_menu_item">
+            <a class="en nav_menu_link" href="/pages/about">about us<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span>
+            </a>
+          </li>
+          <li class="nav_menu_item has_submenu">
+            <a class="en nav_menu_link js-nav_link">service<span class="is_sp up"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_up.svg" alt=""></span>
+            </a>
+            <div class="submenu_wrap is_sp">
+              <div class="submenu service_menu">
+                <div class="service_menu_inner">
+                  <div class="heading">
+                    <span class="en_h en">service</span>
+                    <p class="jp_h">サービス</p>
+                  </div>
+                  <ul>
+                    <li><a href="/pages/repair"><figure><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/service_menu_img01.jpg" alt=""></figure><span class="en_h en">repair</span><p class="jp_h">リペア<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span></p></a></li>
+                    <li><a href="/pages/rental"><figure><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/service_menu_img02.jpg" alt=""></figure><span class="en_h en">rental</span><p class="jp_h">レンタル<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span></p></a></li>
+                    <li><a href="/pages/shop-cordinate"><figure><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/service_menu_img03.jpg" alt=""></figure><span class="en_h en">shop cordinate</span><p class="jp_h">ショップコーディネート<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span></p></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav_menu_item">
+            <a class="en nav_menu_link" href="/pages/review">review<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span>
+            </a>
+          </li>
+          <li class="nav_menu_item">
+            <a class="en nav_menu_link" href="/pages/shop-access">store/access<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span>
+            </a>
+          </li>
+          <li class="nav_menu_item">
+            <a class="en nav_menu_link" href="/pages/topics">topics<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span>
+            </a>
+          </li>
+          <li class="nav_menu_item">
+            <a class="en nav_menu_link" href="/pages/contact">contact<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span>
+            </a>
+          </li>
+        </ul>
+        <div class="icon_btn">
+          <div class="icon">
+            <a href="https://www.instagram.com/kobeantique_warehouse/" target="_blank">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_instagram.svg"
+                alt=""
+                class="items_icon_w">
+              <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_instagram_b.svg" alt="">
+            </a>
+          </div>
+          <div class="icon">
+            <a href="{{ routes.cart_url }}">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_cart.svg"
+                alt=""
+                class="items_icon_w">
+              <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_cart_b.svg" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="sp_side_act is_sp">
+          <div class="act tel">
+            <span class="act_txt en">tel</span>
+            <div class="act_inner">
+              <span class="icon">
+                <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_tel.svg" alt="">
+              </span>
+              <a href="tel:078-224-5444" class="inner en">
+                <p class="tel_number">078-224-5444</p>
+                <p class="time">10:00 - 17:00</p>
+              </a>
+            </div>
+          </div>
+          <div class="act search">
+            <span class="act_txt en">search</span>
+            <div class="act_inner">
+              <span class="icon">
+                <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_search.svg" alt="">
+              </span>
+              <div class="inner">
+                <input type="text" placeholder="サイト内を検索">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sp_chat is_sp">
+          <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_chat.svg" alt="">
+          <span class="en">chat</span>
+        </div>
+
+      </nav>
+
+      <div class="only_sp_cart is_sp">
+        <a href="{{ routes.cart_url }}">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_chat.svg"
+            alt=""
+            class="only_items_cart">
+          <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_cart_br.svg" alt="">
+        </a>
+      </div>
+
+      <div class="menu_open is_sp" id="menu_open">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
     </div>
+  </header>
 
-  </div>
-</header>
+
+{% else %}
+
+
+
+  <header id="header">
+    <div class="header_inner">
+
+      <h1 class="logo">
+        <a href="/">
+          <picture>
+            <source srcset="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/logo.svg" media="(min-width: 768px)" />
+            <source srcset="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/logo_sp.svg" media="(max-width: 767px)" />
+            <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/logo.svg" alt="KOBE ANTIQUE WAREHOUSE">
+          </picture>
+        </a>
+      </h1>
+
+      <nav>
+        <ul class="nav_menu">
+          <li class="nav_menu_item has_submenu">
+            <a class="en nav_menu_link js-nav_link" href="/collections/allitems">items<span class="is_sp up"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_up.svg" alt=""></span>
+            </a>
+            <div class="submenu_wrap">
+              <div class="submenu big_menu">
+                <div class="big_menu_inner">
+                  <div class="heading">
+                    <span class="en_h en">all items</span>
+                    <p class="jp_h">全てのアイテム</p>
+                  </div>
+                  <ul>
+                    {% for link in linklists.collection-menu.links %}
+                      <li>
+                        <a href="{{ link.url }}">
+                          <figure>{{ link.object.image | image_url: width: 150 | image_tag }}</figure>
+                          <p>{{ link.title }}<img
+                              class="submenu_angle is_pc"
+                              src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/angle.svg"
+                              alt=""><img
+                              class="submenu_angle is_sp"
+                              src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg"
+                              alt=""></p>
+                        </a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav_menu_item">
+            <a class="en nav_menu_link" href="/pages/about">about us<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg?v=1672891851" alt=""></span>
+            </a>
+          </li>
+          <li class="nav_menu_item has_submenu">
+            <a class="en nav_menu_link js-nav_link">service<span class="is_sp up"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_up.svg" alt=""></span>
+            </a>
+            <div class="submenu_wrap is_sp">
+              <div class="submenu service_menu">
+                <div class="service_menu_inner">
+                  <div class="heading">
+                    <span class="en_h en">service</span>
+                    <p class="jp_h">サービス</p>
+                  </div>
+                  <ul>
+                    <li><a href="/pages/repair"><figure><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/service_menu_img01.jpg" alt=""></figure><span class="en_h en">repair</span><p class="jp_h">リペア<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg?" alt=""></span></p></a></li>
+                    <li><a href="/pages/rental"><figure><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/service_menu_img02.jpg" alt=""></figure><span class="en_h en">rental</span><p class="jp_h">レンタル<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span></p></a></li>
+                    <li><a href="/pages/shop-cordinate"><figure><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/service_menu_img03.jpg" alt=""></figure><span class="en_h en">shop cordinate</span><p class="jp_h">ショップコーディネート<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span></p></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav_menu_item">
+            <a class="en nav_menu_link" href="/pages/review">review<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span>
+            </a>
+          </li>
+          <li class="nav_menu_item">
+            <a class="en nav_menu_link" href="/pages/shop-access">store/access<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span>
+            </a>
+          </li>
+          <li class="nav_menu_item">
+            <a class="en nav_menu_link" href="/blogs/news">topics<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span>
+            </a>
+          </li>
+          <li class="nav_menu_item">
+            <a class="en nav_menu_link" href="/pages/contact">contact<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span>
+            </a>
+          </li>
+        </ul>
+        <div class="icon_btn">
+          <div class="icon">
+            <a href="https://www.instagram.com/kobeantique_warehouse/" target="_blank">
+              <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_instagram.svg" alt="">
+            </a>
+          </div>
+          <div class="icon">
+            <a href="{{ routes.cart_url }}">
+              <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_cart.svg" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="sp_side_act is_sp">
+          <div class="act tel">
+            <span class="act_txt en">tel</span>
+            <div class="act_inner">
+              <span class="icon">
+                <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_tel.svg" alt="">
+              </span>
+              <a href="tel:078-224-5444" class="inner en">
+                <p class="tel_number">078-224-5444</p>
+                <p class="time">10:00 - 17:00</p>
+              </a>
+            </div>
+          </div>
+          <div class="act search">
+            <span class="act_txt en">search</span>
+            <div class="act_inner">
+              <span class="icon">
+                <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_search.svg" alt="">
+              </span>
+              <div class="inner">
+                <input type="text" placeholder="サイト内を検索">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sp_chat is_sp">
+          <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_chat.svg" alt="">
+          <span class="en">chat</span>
+        </div>
+
+      </nav>
+
+      <div class="only_sp_cart is_sp">
+        <a href="{{ routes.cart_url }}">
+          <img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_cart.svg?" alt="">
+        </a>
+      </div>
+
+      <div class="menu_open is_sp" id="menu_open">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </div>
+  </header>
+
+{% endif %}
+
+
+
+{% comment %} <header id="header"> <div class="header_inner">
+
+<h1 class="logo">
+<a href="/">
+<picture>
+<source srcset="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/logo.svg" media="(min-width: 768px)" />
+<source srcset="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/logo_sp.svg" media="(max-width: 767px)" />
+<img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/logo.svg" alt="KOBE ANTIQUE WAREHOUSE">
+</picture>
+</a>
+</h1>
+
+<nav>
+<ul class="nav_menu">
+<li class="nav_menu_item has_submenu">
+<a class="en nav_menu_link js-nav_link" href="/collections/allitems">items<span class="is_sp up"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_up.svg" alt=""></span>
+</a>
+<div class="submenu_wrap">
+<div class="submenu big_menu">
+<div class="big_menu_inner">
+<div class="heading">
+<span class="en_h en">all items</span>
+<p class="jp_h">全てのアイテム</p>
+</div>
+<ul>
+{% for link in linklists.collection-menu.links %}
+<li>
+<a href="{{ link.url }}">
+<figure>{{ link.object.image | image_url: width: 150 | image_tag }}</figure>
+<p>{{ link.title }}<img
+class="submenu_angle is_pc"
+src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/angle.svg"
+alt=""><img
+class="submenu_angle is_sp"
+src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg"
+alt=""></p>
+</a>
+</li>
+{% endfor %}
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="nav_menu_item">
+<a class="en nav_menu_link" href="/pages/about">about us<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg?v=1672891851" alt=""></span>
+</a>
+</li>
+<li class="nav_menu_item has_submenu">
+<a class="en nav_menu_link js-nav_link">service<span class="is_sp up"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_up.svg" alt=""></span>
+</a>
+<div class="submenu_wrap is_sp">
+<div class="submenu service_menu">
+<div class="service_menu_inner">
+<div class="heading">
+<span class="en_h en">service</span>
+<p class="jp_h">サービス</p>
+</div>
+<ul>
+<li><a href="/pages/repair"><figure><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/service_menu_img01.jpg" alt=""></figure><span class="en_h en">repair</span><p class="jp_h">リペア<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg?" alt=""></span></p></a></li>
+<li><a href="/pages/rental"><figure><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/service_menu_img02.jpg" alt=""></figure><span class="en_h en">rental</span><p class="jp_h">レンタル<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span></p></a></li>
+<li><a href="/pages/shop-cordinate"><figure><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/service_menu_img03.jpg" alt=""></figure><span class="en_h en">shop cordinate</span><p class="jp_h">ショップコーディネート<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span></p></a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="nav_menu_item">
+<a class="en nav_menu_link" href="/pages/review">review<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span>
+</a>
+</li>
+<li class="nav_menu_item">
+<a class="en nav_menu_link" href="/pages/shop-access">store/access<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span>
+</a>
+</li>
+<li class="nav_menu_item">
+<a class="en nav_menu_link" href="/blogs/news">topics<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span>
+</a>
+</li>
+<li class="nav_menu_item">
+<a class="en nav_menu_link" href="/pages/contact">contact<span class="is_sp right"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/sp_arrow_right.svg" alt=""></span>
+</a>
+</li>
+</ul>
+<div class="icon_btn">
+<div class="icon">
+<a href="https://www.instagram.com/kobeantique_warehouse/" target="_blank">
+<img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_instagram.svg" alt="">
+</a>
+</div>
+<div class="icon">
+<a href="{{ routes.cart_url }}">
+<img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_cart.svg" alt="">
+</a>
+</div>
+</div>
+<div class="sp_side_act is_sp">
+<div class="act tel">
+<span class="act_txt en">tel</span>
+<div class="act_inner">
+<span class="icon">
+<img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_tel.svg" alt="">
+</span>
+<a href="tel:078-224-5444" class="inner en">
+<p class="tel_number">078-224-5444</p>
+<p class="time">10:00 - 17:00</p>
+</a>
+</div>
+</div>
+<div class="act search">
+<span class="act_txt en">search</span>
+<div class="act_inner">
+<span class="icon">
+<img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_search.svg" alt="">
+</span>
+<div class="inner">
+<input type="text" placeholder="サイト内を検索">
+</div>
+</div>
+</div>
+</div>
+<div class="sp_chat is_sp">
+<img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_chat.svg" alt="">
+<span class="en">chat</span>
+</div>
+
+</nav>
+
+<div class="only_sp_cart is_sp">
+<a href="{{ routes.cart_url }}">
+<img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_cart.svg?" alt="">
+</a>
+</div>
+
+<div class="menu_open is_sp" id="menu_open">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+</div>
+</header> {% endcomment %}

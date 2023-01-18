@@ -153,7 +153,13 @@
               {% for product in collection.products %}
                 <li>
                   <a href="{{ product.url }}">
-                    <figure><img src="{{ product.featured_image.src | img_url: 'large' }}" alt=""></figure>
+                    <figure>
+                      <img src="{{ product.featured_image.src | img_url: 'large' }}" alt="">
+                      {% comment %} {% if product.variants.first.inventory_management == "shopify" and product.variants.first.inventory_quantity > 0 %}
+                      {%  else %}
+                      <div class="stock-label"><p>Sold out</p></div>
+                      {% endif %} {% endcomment %}
+                    </figure>
                     <div class="txt">
                       <p class="items_title">{{ product.title }}</p>
                       <span class="price en">
@@ -169,7 +175,13 @@
               {% for product in collection.products %}
                 <li>
                   <a href="{{ product.url | within: collection }}">
-                    <figure><img src="{{ product.featured_image.src | img_url: 'large' }}" alt=""></figure>
+                    <figure>
+                      <img src="{{ product.featured_image.src | img_url: 'large' }}" alt="">
+                      {% comment %} {% if product.variants.first.inventory_management == "shopify" and product.variants.first.inventory_quantity > 0 %}
+                      {%  else %}
+                      <div class="stock-label"><p>Sold out</p></div>
+                      {% endif %} {% endcomment %}
+                    </figure>
                     <div class="txt">
                       <p class="items_title">{{ product.title }}</p>
                       <span class="price en">
@@ -191,19 +203,18 @@
   {% endpaginate %}
 </section>
 <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ すべての商品01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
-<!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ すべての商品02 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
-      <!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ すべての商品03 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
-      <section class="items03 contact_area">
-        <div class="contact_area_inner">
-          <div class="section_title white horizontal">
-            <span class="en">contact</span>
-            <h2>コンタクト</h2>
-          </div>
-          <p>商品や修理、レンタルに関する<br class="is_sp">お問い合わせなど <br class="is_sp">お気軽にお問い合わせください。</p>
-          <a href="/pages/contact"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_mail.svg" alt="">お問合せフォーム</a>
-        </div>
-      </section>
-      <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ すべての商品03 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+<!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ すべての商品03 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
+<section class="items03 contact_area">
+  <div class="contact_area_inner">
+    <div class="section_title white horizontal">
+      <span class="en">contact</span>
+      <h2>コンタクト</h2>
+    </div>
+    <p>商品や修理、レンタルに関する<br class="is_sp">お問い合わせなど <br class="is_sp">お気軽にお問い合わせください。</p>
+    <a href="/pages/contact"><img src="https://cdn.shopify.com/s/files/1/0697/0775/9932/files/icon_mail.svg" alt="">お問合せフォーム</a>
+  </div>
+</section>
+<!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ すべての商品03 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
 
 
 {% javascript %}

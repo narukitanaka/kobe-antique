@@ -450,7 +450,7 @@
 
   </head>
 
-  <body class="gradient">
+  <body class="gradient" {% if template == 'collection' %}id="items"{% elsif template == 'product' %}id="items"{% endif %}>
     {% comment %} <a class="skip-to-content-link button visually-hidden" href="#MainContent">
     {{ "accessibility.skip_to_text" | t }}
     </a> {% endcomment %}
