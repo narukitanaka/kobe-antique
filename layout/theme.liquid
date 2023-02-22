@@ -448,7 +448,7 @@
     <script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer></script>
 
 
-  </head>
+  {% include 'wiser' %}{% include 'wiser_popup' %}</head>
 
   <body class="gradient" {% if template == 'collection' %}id="items"{% elsif template == 'product' %}id="items"{% endif %}>
     {% comment %} <a class="skip-to-content-link button visually-hidden" href="#MainContent">
@@ -460,7 +460,9 @@
     {%- endif -%}
 
     {% comment %} {% section 'announcement-bar' %} {% endcomment %}
-    {% section 'header' %}
+    {% unless request.path == '/pages/delivery-charge' %}
+      {% section 'header' %}
+    {% endunless %}
     <main
       id="MainContent"
       class="content-for-layout focus-none"
@@ -469,7 +471,9 @@
       {{ content_for_layout }}
     </main>
 
-    {% section 'footer' %}
+    {% unless request.path == '/pages/delivery-charge' %}
+      {% section 'footer' %}
+    {% endunless %}
 
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>

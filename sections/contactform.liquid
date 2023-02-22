@@ -42,10 +42,20 @@
       </li>
     </ol>
   </div>
+
   <div class="contact02_in">
     <div class="box fadein">
       <p>以下のフォームの項目を入力し、よろしければ「確認する」ボタンをクリックしてください。</p>
       <p>※店舗・事業者の方など、業販向けの対応も可能ですので、その旨を記載頂けましたら幸いです。</p>
+      {%- capture handle -%}
+        {%- render "function_get_query_value_by_key" key: "handle" -%}{%- endcapture -%}
+      {%- assign product = all_products[handle] -%}
+      <div id="contact_product-info_area" class="contact_product-info_area">
+        <div class="contact_product-info">
+          <div class="product_img_contact"><img src="{{ product.featured_image | img_url: "master" }}" alt=""></div>
+          <p class="product_title_contact">{{ product.title }}</p>
+        </div>
+      </div>
       <div class="globo-formbuilder" data-id="MTAyNTIz"></div>
     </div>
   </div>

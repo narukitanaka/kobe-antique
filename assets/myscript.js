@@ -282,3 +282,49 @@ $(window).on("load", function () {
 	});
 
 });
+
+
+//配送料について　ポップアップ
+$('#js-open-page').click(function () {
+  const url = location.href;
+  const urlpath = location.pathname;
+
+  console.log(urlpath);
+
+  const replacedUrl = url.replace(urlpath, "/pages/delivery-charge");
+  window.open(replacedUrl, '_blank', 'menubar=0,location=0,width=500,height=600,top=150,left=300');
+});
+
+//商品に関するお問い合わせ
+window.onload = function() {
+  document.getElementById("102523-name").type = "hidden";
+  document.getElementById("102523-url").type = "hidden";
+
+  // URLを取得
+  const url = new URL(window.location.href);
+  // URLの末尾につく?以降のGETパラメータを取得
+  const params = url.searchParams;
+  // ルートURLを取得
+  const originurl = url.origin; 
+
+  console.log(params);
+  console.log(originurl);
+
+  // パラメータから「name」を取得
+  const productname = params.get("name");
+  const producthandle = params.get("handle");
+  const producturl = params.get("url");
+
+  console.log(productname);
+  console.log(producthandle);
+  console.log(producturl);
+
+  document.getElementById("102523-name").value = productname;
+
+  if( params.has('name') ) {
+    document.getElementById("contact_product-info_area").classList.add("contact_product-info_area_block");
+    document.getElementById("102523-url").value = originurl + producturl;
+  }
+
+}
+

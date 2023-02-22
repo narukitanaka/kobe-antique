@@ -1,0 +1,16 @@
+{%- capture contentForQuerystring -%}
+  {{ content_for_header }}{%- endcapture -%}
+{%- assign pageUrl = contentForQuerystring | split: '"pageurl":"' | last | split: '"' | first | replace: '\/','/' | replace:'%20',' ' | replace:'\u0026','&' -%}
+
+{%- assign get_query_value_by_key = '' -%}
+{%- if pageUrl contains "?" -%}
+  {%- assign pageQuerystring = pageUrl | split: '?' | last | replace: '=', '&' -%}
+  {%- assign tmp = pageQuerystring | split: '&' -%}
+  {%- for kv in tmp -%}
+    {%- if kv == key -%}
+      {%- assign get_query_value_by_key = tmp[forloop.index] -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+{{ get_query_value_by_key }}

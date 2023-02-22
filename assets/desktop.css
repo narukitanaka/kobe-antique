@@ -9729,6 +9729,24 @@ footer .footer_inner .copyright p {
   display: flex;
   margin-bottom: 70px;
 }
+.globo-formbuilder .globo-form-app .globo-form-control:nth-of-type(6){
+  margin-bottom: 0px;
+}
+.globo-formbuilder .globo-form-app .globo-form-control:last-of-type {
+  margin-bottom: 0px;
+}
+.globo-formbuilder .globo-form-app .globo-form-control:nth-of-type(6) .globo-label .label-content:before {
+  position: static;
+}
+.globo-formbuilder .globo-form-app .globo-form-control:nth-of-type(6) .globo-label .label-content:after {
+  content: "";
+}
+.globo-formbuilder .globo-form-app .globo-form-control:last-of-type .globo-label .label-content:before {
+  position: static;
+}
+.globo-formbuilder .globo-form-app .globo-form-control:last-of-type .globo-label .label-content:after {
+  content: "";
+}
 .globo-formbuilder .globo-form-app .globo-form-control .checkbox-wrapper {
   width: 65%;
   margin: 0 0 0 auto;
@@ -9771,7 +9789,7 @@ footer .footer_inner .copyright p {
 }
 .globo-formbuilder .globo-form-app .globo-form-control .globo-form-input {
   width: 65%;
-  background-color: #fff !important;
+  /* background-color: #fff !important; */
 }
 .globo-formbuilder .globo-form-app .globo-form-control textarea {
   width: 65%;
@@ -9897,3 +9915,193 @@ footer .footer_inner .copyright p {
   letter-spacing: 1px;
   color: #fff;
 }
+/*///////////////////////////////////////////////////
+//
+//            ▼ 送料について ▼
+//
+///////////////////////////////////////////////////*/
+.delivery_charge01 {
+  background: rgba(203, 208, 209, 0.4);
+}
+.delivery_charge01 h1 {
+  font-size: 24px;
+  text-align: center;
+  padding: 10px 0 0 0;
+}
+.delivery_charge01 p {
+  text-align: center;
+  margin: 0 0 1em 0;
+  padding: 0 20px;
+}
+.delivery_charge01 .box_form {
+  text-align: center;
+}
+.delivery_charge01 .box_form label {
+  position: relative;
+}
+.delivery_charge01 .box_form label::before {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 5px 0 5px;
+  border-color: #000 transparent transparent transparent;
+  content: "";
+  position: absolute;
+  right: 9px;
+  top: 13px;
+}
+.delivery_charge01 .box_form label select {
+  padding: 5px 10px;
+  border: 1px solid #CCC;
+  width: 80%;
+  display: inline-block;
+  box-sizing: border-box;
+  background: #fff;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.delivery_charge01 .boxArea {
+  padding: 25px 0;
+}
+.delivery_charge01 .boxArea .box:nth-child(n+2) {
+  display: none;
+}
+.delivery_charge01 .boxArea .box .head {
+  text-align: right;
+}
+.delivery_charge01 .boxArea .box table {
+  width: 80%;
+  margin: 0 auto;
+  border-right: 1px solid #CCC;
+  border-left: 1px solid #CCC;
+}
+.delivery_charge01 .boxArea .box table tr:nth-child(2n) td {
+  background: #fff;
+}
+.delivery_charge01 .boxArea .box table tr th {
+  width: 50%;
+  background: #908664;
+  color: #FFF;
+  padding: 0;
+  font-size: 14px;
+}
+.delivery_charge01 .boxArea .box table tr th:first-child {
+  border-right: 1px solid #CCC;
+}
+.delivery_charge01 .boxArea .box table tr td {
+  padding: 0 25px;
+  border-bottom: 1px solid #CCC;
+  font-size: 14px;
+}
+.delivery_charge01 .boxArea .box table tr td:first-child {
+  border-right: 1px solid #CCC;
+}
+/*///////////////////////////////////////////////////
+//
+//            ▼ 商品に関するお問い合わせ ▼
+//
+///////////////////////////////////////////////////*/
+.contact_product-info_area {
+  display: none;
+}
+.contact_product-info_area_block {
+  display: block;
+}
+.contact_product-info {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.contact_product-info .product_img_contact {
+  width: 20%;
+}
+.contact_product-info .product_img_contact img {
+  width: 100%;
+}
+/*///////////////////////////////////////////////////
+//
+//            ▼ 最近チェックした商品 ▼
+//
+///////////////////////////////////////////////////*/
+.recently-viewed {
+  position: relative;
+  padding: 126px 0 151px;
+}
+.recently-viewed::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: url(https://cdn.shopify.com/s/files/1/0697/0775/9932/files/bg02.jpg) center center/contain repeat;
+  z-index: -2;
+}
+.recently-viewed::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 95%;
+  max-width: 1760px;
+  height: 565px;
+  content: "";
+  border-radius: 100px 0 0 0;
+  background: rgba(110, 113, 113, 0.3);
+  z-index: -1;
+}
+.evm_wiser_heading {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.1rem;
+  line-height: 1;
+  margin-bottom: 80px!important;
+}
+.evm_wiser_heading::after {
+  content: "［最近チェックした商品]";
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  font-weight: 500;
+}
+.evm-wscontainer {
+  width: 90% !important;
+  max-width: 1300px!important;
+}
+.ws-card__header {
+  background-color: transparent !important;
+}
+#presets2 .evm-ws-card {
+  margin: 20px 0 0 !important;
+  background-color: transparent !important;
+}
+.ws-card_image_container {
+  border-radius: 5px;
+  overflow: hidden;
+}
+.ws-card__title {
+  font-weight: 500px !important;
+}
+.owl-stage {
+  width: 100% !important;
+  display: flex;
+  gap: 2.625vw;
+}
+.owl-stage:after {
+  display: none !important;
+}
+.owl-item  {
+  width: calc((100% - 10.625vw) / 5) !important;
+}
+.ws-box-wrapper {
+  padding: 0!important;
+}
+.owl-nav  {
+  display: none;
+}
+/* #presets2.evm-wsrow {
+  justify-content: space-between!important;
+} */

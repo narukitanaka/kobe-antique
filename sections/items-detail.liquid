@@ -230,13 +230,13 @@
 
           <div class="about">
             <ul>
-              <li><a href="/pages/contact">商品に関するお問い合わせ</a></li>
-              <li><a href="/">配送料について</a></li>
-              <li><a href="/">お取り置きについて</a></li>
+              <li><a href="/pages/contact?handle={{ product.handle  }}&name={{ product.title  }}&url={{ product.url }}">商品に関するお問い合わせ</a></li>
+              <li><a href="javascript:void(0)" id="js-open-page">配送料について</a></li>
+              <li><a href="/pages/about#about_reserving">お取り置きについて</a></li>
             </ul>
           </div>
           <table>
-            <tr>
+            {% comment %} <tr>
               <th>サイズ</th>
               <td>{{ product.metafields.custom._size }}</td>
             </tr>
@@ -259,6 +259,14 @@
             <tr>
               <th>メンテナンス</th>
               <td>{{ product.metafields.custom._maintenance }}</td>
+            </tr> {% endcomment %}
+            <tr>
+              <th>備考</th>
+              <td>{{ product.metafields.custom._bikou }}</td>
+            </tr>
+            <tr>
+              <th>展示場所</th>
+              <td>{{ product.metafields.custom._tenji }}</td>
             </tr>
           </table>
         </div>
@@ -299,7 +307,7 @@
 </section>
 <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ すべての商品01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
 <!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ すべての商品02 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
-{%- assign metafields-products = product.metafields.custom._related_products -%}
+{% comment %} {%- assign metafields-products = product.metafields.custom._related_products -%}
 <section class="items_detail02 items_common">
   <div class="items_common_inner">
     <div class="section_title">
@@ -329,12 +337,12 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> {% endcomment %}
 </section>
 
 
 
-{% comment %} <section class="items_detail02 items_common">
+<section class="items_detail02 items_common">
   <div class="items_common_inner">
     <div class="section_title">
       <span class="en_h en">related item</span>
@@ -346,8 +354,9 @@
       <div class="swiper-container">
         <div class="swiper-wrapper">
           {% assign names = product.title %}
-            {% for collection in product.collections %}
-              {% unless collection.title == 'すべての商品' %}
+          {% for collection in product.collections %}
+            {% unless collection.title == 'すべての商品' %}
+              {% paginate collection.products by 6 %}
               {% for product in collection.products %}
                 {% unless product.title == names %}
                   <div class="swiper-slide">
@@ -365,13 +374,14 @@
                   </div>
                 {% endunless %}
               {% endfor %}
-              {% endunless %}
-            {% endfor %}
+              {% endpaginate %}
+            {% endunless %}
+          {% endfor %}
         </div>
       </div>
     </div>
   </div>
-</section> {% endcomment %}
+</section>
 
 <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ すべての商品02 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
 <!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ すべての商品03 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->

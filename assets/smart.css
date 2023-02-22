@@ -4820,4 +4820,61 @@ footer .footer_inner .copyright {
 .product-form__buttons .shopify-payment-button__button {
   width: 100% !important;
 }
+/*///////////////////////////////////////////////////
+//
+//            ▼ 送料について ▼
+//
+///////////////////////////////////////////////////*/
+.delivery_charge01 .box_form label::before {
+  top: 12px;
+}
+}
+/*///////////////////////////////////////////////////
+//
+//            ▼ 商品に関するお問い合わせ ▼
+//
+///////////////////////////////////////////////////*/
+.contact_product-info {
+  margin-top: 20px;
+}
+.contact_product-info .product_img_contact {
+  width: 30%;
+}
+/*///////////////////////////////////////////////////
+//
+//            ▼ 最近チェックした商品 ▼
+//
+///////////////////////////////////////////////////*/
+@media screen and (max-width: 767px) {
+  .recently-viewed {
+    padding: 80px 0 82px;
+  }
+  .recently-viewed::after {
+    width: 84%;
+    height: 82%;
+    border-radius: 50px 0 0 0;
+    background: rgba(110, 113, 113, 0.4);
+  }
+  .evm_wiser_heading {
+    font-size: 20px !important;
+    margin-bottom: 40px !important;
+  }
+  .evm_wiser_heading:after {
+    font-size: 14px;;
+  }
+  .evm_wiser_heading::after {
+    content: "最近チェックした商品";
+    bottom:  -25px;
+  }
+  .evm-wscontainer {
+    width: 100% !important;
+  }
+  .owl-stage {
+    padding-left: 20px;
+    width: 900px !important;
+  }
+  .owl-item  {
+    width: 155px !important;
+    margin-right: 21px;
+  }
 }
