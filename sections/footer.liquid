@@ -22,32 +22,11 @@
       </p>
       <div class="footer_list_wrap">
         <ul class="footer_list">
-          <li>
-            <a href="/collections/chair">チェア・ソフア</a>
-          </li>
-          <li>
-            <a href="/collections/table">テーブル</a>
-          </li>
-          <li>
-            <a href="/collections/cabinet">キャビネット</a>
-          </li>
-          <li>
-            <a href="/collections/tnruk">トランク</a>
-          </li>
-          <li>
-            <a href="/collections/desk">ビューロー・デスク</a>
-          </li>
-        </ul>
-        <ul class="footer_list">
-          <li>
-            <a href="/collections/goods">アンティーク雑貨</a>
-          </li>
-          <li>
-            <a href="/collections/ornament">小物</a>
-          </li>
-          <li>
-            <a href="/collections/furniture">その他家具</a>
-          </li>
+          {% for link in linklists.collection-menu.links %}
+            <li>
+              <a href="{{ link.url }}">{{ link.title }}</a>
+            </li>
+          {% endfor %}
         </ul>
       </div>
       <ul class="footer_menu01">

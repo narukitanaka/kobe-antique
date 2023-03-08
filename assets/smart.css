@@ -633,7 +633,8 @@ footer .footer_inner .footer_contents .footer_list_wrap {
   flex-wrap: wrap;
 }
 footer .footer_inner .footer_contents .footer_list_wrap .footer_list {
-  width: 50% !important;
+  /* width: 50% !important; */
+  width: 100%;
 }
 footer .footer_inner .footer_contents .footer_list_wrap .footer_list:nth-of-type(even) {
   padding-left: 24px;
@@ -645,7 +646,8 @@ footer .footer_inner .footer_contents .footer_list_wrap .footer_list:last-of-typ
   left: 0;
 }
 footer .footer_inner .footer_contents .footer_list_wrap .footer_list li {
-  margin-bottom: 9px;
+  margin-bottom: 10px;
+  width: 50%;
 }
 footer .footer_inner .footer_contents .footer_list_wrap .footer_list li a {
   font-size: 12px;

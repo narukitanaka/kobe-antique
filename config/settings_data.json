@@ -401,6 +401,12 @@
         "disabled": false,
         "settings": {
         }
+      },
+      "12887025016891591025": {
+        "type": "shopify:\/\/apps\/\/blocks\/calendar-master-delivery-data\/54207411-7955-4150-b3b9-caf4c757ba72",
+        "disabled": false,
+        "settings": {
+        }
       }
     }
   },
