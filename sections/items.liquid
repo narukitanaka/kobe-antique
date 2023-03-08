@@ -162,8 +162,12 @@
                     </figure>
                     <div class="txt">
                       <p class="items_title">{{ product.title }}</p>
-                      <span class="price en">
-                        {{ product.price | money }}</span>
+                      {% comment %} <span class="price en">{{ product.price | money }}</span> {% endcomment %}
+                        {% if product.variants.first.inventory_management == "shopify" and product.variants.first.inventory_quantity > 0 %}
+                          <span class="price en">{{ product.price | money }}</span>
+                        {%  else %}
+                          <span class="price en">SOLD OUT</span>
+                        {% endif %}
                     </div>
                   </a>
                 </li>

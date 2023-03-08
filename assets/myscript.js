@@ -297,8 +297,9 @@ $('#js-open-page').click(function () {
 
 //商品に関するお問い合わせ
 window.onload = function() {
-  document.getElementById("102523-name").type = "hidden";
+  // document.getElementById("102523-name").type = "hidden";
   document.getElementById("102523-url").type = "hidden";
+  document.getElementById("102523-text-2").type = "hidden";
 
   // URLを取得
   const url = new URL(window.location.href);
@@ -319,7 +320,8 @@ window.onload = function() {
   console.log(producthandle);
   console.log(producturl);
 
-  document.getElementById("102523-name").value = productname;
+  // document.getElementById("102523-name").value = productname;
+  document.getElementById("102523-text-2").value = productname;
 
   if( params.has('name') ) {
     document.getElementById("contact_product-info_area").classList.add("contact_product-info_area_block");

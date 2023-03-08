@@ -76,9 +76,12 @@
             <div class="price_item">
               <p class="price_txt">価格</p>
               <div class="inner">
-                <p class="price en">
-                  {{ product.price | money }}</p>
-                <p class="tax">税込 / 配送料別途</p>
+                {%- if product.selected_or_first_available_variant.available -%}
+                  <p class="price en">{{ product.price | money }}</p>
+                  <p class="tax">税込 / 配送料別途</p>
+                {%- else -%}
+                  <p class="price en">SOLD OUT</p>
+                {%- endif -%}
               </div>
             </div>
             <div class="stock_item">
@@ -368,7 +371,12 @@
                         <p class="items_title">{{ product.title }}</p>
                         <span class="price en">
                           {{ product.price | money }}
-                        </span>
+                        </span> 
+                        {% comment %} {% if product.variants.first.inventory_management == "shopify" and product.variants.first.inventory_quantity > 0 %}
+                          <span class="price en">{{ product.price | money }}</span>
+                        {%  else %}
+                          <span class="price en">SOLD OUT</span>
+                        {% endif %} {% endcomment %}
                       </div>
                     </a>
                   </div>
