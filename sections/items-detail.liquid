@@ -5,6 +5,7 @@
     id="MainProduct-{{ section.id }}"
     class="page-width section-{{ section.id }}-padding"
     data-section="{{ section.id }}">
+
     <div class="breadcrumbs">
       <ol
         itemscope
@@ -24,9 +25,15 @@
           itemprop="itemListElement"
           itemscope
           itemtype="http://schema.org/ListItem">
-          <a itemprop="item" href="/collections/allitems">
-            <span itemprop="name">all items</span>
+          {% for collection in product.collections %}
+          <a itemprop="item" href="{{ collection.url }}">
+            <span itemprop="name">
+                {% unless collection.title == 'すべての商品' %}
+                  {{ collection.title }}
+                {% endunless %}
+            </span>
           </a>
+          {% endfor %}
           <meta itemprop="position" content="2" />
         </li>
 
@@ -39,6 +46,7 @@
         </li>
       </ol>
     </div>
+    
     <div class="items_detail01_bg">
       <div class="items_detail01_inner">
         <div class="box">

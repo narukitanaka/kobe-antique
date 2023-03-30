@@ -143,7 +143,7 @@ cart-items {
   }
 
   .cart__footer > * {
-    width: 35rem;
+    width: 45rem;
   }
 
   .cart__footer > * + * {
@@ -189,9 +189,9 @@ cart-items {
   display: block;
 }
 
-.cart__checkout-button {
+/* .cart__checkout-button {
   max-width: 36rem;
-}
+} */
 
 .cart__ctas {
   text-align: center;

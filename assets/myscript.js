@@ -295,38 +295,79 @@ $('#js-open-page').click(function () {
   window.open(replacedUrl, '_blank', 'menubar=0,location=0,width=500,height=600,top=150,left=300');
 });
 
+
+//ブログページカテゴリーマーク
+// window.onload = function() {
+
+//   var url = window.location.href; 
+//   // 最後の値を取り出す 
+//   var lastValue = url.split('/').pop();
+//   console.log(lastValue);
+
+//   var link01 = $('#act-tag01 a').attr('href'); 
+//   // 最後の値を取り出す 
+//   var lastLink01 = link01.substring(link01.lastIndexOf('/') + 1); 
+//   console.log(lastLink01);
+
+//   var link02 = $('#act-tag02 a').attr('href'); 
+//   // 最後の値を取り出す 
+//   var lastLink02 = link02.substring(link02.lastIndexOf('/') + 1); 
+//   console.log(lastLink02);
+
+//   var link03 = $('#act-tag03 a').attr('href'); 
+//   // 最後の値を取り出す 
+//   var lastLink03 = link03.substring(link03.lastIndexOf('/') + 1); 
+//   console.log(lastLink03);
+
+
+//   if (lastValue == lastLink01) {
+//     $('#all-tag').removeClass('active');
+//     $('.act01').parent().addClass('active');
+//   }else if (lastValue == lastLink02) {
+//     $('#all-tag').removeClass('active');
+//     $('.act02').parent().addClass('active');
+//   }else if (lastValue == lastLink03) {
+//     $('#all-tag').removeClass('active');
+//     $('.act03').parent().addClass('active');
+//   }
+// }
+
+
+
 //商品に関するお問い合わせ
-window.onload = function() {
-  // document.getElementById("102523-name").type = "hidden";
-  document.getElementById("102523-url").type = "hidden";
-  document.getElementById("102523-text-2").type = "hidden";
+// window.onload = function() {
+//   // document.getElementById("102523-name").type = "hidden";
+//   document.getElementById("102523-url").type = "hidden";
+//   document.getElementById("102523-text-2").type = "hidden";
 
-  // URLを取得
-  const url = new URL(window.location.href);
-  // URLの末尾につく?以降のGETパラメータを取得
-  const params = url.searchParams;
-  // ルートURLを取得
-  const originurl = url.origin; 
+//   // URLを取得
+//   const url = new URL(window.location.href);
+//   // URLの末尾につく?以降のGETパラメータを取得
+//   const params = url.searchParams;
+//   // ルートURLを取得
+//   const originurl = url.origin; 
 
-  console.log(params);
-  console.log(originurl);
+//   console.log(params);
+//   console.log(originurl);
 
-  // パラメータから「name」を取得
-  const productname = params.get("name");
-  const producthandle = params.get("handle");
-  const producturl = params.get("url");
+//   // パラメータから「name」を取得
+//   const productname = params.get("name");
+//   const producthandle = params.get("handle");
+//   const producturl = params.get("url");
 
-  console.log(productname);
-  console.log(producthandle);
-  console.log(producturl);
+//   console.log(productname);
+//   console.log(producthandle);
+//   console.log(producturl);
 
-  // document.getElementById("102523-name").value = productname;
-  document.getElementById("102523-text-2").value = productname;
+//   // document.getElementById("102523-name").value = productname;
+//   document.getElementById("102523-text-2").value = productname;
 
-  if( params.has('name') ) {
-    document.getElementById("contact_product-info_area").classList.add("contact_product-info_area_block");
-    document.getElementById("102523-url").value = originurl + producturl;
-  }
+//   if( params.has('name') ) {
+//     document.getElementById("contact_product-info_area").classList.add("contact_product-info_area_block");
+//     document.getElementById("102523-url").value = originurl + producturl;
+//   }
 
-}
+// }
+
+
 

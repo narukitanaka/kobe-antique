@@ -1,3 +1,43 @@
+<script>
+  // 商品に関するお問い合わせ
+  window.onload = function() {
+
+// document.getElementById("102523-name").type = "hidden";
+    document.getElementById("102523-url").type = "hidden";
+    document.getElementById("102523-text-2").type = "hidden";
+
+// URLを取得
+    const url = new URL(window.location.href);
+
+// URLの末尾につく?以降のGETパラメータを取得
+    const params = url.searchParams;
+
+// ルートURLを取得
+    const originurl = url.origin;
+
+    console.log(params);
+    console.log(originurl);
+
+// パラメータから「name」を取得
+    const productname = params.get("name");
+    const producthandle = params.get("handle");
+    const producturl = params.get("url");
+
+    console.log(productname);
+    console.log(producthandle);
+    console.log(producturl);
+
+// document.getElementById("102523-name").value = productname;
+    document.getElementById("102523-text-2").value = productname;
+
+    if (params.has('name')) {
+      document.getElementById("contact_product-info_area").classList.add("contact_product-info_area_block");
+      document.getElementById("102523-url").value = originurl + producturl;
+    }
+
+  }
+</script>
+
 <section class="privacypolicy01 lower_mv">
   <figure>
     <picture>

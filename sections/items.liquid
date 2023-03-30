@@ -25,14 +25,18 @@
           itemprop="itemListElement"
           itemscope
           itemtype="http://schema.org/ListItem">
-          <span itemprop="name">all items</span>
+          <span itemprop="name">
+            {{ collection.title }}
+          </span>
           <meta itemprop="position" content="3" />
         </li>
       </ol>
     </div>
     <div class="items01_wrap">
       <div class="section_title vertical">
-        <span class="en">all items</span>
+        <span class="en">
+          all items
+        </span>
         <h2>すべての商品</h2>
       </div>
       <div class="items01_inner">
@@ -128,12 +132,32 @@
                     {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
                     <select name="sort_by" id="SortBy" aria-describedby="a11y-refresh-page-message">
                       {%- for option in collection.sort_options -%}
-                      <option value="{{ option.value }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name }}</option>
+                        {% unless option.value contains 'best-selling' or option.value contains 'title-ascending' or option.value contains 'title-descending' %}
+                          <option value="{{ option.value }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name }}</option>
+                        {% endunless %}
                       {%- endfor -%}
                     </select>
                     </form>
                   </div>
                 </div>
+
+                {% comment %} 手動の場合 {% endcomment %}
+                {% comment %} <div class="inner">
+                  <p>並び順</p>
+                  <div class="select">
+                    <form  id="FacetSortForm">
+                    <select name="sort_by" id="SortBy" aria-describedby="a11y-refresh-page-message">
+                        <option value="created-descending">新着順
+                        <option value="title-ascending">アルファベット順、A-Z
+                        <option value="title-descending">アルファベット順、Z-A
+                        <option value="price-ascending">価格の安い順
+                        <option value="price-descending">価格の高い順
+                        <option value="created-ascending">古い商品順
+                    </select>
+                    </form>
+                  </div>
+                </div> {% endcomment %}
+
               </div>
               <div class="toolbar_item02">
                 <p>表示</p>

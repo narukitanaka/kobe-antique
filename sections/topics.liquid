@@ -1,3 +1,42 @@
+<script>
+  //ブログページカテゴリーマーク
+  window.onload = function() {
+
+  var url = window.location.href; 
+  // 最後の値を取り出す 
+  var lastValue = url.split('/').pop();
+  console.log(lastValue);
+
+  var link01 = $('#act-tag01 a').attr('href'); 
+  // 最後の値を取り出す 
+  var lastLink01 = link01.substring(link01.lastIndexOf('/') + 1); 
+  console.log(lastLink01);
+
+  var link02 = $('#act-tag02 a').attr('href'); 
+  // 最後の値を取り出す 
+  var lastLink02 = link02.substring(link02.lastIndexOf('/') + 1); 
+  console.log(lastLink02);
+
+  var link03 = $('#act-tag03 a').attr('href'); 
+  // 最後の値を取り出す 
+  var lastLink03 = link03.substring(link03.lastIndexOf('/') + 1); 
+  console.log(lastLink03);
+
+
+  if (lastValue == lastLink01) {
+    $('#all-tag').removeClass('active');
+    $('.act01').parent().addClass('active');
+  }else if (lastValue == lastLink02) {
+    $('#all-tag').removeClass('active');
+    $('.act02').parent().addClass('active');
+  }else if (lastValue == lastLink03) {
+    $('#all-tag').removeClass('active');
+    $('.act03').parent().addClass('active');
+  }
+
+  }
+</script>
+
 <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 新着情報01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
 <section class="topics01 lower_mv">
   <figure>
@@ -49,12 +88,14 @@
   <div class="topics02_outer">
     <div class="topics02_in">
       <ul class="category_list fadein">
-        <li class="en active">
-          <a href="/blogs/news">ALL</a>
+        <li class="en active" id="all-tag">
+          <a href="/blogs/news">ALL</a> 
         </li>
         {% for tag in blog.all_tags %}
-        <li class="en">
-          <a href="{{ blog.url }}/tagged/{{ tag }}">{{ tag }}</span>
+        {% assign class_num = class_num | plus: 1 %}
+        {% assign id_num = id_num | plus: 1 %}
+        <li class="en" id="act-tag0{{ class_num }}">
+          <a href="{{ blog.url }}/tagged/{{ tag }}" class="act0{{ class_num }}">{{ tag }}</span>
           </a>
         </li>
         {% endfor %}
@@ -103,6 +144,7 @@
   </div>
 </section>
 <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ cta ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+
 
 {% schema %}
   {
