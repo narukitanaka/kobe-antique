@@ -2244,6 +2244,7 @@ footer .footer_inner .copyright p {
   font-size: 15px;
   letter-spacing: 0.05em;
   font-weight: 500;
+  padding:0 1.6em;
 }
 @media screen and (max-width: 1279px) {
   .top04 .top04_inner01 .box ul li a .txt h3 {
